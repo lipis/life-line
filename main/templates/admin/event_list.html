@@ -1,0 +1,56 @@
+# extends 'base.html'
+# import 'macro/utils.html' as utils
+
+# block content
+  <div class="page-header">
+    <h1>{{title}}</h1>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="span1">{{_('Datetime')}}</th>
+        <th class="span2">{{_('Place / City')}}</th>
+        <th class="span2">{{_('Country')}}</th>
+        <th class="span4">{{_('Name / Address')}}</th>
+        <th class="span1">{{_('User')}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      # for event_db in event_dbs
+        # if last and last.year != event_db.timestamp.year
+          <tr>
+            <td colspan="5">
+              <h4 class="align-center">{{event_db.timestamp.year}}</h4>
+            </td>
+          </tr>
+        # endif
+        <tr id="{{event_db.key.id()}}" class="{{event_db.key.id()}}">
+          <td>
+            <a href="{{url_for('event_update', event_id=event_db.key.id())}}">
+              # if event_db.accuracy == 'year'
+                {{event_db.timestamp.strftime('%Y')}}
+              # elif event_db.accuracy == 'month'
+                {{event_db.timestamp.strftime('%B %Y')}}
+              # else
+                {{event_db.timestamp.strftime('%d %b %Y')}}
+              # endif
+
+              # if event_db.timestamp.hour > 0
+                @ {{event_db.timestamp.strftime('%H:00')}}
+              # endif
+            </a>
+          </td>
+          <td>{{event_db.place}}</td>
+          <td>{{event_db.country}}</td>
+          <td>{{event_db.address}}</td>
+          <td>{{event_db.user_key.get().name}}</td>
+        </tr>
+
+        # set last = event_db.timestamp
+      # endfor
+    </tbody>
+  </table>
+
+  {{utils.next_link(next_url)}}
+# endblock

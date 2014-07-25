@@ -11,6 +11,7 @@
         <li class="divider"></li>
         <li><a href="{{url_for('admin_config_update')}}"><i class="fa fa-fw fa-cog"></i> {{_('Admin Config')}}</a></li>
         <li><a href="{{url_for('user_list', order='-modified', active=True)}}"><i class="fa fa-fw fa-group"></i> {{_('User List')}}</a></li>
+        <li><a href="{{url_for('admin_event_list', order='-created')}}"><i class="fa fa-list"></i> {{_('Event List')}}</a></li>
         <li class="divider"></li>
       # endif
       <li><a href="{{url_for('signout')}}"><i class="fa fa-fw fa-sign-out"></i> {{_('Sign out')}}</a></li>

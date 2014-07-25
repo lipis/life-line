@@ -4,6 +4,7 @@ import copy
 
 from flask.ext import wtf
 from flask.ext.babel import lazy_gettext as _
+from google.appengine.ext import deferred
 from google.appengine.ext import ndb
 import flask
 
@@ -133,7 +134,23 @@ def user_delete_service():
 
 @ndb.transactional(xg=True)
 def delete_user_dbs(user_db_keys):
-  ndb.delete_multi(user_db_keys)
+  for user_key in user_db_keys:
+    delete_user_task(user_key)
+
+
+def delete_user_task(user_key, next_cursor=None):
+  event_dbs, next_cursor = util.get_dbs(
+      model.Event.query(),
+      user_key=user_key,
+      cursor=next_cursor,
+    )
+  if event_dbs:
+    ndb.delete_multi([event_db.key for event_db in event_dbs])
+
+  if next_cursor:
+    deferred.defer(delete_user_task, user_key, next_cursor)
+  else:
+    user_key.delete()
 
 
 ###############################################################################
@@ -224,4 +241,18 @@ def merge_user_dbs(user_db, deprecated_keys):
     deprecated_db.active = False
     if not deprecated_db.username.startswith('_'):
       deprecated_db.username = '_%s' % deprecated_db.username
+    deferred.defer(move_events_task, user_db.key, deprecated_db.key)
   ndb.put_multi(deprecated_dbs)
+
+
+def move_events_task(user_key, deprecated_key, next_cursor=None):
+  event_dbs, next_cursor = util.get_dbs(
+      model.Event.query(),
+      user_key=deprecated_key,
+      cursor=next_cursor,
+    )
+  for event_db in event_dbs:
+    event_db.user_key = user_key
+  ndb.put_multi(event_dbs)
+  if next_cursor:
+    deferred.defer(move_events_task, user_key, deprecated_key, next_cursor)

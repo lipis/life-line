@@ -1,0 +1,116 @@
+# extends 'base.html'
+# import 'macro/forms.html' as forms
+
+# block head
+  # include 'bit/google_maps_api.html'
+# endblock
+
+# block content
+  <div class="page-header">
+    <h1>{{title}}</h1>
+  </div>
+  <form class="form" method="POST" action=".">
+    {{form.csrf_token}}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="{% if form.timestamp.errors %} has-error {% endif %}">
+          <div class="pull-right">
+            <span class="date today label label-warning">{{_('Today')}}</span>
+            <span class="date today now label label-success">{{_('Now')}}</span>
+          </div>
+          <label class="control-label" for="year">
+            {{_('Datetime')}}
+          </label>
+          <div class="row">
+            <div class="col-sm-3 form-group">
+              {{form.year(class='form-control datetime', title=form.year.label.text)}}
+              <p class="help-block">
+
+              </p>
+            </div>
+            <div class="col-sm-3 form-group">
+              <select class="form-control datetime" id="month" name="month" data-selected="{{form.month.data or 0}}" title="{{form.month.label.text}}"></select>
+            </div>
+            <div class="col-sm-3 form-group">
+              <select class="form-control datetime" id="day" name="day" data-selected="{{form.day.data or 0}}" title="{{form.day.label.text}}"></select>
+            </div>
+            <div class="col-sm-3 form-group">
+              {{form.hour(class='form-control', title=form.hour.label.text)}}
+            </div>
+          </div>
+          # for error in form.timestamp.errors
+            <span class="help-block">{{error}}</span>
+          # endfor
+        </div>
+        <div class="form-group {{'has-error' if form.search.errors}}">
+          {{form.search.label(class='control-label')}}
+          {{form.search(class='form-control text', autocomplete='off')}}
+          {{forms.field_errors(form.search)}}
+          <p class="help-block">
+            <span class="place label label-success" title="{{_('Home')}}">{{current_user.user_db.home}}</span>
+            # if city and country
+              <span class="place label label-warning" title="{{_('Current Location')}}">{{city.title()}}, {{country}}</span>
+            # endif
+          </p>
+        </div>
+        {{form.country_code()}}
+        {{form.lat()}}
+        {{form.lng()}}
+
+        {{forms.readonly_field(form.address)}}
+        <div class="row">
+          <div class="col-xs-6">
+            {{forms.readonly_field(form.place)}}
+          </div>
+          <div class="col-xs-6">
+            {{forms.readonly_field(form.country)}}
+          </div>
+        </div>
+
+        {{forms.checkbox_field(form.layover)}}
+        {{forms.textarea_field(form.notes, rows=2)}}
+        <div class="form-group visible-sm visible-xs">
+          <button type="submit" class="btn btn-primary btn-block btn-loading">
+            # if event_db.key
+              {{_('Update')}}
+            # else
+              {{_('Add')}}
+            # endif
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="control-label">{{_('Draggable map to update the address')}}</label>
+          <div id="event-map" class="event-map"></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <button type="submit" class="btn btn-primary btn-block btn-loading">
+          # if event_db.key
+            {{_('Update')}}
+          # else
+            {{_('Add')}}
+          # endif
+        </button>
+        {{forms.checkbox_field(form.add_more)}}
+      </div>
+    </div>
+  </form>
+
+  <hr>
+  <h4>Notes</h4>
+  <ul>
+    <li>Type the name of the place in the search and hit return to locate it on the map</li>
+    <li>Month and/or day are optional</li>
+    <li>Time is needed only for sorting if you visited more than one place in a single period</li>
+    <li>If there is a query that doesn't fill all fields, please <a href="{{url_for('feedback')}}">send a feedback</a> with it</li>
+    <li><strong>Layover</strong>: For more accurate data search for specific airport or train stations or check Layover manualy</li>
+    <li>Don't forget that this is a developers preview and any kind of <a href="{{url_for('feedback')}}">feedback</a> is highly appreciated</li>
+    <li><strong>Put your birthday.. if you haven't started with that!!</strong></li>
+  </ul>
+# endblock

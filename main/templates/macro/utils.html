@@ -42,12 +42,32 @@
 
 
 # macro auth_icon(auth_id)
-  # if auth_id.startswith('federated')
-    <span class="fa fa-fw fa-google-plus"></span>
+  # if auth_id.startswith('bitbucket')
+    <span class="fa fa-fw fa-bitbucket"></span>
+  # elif auth_id.startswith('dropbox')
+    <span class="fa fa-fw fa-dropbox"></span>
   # elif auth_id.startswith('facebook')
     <span class="fa fa-fw fa-facebook"></span>
+  # elif auth_id.startswith('federated')
+    <span class="fa fa-fw fa-google-plus"></span>
+  # elif auth_id.startswith('github')
+    <span class="fa fa-fw fa-github"></span>
+  # elif auth_id.startswith('instagram')
+    <span class="fa fa-fw fa-instagram"></span>
+  # elif auth_id.startswith('linkedin')
+    <span class="fa fa-fw fa-linkedin"></span>
+  # elif auth_id.startswith('reddit')
+    <span class="fa fa-reddit"></span>
+  # elif auth_id.startswith('stackoverflow')
+    <span class="fa fa-fw fa-stack-overflow"></span>
   # elif auth_id.startswith('twitter')
     <span class="fa fa-fw fa-twitter"></span>
+  # elif auth_id.startswith('vk')
+    <span class="fa fa-fw fa-vk"></span>
+  # elif auth_id.startswith('microsoft')
+    <span class="fa fa-fw fa-windows"></span>
+  # elif auth_id.startswith('yahoo')
+    <span class="fa fa-fw fa-yahoo"></span>
   # else
     <span class="fa fa-fw fa-question"></span>
   # endif

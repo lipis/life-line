@@ -24,9 +24,13 @@ app.config['BABEL_DEFAULT_LOCALE'] = config.LOCALE_DEFAULT
 babel = Babel(app)
 
 import admin
+import admin
 import auth
+import event
+import model
 import task
 import user
+import util
 
 
 if config.DEVELOPMENT:
@@ -69,6 +73,9 @@ class ProfileUpdateForm(i18n.Form):
     )
   locale = wtf.SelectField(_('Language'),
       choices=config.LOCALE_SORTED, filters=[util.strip_filter],
+    )
+  home = wtf.StringField(_('Home'),
+      [wtf.validators.optional()], filters=[util.strip_filter],
     )
 
 

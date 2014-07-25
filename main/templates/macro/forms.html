@@ -56,6 +56,9 @@
   {{field(type='hidden', **kwargs)}}
 # endmacro
 
+# macro readonly_field(field)
+  {{input_field(field, readonly=True, **kwargs)}}
+# endmacro
 
 # macro textarea_field(field, rows=4)
   <div class="form-group {{'has-error' if field.errors}}">

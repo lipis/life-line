@@ -31,7 +31,8 @@ else:
   SECRET_KEY = CONFIG_DB.flask_secret_key.encode('ascii')
   LOCALE_DEFAULT = CONFIG_DB.locale
 
-DEFAULT_DB_LIMIT = 64
+DEFAULT_DB_LIMIT = 256
+MAX_DB_LIMIT = 1024
 
 
 ###############################################################################
@@ -45,8 +46,6 @@ DEFAULT_DB_LIMIT = 64
 LOCALE = {
   'en': u'English',
   'el': u'Ελληνικά',
-  'pl': u'Polski',
-  'ru': u'Русский',
 }
 
 LOCALE_SORTED = sorted(LOCALE.iteritems(), key=operator.itemgetter(1))
@@ -60,6 +59,9 @@ STYLES = [
   ]
 
 SCRIPTS = [
+    ('one', [
+        'ext/js/color/one-color.js',
+      ]),
     ('libs', [
         'ext/js/jquery/jquery.js',
         'ext/js/momentjs/moment.js',
@@ -75,9 +77,13 @@ SCRIPTS = [
         'src/script/common/service.coffee',
         'src/script/common/util.coffee',
         'src/script/site/app.coffee',
+        'src/script/site/welcome.coffee',
         'src/script/site/admin.coffee',
         'src/script/site/profile.coffee',
         'src/script/site/signin.coffee',
         'src/script/site/user.coffee',
+        'src/script/site/event.coffee',
+        'src/script/site/map/geocoder_map.coffee',
+        'src/script/site/map/chart_map.coffee',
       ]),
   ]

@@ -1,31 +1,25 @@
 # extends 'base.html'
 
+# block scripts
+  # include 'bit/google_maps_api.html'
+# endblock
+
 # block header
-  <div class="jumbotron">
+  # if current_user.id > 0
+    # include 'map/map.html'
+    # include 'map/map_toolbar.html'
+  # endif
+
+  <div class="jumbotron text-center">
     <div class="container">
       <h1>{{config.CONFIG_DB.brand_name}}</h1>
-      <p>Hello, world!</p>
+      <p class="lead">
+        {{_("See all the places that you've visited on a map like a vomit!")}}
+      </p>
     </div>
   </div>
 # endblock
 
 # block content
-  <div class="row">
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <h2>Heading</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <h2>Heading</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <h2>Heading</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-sm-6 col-md-12 col-lg-3">
-      <h2>Heading</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
+
 # endblock

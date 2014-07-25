@@ -102,7 +102,7 @@
                 <i class="fa fa-hand-o-left" title="{{_('You')}}"></i>
               # endif
             </td>
-            <td>{{user_db.username}}</td>
+            <td><a href="{{url_for('event_list', username=user_db.username)}}">{{user_db.username}}</a></td>
             <td>{{user_db.email}}</td>
             <td class="text-nowrap">
               # if user_db.locale

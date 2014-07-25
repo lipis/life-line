@@ -33,3 +33,19 @@ def new_user_notification(user_db):
       flask.url_for('user_update', user_id=user_db.key.id(), _external=True),
     )
   send_mail_notification('New user: %s' % user_db.name, body)
+
+
+###############################################################################
+# Event related
+###############################################################################
+def new_event_notification(event_db):
+
+  user_db = event_db.user_key.get()
+
+  body = 'name: %s\nusername: %s\ncountry: %s\nplace: %s\n' % (
+      user_db.name,
+      user_db.username,
+      event_db.country,
+      event_db.place
+    )
+  send_mail_notification('New event: %s' % event_db.address, body)

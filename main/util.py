@@ -138,6 +138,10 @@ def model_db_to_object(model_db):
       value = json_value(getattr(model_db, prop, None))
     if value is not None:
       model_db_object[prop] = value
+      if prop == 'geo_pt':
+        model_db_object['latitude'] = value.split(',')[0]
+        model_db_object['longitude'] = value.split(',')[1]
+
   return model_db_object
 
 
@@ -221,6 +225,13 @@ _username_re = re.compile(r'^[a-z0-9]+(?:[\.][a-z0-9]+)*$')
 
 def is_valid_username(username):
   return True if _username_re.match(username) else False
+
+
+def parse_date_input(text):
+  try:
+    return datetime.strptime(text, '%Y-%m-%d')
+  except:
+    return None
 
 
 def update_query_argument(name, value=None, ignore='cursor', is_list=False):

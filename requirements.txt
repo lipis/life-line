@@ -5,3 +5,4 @@ git+https://github.com/mitsuhiko/flask-oauth.git@0.13
 flask-wtf==0.8.2
 Flask-Babel
 git+https://github.com/joernhees/babel@zipcompat-build
+unidecode

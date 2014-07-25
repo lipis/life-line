@@ -19,6 +19,7 @@ class User(model.Base):
   active = ndb.BooleanProperty(default=True)
   admin = ndb.BooleanProperty(default=False)
   permissions = ndb.StringProperty(repeated=True)
+  home = ndb.StringProperty(default='')
 
   def has_permission(self, perm):
     return self.admin or perm in self.permissions
@@ -58,3 +59,11 @@ class User(model.Base):
     user_dbs, _ = util.get_dbs(cls.query(), username=username, limit=2)
     c = len(user_dbs)
     return not (c == 2 or c == 1 and self_db.key != user_dbs[0].key)
+
+  def get_event_dbs(self, order=None, **kwargs):
+    return model.Event.get_dbs(
+        user_key=self.key,
+        order=order or util.param('order') or '-timestamp,accuracy,-created',
+        **kwargs
+      )
+

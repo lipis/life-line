@@ -2,6 +2,8 @@
   "name": "gae-init",
   "dependencies": {
     "bootstrap": "~3",
+    "bootswatch": "~3",
+    "color": "2.4.1",
     "flag-icon-css": "~0",
     "font-awesome": "~4",
     "jquery": "~2",
@@ -14,6 +16,26 @@
       "less": "less/*.less",
       "less/mixins": "less/mixins/*.less",
       "font": "fonts/*"
+    },
+    "bootswatch": {
+      "less/amelia": "amelia/*.less",
+      "less/cerulean": "cerulean/*.less",
+      "less/cosmo": "cosmo/*.less",
+      "less/cyborg": "cyborg/*.less",
+      "less/darkly": "darkly/*.less",
+      "less/flatly": "flatly/*.less",
+      "less/journal": "journal/*.less",
+      "less/lumen": "lumen/*.less",
+      "less/readable": "readable/*.less",
+      "less/simplex": "simplex/*.less",
+      "less/slate": "slate/*.less",
+      "less/spacelab": "spacelab/*.less",
+      "less/superhero": "superhero/*.less",
+      "less/united": "united/*.less",
+      "less/yeti": "yeti/*.less"
+    },
+    "color": {
+      "js": "one-color.js"
     },
     "flag-icon-css": {
       "less": "less/*.less",

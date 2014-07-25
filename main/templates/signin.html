@@ -31,6 +31,83 @@
         </a>
       # endif
 
+      # if config.CONFIG_DB.has_github
+        <a class="btn btn-block btn-lg btn-social btn-github" href="{{github_signin_url}}" rel="nofollow">
+          <i class="fa fa-github"></i>
+          {{_('Sign in with %(brand)s', brand=_('GitHub'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_bitbucket
+        <a class="btn btn-block btn-lg btn-social btn-bitbucket" href="{{bitbucket_signin_url}}" rel="nofollow">
+          <i class="fa fa-bitbucket"></i>
+          {{_('Sign in with %(brand)s', brand=_('Bitbucket'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_vk
+        <a class="btn btn-block btn-lg btn-social btn-vk" href="{{vk_signin_url}}" rel="nofollow">
+          <i class="fa fa-vk"></i>
+          {{_('Sign in with %(brand)s', brand=_('VK'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_linkedin
+        <a class="btn btn-block btn-lg btn-social btn-linkedin" href="{{linkedin_signin_url}}" rel="nofollow">
+          <i class="fa fa-linkedin"></i>
+          {{_('Sign in with %(brand)s', brand=_('LinkedIn'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_dropbox
+        <a class="btn btn-block btn-lg btn-social btn-dropbox" href="{{dropbox_signin_url}}" rel="nofollow">
+          <i class="fa fa-dropbox"></i>
+          {{_('Sign in with %(brand)s', brand=_('Dropbox'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_windowslive
+        <a class="btn btn-block btn-lg btn-social btn-windowslive" href="{{windowslive_signin_url}}" rel="nofollow">
+          <i class="fa fa-windows"></i>
+          {{_('Sign in with %(brand)s', brand=_('Windows Live'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_stackoverflow
+        <a class="btn btn-block btn-lg btn-social btn-stackoverflow" href="{{stackoverflow_signin_url}}" rel="nofollow">
+          <i class="fa fa-stack-overflow"></i>
+          {{_('Sign in with %(brand)s', brand=_('Stack Overflow'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_instagram
+        <a class="btn btn-block btn-lg btn-social btn-instagram" href="{{instagram_signin_url}}" rel="nofollow">
+          <i class="fa fa-instagram"></i>
+          {{_('Sign in with %(brand)s', brand=_('Instagram'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_microsoft
+        <a class="btn btn-block btn-lg btn-social btn-microsoft" href="{{microsoft_signin_url}}" rel="nofollow">
+          <i class="fa fa-windows"></i>
+          {{_('Sign in with %(brand)s', brand=_('Microsoft'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_reddit
+        <a class="btn btn-block btn-lg btn-social btn-reddit" href="{{reddit_signin_url}}" rel="nofollow">
+          <i class="fa fa-reddit"></i>
+          {{_('Sign in with %(brand)s', brand=_('Reddit'))}}
+        </a>
+      # endif
+
+      # if config.CONFIG_DB.has_yahoo
+        <a class="btn btn-block btn-lg btn-social btn-yahoo" href="{{yahoo_signin_url}}" rel="nofollow">
+          <i class="fa fa-yahoo"></i>
+          {{_('Sign in with %(brand)s', brand=_('Yahoo!'))}}
+        </a>
+      # endif
+
       <div class="checkbox remember">
         <label><input type="checkbox" checked> {{_('Keep me signed in')}}</label>
       </div>
