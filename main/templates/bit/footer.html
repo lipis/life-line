@@ -4,6 +4,7 @@
       <p>
         {{_('Version')}}: {{config.CURRENT_VERSION_NAME}}
         (<time datetime="{{config.CURRENT_VERSION_DATE}}">{{config.CURRENT_VERSION_DATE}}</time>)
+        | <a href="https://github.com/lipis/life-line">GitHub</a>
         # if has_json
           | <a href="/_s/{{request.url.replace(request.host_url, '')}}" target="_blank">{{_('View in JSON')}}</a>
         # endif

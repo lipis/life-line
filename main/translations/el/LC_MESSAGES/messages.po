@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-07-25 13:27+0200\n"
+"POT-Creation-Date: 2014-07-26 00:56+0200\n"
 "PO-Revision-Date: 2013-12-30 03:14+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: el <LL@li.org>\n"
@@ -377,7 +377,7 @@ msgstr ""
 msgid "Version"
 msgstr "Έκδοση"
 
-#: main/templates/bit/footer.html:8
+#: main/templates/bit/footer.html:9
 msgid "View in JSON"
 msgstr "Προβολή σε JSON"
 
@@ -717,3 +717,4 @@ msgstr ""
 #: main/user.py:226
 msgid "Merge Users"
 msgstr "Συγχώνευση Χρηστών"
+

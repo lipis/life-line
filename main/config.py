@@ -83,6 +83,7 @@ SCRIPTS = [
         'src/script/site/signin.coffee',
         'src/script/site/user.coffee',
         'src/script/site/event.coffee',
+        'src/script/site/map/map_utils.coffee',
         'src/script/site/map/geocoder_map.coffee',
         'src/script/site/map/chart_map.coffee',
       ]),

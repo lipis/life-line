@@ -359,7 +359,7 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: main/templates/bit/footer.html:8
+#: main/templates/bit/footer.html:9
 msgid "View in JSON"
 msgstr ""
 
