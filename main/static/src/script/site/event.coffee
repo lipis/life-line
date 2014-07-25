@@ -33,6 +33,9 @@ update_datetime = () ->
   $('#month').prop('disabled', year_val == 0)
   $('#day').prop('disabled', month_val == 0)
 
+  # should work without that line..
+  moment.lang LOCALE
+
   date = moment.utc [year_val]
   if month_val > 0
     date = moment.utc [year_val, month_val - 1]
