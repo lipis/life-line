@@ -717,19 +717,3 @@ msgstr ""
 #: main/user.py:226
 msgid "Merge Users"
 msgstr "Συγχώνευση Χρηστών"
-
-#~ msgid "Already exists."
-#~ msgstr ""
-
-#~ msgid "Latitude"
-#~ msgstr ""
-
-#~ msgid "Longtitude"
-#~ msgstr ""
-
-#~ msgid "Update Place"
-#~ msgstr ""
-
-#~ msgid "Continue adding"
-#~ msgstr ""
-
