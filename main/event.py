@@ -47,19 +47,6 @@ class EventUpdateForm(i18n.Form):
 @app.route('/place/<int:event_id>/update/', methods=['GET', 'POST'], endpoint='event_update')
 @auth.login_required
 def event_create(event_id=0):
-  country = None
-  region = None
-  city = None
-  city_lat_lng = '40.6393495,22.944606399999998'
-  if 'X-AppEngine-Country' in flask.request.headers:
-    country = flask.request.headers['X-AppEngine-Country']
-  if 'X-AppEngine-Region' in flask.request.headers:
-    region = flask.request.headers['X-AppEngine-Region']
-  if 'X-AppEngine-City' in flask.request.headers:
-    city = flask.request.headers['X-AppEngine-City']
-  if 'X-AppEngine-CityLatLong' in flask.request.headers:
-    city_lat_lng = flask.request.headers['X-AppEngine-CityLatLong']
-
   if event_id == 0:
     event_db = model.Event(user_key=auth.current_user_key())
   else:
@@ -74,15 +61,14 @@ def event_create(event_id=0):
   form.year.choices = sorted([(str(y), y) for y in range(1900, today.year + 1)], reverse=True)
 
   if form.validate_on_submit():
-    event_db.search = form.search.data
-    success = False
-
     form.year.data = int(form.year.data)
     form.month.data = int(form.month.data)
     try:
       form.day.data = int(form.day.data)
     except:
       form.day.data = 1
+
+    success = False
 
     if not form.year.data:
       form.timestamp.errors.append(_('You should at least enter a year'))
@@ -102,27 +88,22 @@ def event_create(event_id=0):
 
       hour = int(form.hour.data) or 0
       try:
-        event_db.timestamp = datetime(form.year.data, month, day, hour)
+        form.timestamp.data = datetime(form.year.data, month, day, hour)
         success = True
       except:
         form.timestamp.errors.append(_('Enter a valid date'))
         success = False
 
     if success:
+      form.populate_obj(event_db)
+
       if form.month.data and form.day.data:
         event_db.accuracy = 'day'
       elif form.month.data:
         event_db.accuracy = 'month'
       else:
         event_db.accuracy = 'year'
-
-      event_db.address = form.address.data
-      event_db.country = form.country.data
-      event_db.country_code = form.country_code.data
       event_db.geo_pt = ndb.GeoPt(form.lat.data, form.lng.data)
-      event_db.layover = form.layover.data
-      event_db.notes = form.notes.data
-      event_db.place = form.place.data
       event_db.put()
       if event_id:
         flask.flash('"%s" is updated!' % event_db.address, category='success')
@@ -142,9 +123,9 @@ def event_create(event_id=0):
     if event_db.geo_pt:
       form.lat.data = event_db.geo_pt.lat
       form.lng.data = event_db.geo_pt.lon
-    elif city_lat_lng:
-      form.lat.data = city_lat_lng.split(',')[0]
-      form.lng.data = city_lat_lng.split(',')[1]
+    elif flask.request.city_lat_lng:
+      form.lat.data = flask.request.city_lat_lng.split(',')[0]
+      form.lng.data = flask.request.city_lat_lng.split(',')[1]
 
     try:
       form.year.data = str(event_db.timestamp.year)
@@ -154,7 +135,6 @@ def event_create(event_id=0):
         form.month.data = str(event_db.timestamp.month)
         form.day.data = str(event_db.timestamp.day)
       form.hour.data = str(event_db.timestamp.hour)
-
     except:
       pass
 
@@ -165,10 +145,6 @@ def event_create(event_id=0):
       form=form,
       today=today,
       event_db=event_db,
-      country=country,
-      region=region,
-      city=city,
-      city_lat_lng=city_lat_lng,
     )
 
 

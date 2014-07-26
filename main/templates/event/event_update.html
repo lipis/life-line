@@ -49,7 +49,7 @@
           <p class="help-block">
             <span class="place label label-success" title="{{_('Home')}}">{{current_user.user_db.home}}</span>
             # if city and country
-              <span class="place label label-warning" title="{{_('Current Location')}}">{{city.title()}}, {{country}}</span>
+              <span class="place label label-warning" title="{{_('Current Location')}}">{{request.city.title()}}, {{request.country}}</span>
             # endif
           </p>
         </div>

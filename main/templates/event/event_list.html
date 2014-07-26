@@ -7,21 +7,18 @@
 
 # block content
   <div class="map-container">
-    <div id="map" class="map" data-max-height="640"
-        data-service-url="{{url_for('event_list_service', username=user_db.username)}}"
-      ></div>
+    <div id="map" class="map" data-max-height="640" data-service-url="{{url_for('event_list_service', username=user_db.username)}}"></div>
   </div>
   # include 'map/map_toolbar.html'
-
   <hr>
   <table class="table table-bordered table-hover">
     <thead>
       <tr>
-        <th class="span1">{{_('Datetime')}}</th>
+        <th class="span2">{{_('Datetime')}}</th>
         <th class="span2">{{_('Place / City')}}</th>
         <th class="span2">{{_('Country')}}</th>
         <th class="span4">{{_('Name / Address')}}</th>
-        <th class="span1">{{_('Notes')}}</th>
+        <th class="span2">{{_('Notes')}}</th>
       </tr>
     </thead>
     <tbody>
@@ -56,13 +53,10 @@
             # if event_db.layover
               {{_('Layover')}}
             # endif
-
             {{'-' if event_db.notes and event_db.layover}}
-
             # if event_db.notes
               {{event_db.notes[:64].strip()}}{% if event_db.notes |length > 64 %}...{% endif %}
             # endif
-
             {{'-' if not (event_db.notes or event_db.layover)}}
           </td>
         </tr>

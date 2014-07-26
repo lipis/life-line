@@ -38,6 +38,26 @@ if config.DEVELOPMENT:
   app.wsgi_app = debug.DebuggedApplication(app.wsgi_app, evalex=True)
 
 
+
+###############################################################################
+# Main page
+###############################################################################
+@flask.request_started.connect_via(app)
+def request_started(sender, **extra):
+  flask.request.country = None
+  flask.request.region = None
+  flask.request.city = None
+  flask.request.city_lat_lng = '40.6393495,22.944606399999998'
+  if 'X-AppEngine-Country' in flask.request.headers:
+    flask.request.country = flask.request.headers['X-AppEngine-Country']
+  if 'X-AppEngine-Region' in flask.request.headers:
+    flask.request.region = flask.request.headers['X-AppEngine-Region']
+  if 'X-AppEngine-City' in flask.request.headers:
+    flask.request.city = flask.request.headers['X-AppEngine-City']
+  if 'X-AppEngine-CityLatLong' in flask.request.headers:
+    flask.request.city_lat_lng = flask.request.headers['X-AppEngine-CityLatLong']
+
+
 ###############################################################################
 # Main page
 ###############################################################################
