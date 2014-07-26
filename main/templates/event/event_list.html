@@ -50,7 +50,7 @@
             </a>
           </td>
           <td>{{event_db.place}}</td>
-          <td>{{event_db.country}}</td>
+          <td><i class="flag-icon flag-icon-{{event_db.country_code.lower()}}"></i> {{event_db.country}}</td>
           <td>{{event_db.address}}</td>
           <td>
             # if event_db.layover

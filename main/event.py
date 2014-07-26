@@ -65,6 +65,9 @@ def event_create(event_id=0):
   else:
     event_db = model.Event.get_by_id(event_id)
 
+  if not event_db or event_db.user_key != auth.current_user_key():
+    return flask.abort(404)
+
   form = EventUpdateForm(obj=event_db)
   today = datetime.utcnow().date()
   today = datetime(today.year, today.month, today.day)

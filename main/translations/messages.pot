@@ -79,19 +79,19 @@ msgstr ""
 msgid "Time"
 msgstr ""
 
-#: main/event.py:85
+#: main/event.py:88
 msgid "You should at least enter a year"
 msgstr ""
 
-#: main/event.py:105
+#: main/event.py:108
 msgid "Enter a valid date"
 msgstr ""
 
-#: main/event.py:161 main/templates/bit/header.html:15
+#: main/event.py:164 main/templates/bit/header.html:15
 msgid "Add Place"
 msgstr ""
 
-#: main/event.py:194 main/templates/bit/header.html:18
+#: main/event.py:197 main/templates/bit/header.html:18
 msgid "My Places"
 msgstr ""
 
