@@ -14,11 +14,11 @@
   <table class="table table-bordered table-hover">
     <thead>
       <tr>
-        <th class="span2">{{_('Datetime')}}</th>
+        <th class="span1">{{_('Datetime')}}</th>
         <th class="span2">{{_('Place / City')}}</th>
         <th class="span2">{{_('Country')}}</th>
         <th class="span4">{{_('Name / Address')}}</th>
-        <th class="span2">{{_('Notes')}}</th>
+        <th class="span3">{{_('Notes')}}</th>
       </tr>
     </thead>
     <tbody>
@@ -31,7 +31,7 @@
           </tr>
         # endif
         <tr id="{{event_db.key.id()}}" class="{{event_db.key.id()}} {% if event_db.layover %} layover {% endif %}">
-          <td>
+          <td class="text-nowrap">
             <a href="{{url_for('event_update', event_id=event_db.key.id())}}">
               # if event_db.accuracy == 'year'
                 {{event_db.timestamp.strftime('%Y')}}

@@ -48,8 +48,22 @@ LOCALE = {
   'el': u'Ελληνικά',
 }
 
+LOCALE = {
+    'de': u'Deutsch',
+    'el': u'Ελληνικά',
+    'en': u'English',
+    'nl': u'Nederlands',
+  }
+
 LOCALE_SORTED = sorted(LOCALE.iteritems(), key=operator.itemgetter(1))
-LANGUAGES = [l.lower().replace('_', '-') for l in LOCALE.keys()]
+
+LOCALE_LANGUAGE = {
+    'de': 'de',
+    'el': 'el',
+    'en': 'en',
+    'nl': 'nl',
+  }
+LANGUAGES = [l for l in LOCALE_LANGUAGE.values()]
 
 ###############################################################################
 # Client modules, also used by the run.py script.
