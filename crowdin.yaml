@@ -1,0 +1,11 @@
+project_identifier: life-line
+
+files:
+  -
+    source: '/main/translations/messages.pot'
+    translation: '/main/translations/%two_letters_code%/LC_MESSAGES/messages.po'
+    languages_mapping:
+      two_letters_code:
+        es-ES: es
+        zh-CN: zh
+        sv-SE: sv

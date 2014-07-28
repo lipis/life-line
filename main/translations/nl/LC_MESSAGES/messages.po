@@ -1,156 +1,156 @@
 #: main/admin.py:82 main/templates/bit/user_menu.html:12
 msgid "Admin Config"
-msgstr "Διαχείριση"
+msgstr "Configuratie"
 
 #: main/auth.py:225
 msgid "Please sign in"
-msgstr "Παρακαλώ συνδεθείτε"
+msgstr "Meld u aan"
 
 #: main/auth.py:247
 msgid "You have been signed out."
-msgstr "Μολις αποσυνδεθήκατε."
+msgstr "U bent afgemeld."
 
 #: main/auth.py:265 main/auth.py:311 main/auth.py:375
 msgid "You denied the request to sign in."
-msgstr "Αρνηθήκατε το αίτημα της σύνδεσης."
+msgstr "U hebt het verzoek om aan te melden afgewezen."
 
 #: main/auth.py:335
 msgid "Something went wrong with Twitter sign in. Please try again."
-msgstr "Κάτι πήγε στραβά με τη σύνδεση μέσω Twitter. Παρακαλώ, ξαναδοκιμάστε."
+msgstr "Er ging iets mis met aanmelden via Twitter. Probeer het opnieuw."
 
 #: main/auth.py:1147
 #, python-format
 msgid "Hello %(name)s, welcome to %(brand)s."
-msgstr "Γειά σας %(name)s, καλωσήρθατε στο %(brand)s."
+msgstr "Hallo %(name)s, welkom bij %(brand)s."
 
 #: main/auth.py:1152
 msgid "Sorry, but you could not sign in."
-msgstr "Λυπούμαστε, αλλά δεν μπορείτε να εισέλθετε."
+msgstr "Sorry, maar u kon niet aangemeld worden."
 
 #: main/event.py:28
 msgid "Search for a place"
-msgstr "Ψάξε για μέρος"
+msgstr "Search for a place"
 
 #: main/event.py:28
 msgid "Paralia Armenistis, Chalkidiki"
-msgstr "Παραλία Αρμενιστής, Χαλκιδική"
+msgstr "Paralia Armenistis, Chalkidiki"
 
 #: main/event.py:29
 msgid "Name / Address (Automatic)"
-msgstr "Όνομα / Διεύθυνση (Αυτόματα)"
+msgstr "Name / Address (Automatic)"
 
 #: main/event.py:30
 msgid "Place / City (Automatic)"
-msgstr "Μέρος / Πόλη (Αυτόματα)"
+msgstr "Place / City (Automatic)"
 
 #: main/event.py:31
 msgid "Country (Automatic)"
-msgstr "Χώρα (Αυτόματα)"
+msgstr "Country (Automatic)"
 
 #: main/event.py:35
 msgid "Timestamp"
-msgstr "Ημερομηνία/ώρα"
+msgstr "Timestamp"
 
 #: main/event.py:36 main/templates/event/event_list.html:21
 msgid "Notes"
-msgstr "Σημειώσεις"
+msgstr "Notes"
 
 #: main/event.py:37
 msgid "This place is a layover"
-msgstr "Αυτό το μέρος είναι μετάβαση"
+msgstr "This place is a layover"
 
 #: main/event.py:38
 msgid "Add More"
-msgstr "Πρόσθεσε κι άλλα"
+msgstr "Add More"
 
 #: main/event.py:40
 msgid "Year"
-msgstr "Χρονιά"
+msgstr "Year"
 
 #: main/event.py:41
 msgid "Month"
-msgstr "Μήνας"
+msgstr "Month"
 
 #: main/event.py:42
 msgid "Day"
-msgstr "Μέρα"
+msgstr "Day"
 
 #: main/event.py:43
 msgid "Time"
-msgstr "Ώρα"
+msgstr "Actief"
 
 #: main/event.py:74
 msgid "You should at least enter a year"
-msgstr "Πρέπει τουλάχιστον να συμπληρώσεις τη χρονιά"
+msgstr "You should at least enter a year"
 
 #: main/event.py:94
 msgid "Enter a valid date"
-msgstr "Βάλε μια έγκυρη ημερομηνία"
+msgstr "Ongeldige datum"
 
 #: main/event.py:144 main/templates/bit/header.html:15
 msgid "Add Place"
-msgstr "Νέο Μέρος"
+msgstr "Add Place"
 
 #: main/event.py:173 main/templates/bit/header.html:18
 msgid "My Places"
-msgstr "Τα Μέρη μου"
+msgstr "My Places"
 
 #: main/lib/flask_wtf/recaptcha/validators.py:34
 #: main/lib/wtforms/validators.py:203 main/lib/wtforms/validators.py:240
 msgid "This field is required."
-msgstr "Αυτό το πεδίο είναι υποχρεωτικό."
+msgstr "Dit veld is verplicht."
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:68
 msgid "Get a visual challenge"
-msgstr "Δοκιμάστε μια οπτική πρόκληση"
+msgstr "Probeer een visuele uitdaging"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:69
 msgid "Get an audio challenge"
-msgstr "Δοκιμάστε μια ακουστική πρόκληση"
+msgstr "Probeer een audio uitdaging"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:70
 msgid "Get a new challenge"
-msgstr "Δοκιμάστε μια νέα πρόκληση"
+msgstr "Probeer een nieuwe uitdaging"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:71
 msgid "Type the two words:"
-msgstr "Πληκτρολογήστε τις δύο λέξεις:"
+msgstr "Typ de twee woorden:"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:72
 msgid "Type what you hear:"
-msgstr "Πληκτρολογήστε αυτό που ακούτε:"
+msgstr "Typ wat u hoort:"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:73
 msgid "Help"
-msgstr "Βοήθεια"
+msgstr "Help"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:74
 msgid "Play sound again"
-msgstr "Παίξτε ξανά τον ήχο"
+msgstr "Geluid opnieuw afspelen"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:75
 msgid "Download sound as MP3"
-msgstr "Κατεβάστε τον ήχο σε μορφή MP3"
+msgstr "Geluid downloaden als MP3"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:76
 msgid "Incorrect. Try again."
-msgstr "Λάθος. Δοκιμάστε ξανά."
+msgstr "Onjuist. Probeer het opnieuw."
 
 #: main/lib/wtforms/csrf/core.py:98 main/lib/wtforms/ext/csrf/form.py:47
 msgid "Invalid CSRF Token"
-msgstr "Μη-έγκυρο CSRF Token"
+msgstr "Ongeldig CSRF-token"
 
 #: main/lib/wtforms/csrf/session.py:61 main/lib/wtforms/ext/csrf/session.py:58
 msgid "CSRF token missing"
-msgstr "Λείπει το CSRF token"
+msgstr "CSRF-token ontbreekt"
 
 #: main/lib/wtforms/csrf/session.py:69 main/lib/wtforms/ext/csrf/session.py:66
 msgid "CSRF failed"
-msgstr "Απέτυχε το CSRF"
+msgstr "CSRF gefaald"
 
 #: main/lib/wtforms/csrf/session.py:74 main/lib/wtforms/ext/csrf/session.py:71
 msgid "CSRF token expired"
-msgstr "Έληξε το CSRF token"
+msgstr "CSRF-token is verlopen"
 
 #: main/lib/wtforms/ext/appengine/fields.py:87
 #: main/lib/wtforms/ext/appengine/fields.py:164
@@ -162,214 +162,214 @@ msgstr "Έληξε το CSRF token"
 #: main/lib/wtforms/ext/sqlalchemy/fields.py:185
 #: main/lib/wtforms/fields/core.py:468
 msgid "Not a valid choice"
-msgstr "Άκυρη επιλογή"
+msgstr "Ongeldige keuze"
 
 #: main/lib/wtforms/ext/appengine/fields.py:185
 msgid "Not a valid list"
-msgstr "Άκυρη λίστα"
+msgstr "Niet een geldige lijst"
 
 #: main/lib/wtforms/ext/appengine/fields.py:204
 msgid "Not a valid integer list"
-msgstr "Άκυρη λίστα ακεραίων"
+msgstr "Niet een geldige lijst van getallen"
 
 #: main/lib/wtforms/ext/dateutil/fields.py:63
 msgid "Please input a date/time value"
-msgstr "Παρακαλώ, εισάγετε μια τιμή ημερομηνίας/ώρας"
+msgstr "Voer een datum/tijd in"
 
 #: main/lib/wtforms/ext/dateutil/fields.py:75
 #: main/lib/wtforms/ext/dateutil/fields.py:83
 msgid "Invalid date/time input"
-msgstr "Η ημερομηνία/ώρα που δώσατε δεν είναι έγκυρη "
+msgstr "Ongeldige datum/tijd"
 
 #: main/lib/wtforms/fields/core.py:461
 msgid "Invalid Choice: could not coerce"
-msgstr "Μη Έγκυρη Επιλογή: Δεν μπορώ να εξαναγκασω"
+msgstr "Ongeldige keuze: kon niet omgezet worden"
 
 #: main/lib/wtforms/fields/core.py:494
 msgid "Invalid choice(s): one or more data inputs could not be coerced"
-msgstr "Άκυρες επιλογές: Μία ή περισσότερες εισαγωγές δεδομένων δεν μπόρεσαν να εξαναγκασθούν"
+msgstr "Ongeldige keuze(s): één of meer van de invoeren kon niet omgezet worden"
 
 #: main/lib/wtforms/fields/core.py:501
 #, python-format
 msgid "'%(value)s' is not a valid choice for this field"
-msgstr "'%(value)s' δεν είναι έγκυρη επιλογή για αυτό το πεδίο"
+msgstr "'%(value)s' is een ongeldige keuze voor dit veld"
 
 #: main/lib/wtforms/fields/core.py:584
 msgid "Not a valid integer value"
-msgstr "Μη-έγκυρος ακέραιος"
+msgstr "Ongeldig getal"
 
 #: main/lib/wtforms/fields/core.py:650
 msgid "Not a valid decimal value"
-msgstr "Μη-έγκυρος δεκαδικός"
+msgstr "Ongeldige decimale waarde"
 
 #: main/lib/wtforms/fields/core.py:677
 msgid "Not a valid float value"
-msgstr "Μη-έγκυρος δεκαδικός"
+msgstr "Ongeldige float-waarde"
 
 #: main/lib/wtforms/fields/core.py:736
 msgid "Not a valid datetime value"
-msgstr "Μη-έγκυρη ημερομηνία/ώρα"
+msgstr "Ongeldige datum/tijd"
 
 #: main/lib/wtforms/fields/core.py:753
 msgid "Not a valid date value"
-msgstr "Μη-έγκυρη ημερομηνία"
+msgstr "Ongeldige datum"
 
 #: main/lib/wtforms/validators.py:56
 #, python-format
 msgid "Invalid field name '%s'."
-msgstr "Μη-έγκυρο όνομα πεδίου '%s'"
+msgstr "Ongeldige naam voor veld '%s'."
 
 #: main/lib/wtforms/validators.py:64
 #, python-format
 msgid "Field must be equal to %(other_name)s."
-msgstr "Το πεδίο πρέπει να είναι ίσο με το %(other_name)s."
+msgstr "Veld moet gelijk zijn aan %(other_name)s."
 
 #: main/lib/wtforms/validators.py:97
 #, python-format
 msgid "Field must be at least %(min)d character long."
 msgid_plural "Field must be at least %(min)d characters long."
-msgstr[0] "Το πεδίο πρέπει να έχει τουλάχιστον %(min)d χαρακτήρα."
-msgstr[1] "Το πεδίο πρέπει να έχει τουλάχιστον %(min)d χαρακτήρες."
+msgstr[0] "Veld moet minstens %(min)d karakter lang zijn."
+msgstr[1] "Veld moet minstens %(min)d karakters lang zijn."
 
 #: main/lib/wtforms/validators.py:100
 #, python-format
 msgid "Field cannot be longer than %(max)d character."
 msgid_plural "Field cannot be longer than %(max)d characters."
-msgstr[0] "Το πεδίο δεν μπορεί να είναι μεγαλύτερο από %(max)d χαρακτήρα."
-msgstr[1] "Το πεδίο δεν μπορεί να είναι μεγαλύτερο από %(max)d χαρακτήρες."
+msgstr[0] "Veld mag niet langer zijn dan %(max)d karakter."
+msgstr[1] "Veld mag niet langer zijn dan %(max)d karakters."
 
 #: main/lib/wtforms/validators.py:103
 #, python-format
 msgid "Field must be between %(min)d and %(max)d characters long."
-msgstr "Το πεδίο πρέπει να είναι από %(min)d έως %(max)d χαρακτήρες."
+msgstr "Veld moet tussen %(min)d en %(max)d karakters lang zijn."
 
 #: main/lib/wtforms/validators.py:139
 #, python-format
 msgid "Number must be at least %(min)s."
-msgstr "Ο αριθμός πρέπει να είναι μεγαλύτερος του %(min)s."
+msgstr "Getal moet minstens %(min)s zijn."
 
 #: main/lib/wtforms/validators.py:141
 #, python-format
 msgid "Number must be at most %(max)s."
-msgstr "Ο αριθμός πρέπει να είναι μικρότερος του %(max)s."
+msgstr "Getal mag maximaal %(max)s zijn."
 
 #: main/lib/wtforms/validators.py:143
 #, python-format
 msgid "Number must be between %(min)s and %(max)s."
-msgstr "Ο αριθμός πρέπει να είναι μεταξύ του %(min)s και του %(max)s."
+msgstr "Getal moet tussen %(min)s en %(max)s liggen."
 
 #: main/lib/wtforms/validators.py:271
 msgid "Invalid input."
-msgstr "Μη έγκυρη τιμή."
+msgstr "Ongeldige invoer."
 
 #: main/lib/wtforms/validators.py:293
 msgid "Invalid email address."
-msgstr "Μη έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου."
+msgstr "Ongeldig e-mailadres."
 
 #: main/lib/wtforms/validators.py:325
 msgid "Invalid IP address."
-msgstr "Μη έγκυρη διεύθυνση IP."
+msgstr "Ongeldig IP-adres."
 
 #: main/lib/wtforms/validators.py:374
 msgid "Invalid Mac address."
-msgstr "Μη έγκυρη διεύθυνση MAC."
+msgstr "Ongeldig Mac-adres."
 
 #: main/lib/wtforms/validators.py:400
 msgid "Invalid URL."
-msgstr "Μη έγκυρο URL."
+msgstr "Ongeldige URL."
 
 #: main/lib/wtforms/validators.py:419
 msgid "Invalid UUID."
-msgstr "Μη έγκυρο UUID."
+msgstr "Ongeldige UUID."
 
 #: main/lib/wtforms/validators.py:447
 #, python-format
 msgid "Invalid value, must be one of: %(values)s."
-msgstr "Μη έγκυρη τιμή, πρέπει να είναι μια εκ των: %(values)s."
+msgstr "Ongeldige waarde, moet een waarde zijn uit: %(values)s."
 
 #: main/lib/wtforms/validators.py:479
 #, python-format
 msgid "Invalid value, can't be any of: %(values)s."
-msgstr "Μη έγκυρη τιμή, δεν πρέπει να είναι καμία εκ των: %(values)s."
+msgstr "Ongeldige waarde, kan niet een waarde zijn in: %(values)s."
 
 #: main/main.py:87 main/user.py:53 main/templates/user/user_list.html:84
 #: main/templates/user/user_merge.html:21
 msgid "Name"
-msgstr "Όνομα"
+msgstr "Naam"
 
 #: main/main.py:90 main/user.py:56 main/templates/user/user_list.html:86
 #: main/templates/user/user_merge.html:23
 msgid "Email"
-msgstr "Email"
+msgstr "E-mail"
 
 #: main/main.py:94 main/user.py:60 main/templates/user/user_list.html:87
 msgid "Language"
-msgstr "Γλώσσα"
+msgstr "Taal"
 
 #: main/main.py:97 main/templates/event/event_update.html:50
 msgid "Home"
-msgstr "Σπίτι"
+msgstr "Home"
 
 #: main/main.py:133
 msgid "Subject"
-msgstr "Θέμα"
+msgstr "Onderwerp"
 
 #: main/main.py:136
 msgid "Message"
-msgstr "Μήνυμα"
+msgstr "Bericht"
 
 #: main/main.py:139
 msgid "Your email (optional)"
-msgstr "Email (προαιρετικό)"
+msgstr "Uw e-mail (optioneel)"
 
 #: main/main.py:155
 msgid "Thank you for your feedback!"
-msgstr "Σας ευχαριστούμε για την επικοινωνία!"
+msgstr "Bedankt voor uw feedback!"
 
 #: main/main.py:160 main/templates/bit/contact_menu.html:3
 msgid "Feedback"
-msgstr "Επικοινωνία"
+msgstr "Feedback"
 
 #: main/templates/admin/event_list.html:12
 #: main/templates/event/event_list.html:17
 #: main/templates/event/event_update.html:22
 msgid "Datetime"
-msgstr "Ημερομηνία"
+msgstr "Datetime"
 
 #: main/templates/admin/event_list.html:13
 #: main/templates/event/event_list.html:18
 msgid "Place / City"
-msgstr "Μέρος / Πόλη"
+msgstr "Place / City"
 
 #: main/templates/admin/event_list.html:14
 #: main/templates/event/event_list.html:19
 msgid "Country"
-msgstr "Χώρα"
+msgstr "Accounts"
 
 #: main/templates/admin/event_list.html:15
 #: main/templates/event/event_list.html:20
 msgid "Name / Address"
-msgstr "Όνομα / Διεύθυνση"
+msgstr "Ongeldig IP-adres."
 
 #: main/templates/admin/event_list.html:16
 msgid "User"
-msgstr "Χρήστης"
+msgstr "User"
 
 #: main/templates/bit/footer.html:5
 msgid "Version"
-msgstr "Έκδοση"
+msgstr "Versie"
 
 #: main/templates/bit/footer.html:9
 msgid "View in JSON"
-msgstr "Προβολή σε JSON"
+msgstr "Bekijk in JSON"
 
 #: main/templates/bit/header.html:5
 msgid "Toggle navigation"
-msgstr "Εναλλαγή πλοήγησης"
+msgstr "Wissel navigatie"
 
 #: main/templates/bit/user_menu.html:9
 msgid "Profile Settings"
-msgstr "Ρυθμίσεις Προφίλ"
+msgstr "Profiel instellingen"
 
 #: main/templates/bit/user_menu.html:14
 msgid "Event List"
@@ -377,46 +377,46 @@ msgstr "Event List"
 
 #: main/templates/bit/user_menu.html:17
 msgid "Sign out"
-msgstr "Έξοδος"
+msgstr "Afmelden"
 
 #: main/templates/bit/user_menu.html:22
 msgid "Sign in"
-msgstr "Είσοδος"
+msgstr "Aanmelden"
 
 #: main/templates/error.html:8
 msgid "Oh no"
-msgstr "Ωχ όχι"
+msgstr "Oh nee"
 
 #: main/templates/error.html:10
 msgid "Maybe it's our fault.. maybe it's yours.. but either case, this page is unavailable!"
-msgstr "Ίσως είναι δικό μας λάθος.. ίσως είναι δικό σας.. αλλά σε κάθε περίπτωση, αυτή η σελίδα δεν είναι διαθέσιμη!"
+msgstr "Misschien is het onze fout... misschien die van u... maar in ieder geval, deze pagina is niet beschikbaar!"
 
 #: main/templates/event/event_list.html:54
 msgid "Layover"
-msgstr "Μετάβαση"
+msgstr "Layover"
 
 #: main/templates/event/event_update.html:18
 msgid "Today"
-msgstr "Σήμερα"
+msgstr "Today"
 
 #: main/templates/event/event_update.html:19
 msgid "Now"
-msgstr "Τώρα"
+msgstr "Now"
 
 #: main/templates/event/event_update.html:52
 msgid "Current Location"
-msgstr "Τρέχουσα Τοποθεσία"
+msgstr "Current Location"
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
 #: main/templates/user/user_update.html:70
 msgid "Update"
-msgstr "Αποθήκευση"
+msgstr "Bijwerken"
 
 #: main/templates/event/event_update.html:77
 #: main/templates/event/event_update.html:97
 msgid "Add"
-msgstr "Προσθέστε"
+msgstr "Add"
 
 #: main/templates/event/event_update.html:85
 msgid "Draggable map to update the address"
@@ -424,37 +424,37 @@ msgstr "Draggable map to update the address"
 
 #: main/templates/feedback.html:6
 msgid "Any questions or suggestions are welcome"
-msgstr "Οποιεσδήποτε ερωτήσεις ή εισήγησεις είναι ευπρόσδεκτες"
+msgstr "Vragen en/of suggesties zijn welkom"
 
 #: main/templates/feedback.html:18
 msgid "Sending Feedback.."
-msgstr "Αποστολή Φόρμας.."
+msgstr "Feedback verzenden..."
 
 #: main/templates/feedback.html:19
 msgid "Send Feedback"
-msgstr "Αποστολή Φόρμας"
+msgstr "Feedback verzenden"
 
 #: main/templates/macro/utils.html:30
 msgid "Next Page"
-msgstr "Επόμενη Σελίδα"
+msgstr "Volgende pagina"
 
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
-msgstr "Συνδεδεμένοι Λογαριασμοί"
+msgstr "Verbonden accounts"
 
 #: main/templates/profile.html:27 main/templates/user/user_update.html:38
 msgid "Avatar"
-msgstr "Άβαταρ"
+msgstr "Avatar"
 
 #: main/templates/profile.html:29 main/templates/user/user_list.html:99
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
-msgstr "Άβαταρ"
+msgstr "Avatar van"
 
 #: main/templates/profile.html:32
 msgid "Change on"
-msgstr "Άλλαξέ το στο"
+msgstr "Verander op"
 
 #: main/templates/profile.html:33
 msgid "Gravatar"
@@ -462,15 +462,15 @@ msgstr "Gravatar"
 
 #: main/templates/profile.html:41
 msgid "Updating Profile.."
-msgstr "Αποθήκευση Προφίλ.."
+msgstr "Profiel bijwerken..."
 
 #: main/templates/profile.html:42
 msgid "Update Profile"
-msgstr "Αποθήκευση Προφίλ"
+msgstr "Profiel bijwerken"
 
 #: main/templates/signin.html:10
 msgid "It only takes 8 seconds"
-msgstr "Παίρνει μόλις 8 δευτερόλεπτα"
+msgstr "Het duurt slechts 8 seconden"
 
 #: main/templates/signin.html:17
 msgid "Google"
@@ -485,7 +485,7 @@ msgstr "Google"
 #: main/templates/signin.html:100 main/templates/signin.html:107
 #, python-format
 msgid "Sign in with %(brand)s"
-msgstr "Συνδεθείτε με %(brand)s"
+msgstr "Aanmelden met %(brand)s"
 
 #: main/templates/signin.html:23
 msgid "Facebook"
@@ -541,162 +541,162 @@ msgstr "Yahoo!"
 
 #: main/templates/signin.html:112
 msgid "Keep me signed in"
-msgstr "Να παραμείνω συνδεδεμένος"
+msgstr "Houd mij aangemeld"
 
 #: main/templates/user/user_list.html:16
 msgid "Limit"
-msgstr "Όριο"
+msgstr "Aantal"
 
 #: main/templates/user/user_list.html:25
 msgid "Admins"
-msgstr "Διαχειριστές"
+msgstr "Beheerders"
 
 #: main/templates/user/user_list.html:42
 msgid "Clear all permissions"
-msgstr "Clear all permissions"
+msgstr "Wis alle machtigingen"
 
 #: main/templates/user/user_list.html:48
 msgid "More"
-msgstr "Περισσότερα"
+msgstr "Meer"
 
 #: main/templates/user/user_list.html:55
 msgid "Are you sure you want to delete {users} selected user(s)?"
-msgstr "Είστε σίγουρος ότι θέλετε να διαγράψετε τους {users} επιλεγμένους χρήστες?"
+msgstr "Weet u zeker dat u de {users} geselecteerde gebruiker(s) wilt verwijderen?"
 
 #: main/templates/user/user_list.html:56
 msgid "{users} user(s) deleted."
-msgstr "{users} χρήστες διαγράφηκαν."
+msgstr "{users} gebruiker(s) verwijderd."
 
 #: main/templates/user/user_list.html:57
 msgid "Something went wrong while deleting. Please try again."
-msgstr "Παρουσιάστηκε σφάλμα κατά τη διαγραφή. Παρακαλώ προσπαθήστε ξανά."
+msgstr "Er ging iets mis tijdens het verwijderen. Probeer het opnieuw."
 
 #: main/templates/user/user_list.html:61
 msgid "Delete Selected"
-msgstr "Διαγραφή επιλεγμένων"
+msgstr "Selectie verwijderen"
 
 #: main/templates/user/user_list.html:67
 msgid "Merge Selected"
-msgstr "Συγχώνευση επιλεγμένων"
+msgstr "Selectie samenvoegen"
 
 #: main/templates/user/user_list.html:76
 msgid "Remove all filters"
-msgstr "Κατάργηση όλων των φίλτρων"
+msgstr "Alle filters verwijderen"
 
 #: main/templates/user/user_list.html:77
 msgid "There are no users matching the filters."
-msgstr "Δεν υπάρχουν χρήστες που ταιριάζουν με τα φίλτρα."
+msgstr "Er zijn geen gebruikers die overeenkomen met de filters."
 
 #: main/templates/user/user_list.html:88 main/templates/user/user_merge.html:24
 msgid "Created"
-msgstr "Δημιουργήθηκε"
+msgstr "Gemaakt"
 
 #: main/templates/user/user_list.html:89
 msgid "Modified"
-msgstr "Τροποποιήθηκε"
+msgstr "Gewijzigd"
 
 #: main/templates/user/user_list.html:91 main/templates/user/user_merge.html:26
 #: main/templates/user/user_update.html:46
 msgid "Accounts"
-msgstr "Λογαριασμοί"
+msgstr "Accounts"
 
 #: main/templates/user/user_list.html:102
 #: main/templates/user/user_merge.html:37
 #: main/templates/user/user_update.html:13
 msgid "You"
-msgstr "Εσύ"
+msgstr "U"
 
 #: main/templates/user/user_list.html:125
 #: main/templates/user/user_merge.html:49
 msgid "admin"
-msgstr "διαχειριστής"
+msgstr "beheerder"
 
 #: main/templates/user/user_list.html:128
 #: main/templates/user/user_merge.html:52
 msgid "inactive"
-msgstr "ανενεργός"
+msgstr "inactief"
 
 #: main/templates/user/user_merge.html:10
 #: main/templates/user/user_update.html:9
 msgid "Back to user list"
-msgstr "Επιστροφή στη λίστα χρηστών"
+msgstr "Terug naar de gebruikers lijst"
 
 #: main/templates/user/user_merge.html:81
 msgid "Merged Accounts"
-msgstr "Συγχώνευση Λογαριασμών"
+msgstr "Samengevoegde accounts"
 
 #: main/templates/user/user_merge.html:86
 #: main/templates/user/user_update.html:51
 msgid "Auth ID"
-msgstr "Auth ID"
+msgstr "Autorisatie ID"
 
 #: main/templates/user/user_merge.html:103
 msgid "Select the user's entity that you want to keep (the other entities will be deactivated)"
-msgstr "Επιλέξτε τον χρήστη που θέλετε να κρατήσετε (οι υπόλοιποι χρήστες θα απενεργοποιηθούν)"
+msgstr "Selecteer de gebruiker die u wilt bewaren (de andere gebruiker gegevens zullen worden gedeactiveerd)"
 
 #: main/templates/user/user_merge.html:104
 msgid "Before merging make sure the entities with references to the user are being taking care of"
-msgstr "Πριν τη συγχώνευση, σιγουρευτείτε ότι οι οντότητες με αναφορές στον χρήστη, έχουν τακτοποιηθεί"
+msgstr "Zorg vóór het samenvoegen ervoor dat gegevens met verwijzingen naar de gebruiker aangepast zijn"
 
 #: main/templates/user/user_merge.html:105
 msgid "For deactivated users the 3rd party associated accounts will be cleared"
-msgstr "Για τους απενεργοποιημένους χρήστες, οι λογαριασμοί από τρίτους, θα εκκαθαρίζονται"
+msgstr "Voor gedeactiveerde gebruikers zullen de 3de partij verbonden accounts worden gewist"
 
 #: main/templates/user/user_merge.html:111
 msgid "Merging.."
-msgstr "Συγχώνευση.."
+msgstr "Samenvoegen..."
 
 #: main/templates/user/user_merge.html:112
 msgid "Merge"
-msgstr "Συγχώνευση"
+msgstr "Samenvoegen"
 
 #: main/templates/user/user_update.html:69
 msgid "Updating.."
-msgstr "Αποθήκευση.."
+msgstr "Bijwerken..."
 
 #: main/templates/welcome.html:17
 msgid "See all the places that you've visited on a map like a vomit!"
-msgstr "Δές όλα τα μέρη που επισκέφτηκες στον χάρτη σαν εμετός!"
+msgstr "See all the places that you've visited on a map like a vomit!"
 
 #: main/user.py:37 main/templates/bit/user_menu.html:13
 msgid "User List"
-msgstr "Λίστα Χρηστών"
+msgstr "Gebruikers lijst"
 
 #: main/user.py:49 main/user.py:162 main/templates/profile.html:17
 #: main/templates/user/user_list.html:85 main/templates/user/user_merge.html:22
 msgid "Username"
-msgstr "Όνομα Χρήστη"
+msgstr "Gebruikersnaam"
 
 #: main/user.py:63
 msgid "Admin"
-msgstr "Διαχειριστής"
+msgstr "Beheerder"
 
 #: main/user.py:64 main/templates/user/user_list.html:31
 msgid "Active"
-msgstr "Ενεργός"
+msgstr "Actief"
 
 #: main/user.py:65 main/templates/user/user_list.html:90
 #: main/templates/user/user_merge.html:25
 msgid "Permissions"
-msgstr "Δικαιώματα"
+msgstr "Machtigingen"
 
 #: main/user.py:95
 msgid "This username is invalid."
-msgstr "Αυτό το όνομα χρήστη δεν είναι έγκυρο."
+msgstr "Deze gebruikersnaam is ongeldig."
 
 #: main/user.py:97
 msgid "This username is already taken."
-msgstr "Το όνομα χρήστη χρησιμοποιείται ήδη."
+msgstr "Deze gebruikersnaam is al in gebruik."
 
 #: main/user.py:163
 msgid "Name (merged)"
-msgstr "Όνομα (συγχωνευμένο)"
+msgstr "Naam (samengevoegd)"
 
 #: main/user.py:166
 msgid "Email (merged)"
-msgstr "Email (συγχωνευμένο)"
+msgstr "E-mail (samengevoegd)"
 
 #: main/user.py:226
 msgid "Merge Users"
-msgstr "Συγχώνευση Χρηστών"
+msgstr "Gebruikers samenvoegen"
 

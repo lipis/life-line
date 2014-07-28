@@ -51,7 +51,7 @@ msgstr ""
 msgid "Timestamp"
 msgstr ""
 
-#: main/event.py:36 main/templates/event/event_list.html:24
+#: main/event.py:36 main/templates/event/event_list.html:21
 msgid "Notes"
 msgstr ""
 
@@ -79,19 +79,19 @@ msgstr ""
 msgid "Time"
 msgstr ""
 
-#: main/event.py:88
+#: main/event.py:74
 msgid "You should at least enter a year"
 msgstr ""
 
-#: main/event.py:108
+#: main/event.py:94
 msgid "Enter a valid date"
 msgstr ""
 
-#: main/event.py:164 main/templates/bit/header.html:15
+#: main/event.py:144 main/templates/bit/header.html:15
 msgid "Add Place"
 msgstr ""
 
-#: main/event.py:197 main/templates/bit/header.html:18
+#: main/event.py:173 main/templates/bit/header.html:18
 msgid "My Places"
 msgstr ""
 
@@ -292,62 +292,62 @@ msgstr ""
 msgid "Invalid value, can't be any of: %(values)s."
 msgstr ""
 
-#: main/main.py:67 main/user.py:53 main/templates/user/user_list.html:84
+#: main/main.py:87 main/user.py:53 main/templates/user/user_list.html:84
 #: main/templates/user/user_merge.html:21
 msgid "Name"
 msgstr ""
 
-#: main/main.py:70 main/user.py:56 main/templates/user/user_list.html:86
+#: main/main.py:90 main/user.py:56 main/templates/user/user_list.html:86
 #: main/templates/user/user_merge.html:23
 msgid "Email"
 msgstr ""
 
-#: main/main.py:74 main/user.py:60 main/templates/user/user_list.html:87
+#: main/main.py:94 main/user.py:60 main/templates/user/user_list.html:87
 msgid "Language"
 msgstr ""
 
-#: main/main.py:77 main/templates/event/event_update.html:50
+#: main/main.py:97 main/templates/event/event_update.html:50
 msgid "Home"
 msgstr ""
 
-#: main/main.py:113
+#: main/main.py:133
 msgid "Subject"
 msgstr ""
 
-#: main/main.py:116
+#: main/main.py:136
 msgid "Message"
 msgstr ""
 
-#: main/main.py:119
+#: main/main.py:139
 msgid "Your email (optional)"
 msgstr ""
 
-#: main/main.py:135
+#: main/main.py:155
 msgid "Thank you for your feedback!"
 msgstr ""
 
-#: main/main.py:140 main/templates/bit/contact_menu.html:3
+#: main/main.py:160 main/templates/bit/contact_menu.html:3
 msgid "Feedback"
 msgstr ""
 
 #: main/templates/admin/event_list.html:12
-#: main/templates/event/event_list.html:20
+#: main/templates/event/event_list.html:17
 #: main/templates/event/event_update.html:22
 msgid "Datetime"
 msgstr ""
 
 #: main/templates/admin/event_list.html:13
-#: main/templates/event/event_list.html:21
+#: main/templates/event/event_list.html:18
 msgid "Place / City"
 msgstr ""
 
 #: main/templates/admin/event_list.html:14
-#: main/templates/event/event_list.html:22
+#: main/templates/event/event_list.html:19
 msgid "Country"
 msgstr ""
 
 #: main/templates/admin/event_list.html:15
-#: main/templates/event/event_list.html:23
+#: main/templates/event/event_list.html:20
 msgid "Name / Address"
 msgstr ""
 
@@ -393,7 +393,7 @@ msgid ""
 "unavailable!"
 msgstr ""
 
-#: main/templates/event/event_list.html:57
+#: main/templates/event/event_list.html:54
 msgid "Layover"
 msgstr ""
 
