@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-07-28 11:14+0200\n"
+"POT-Creation-Date: 2014-07-28 19:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: nl <LL@li.org>\n"
@@ -47,73 +47,69 @@ msgstr "Hallo %(name)s, welkom bij %(brand)s."
 msgid "Sorry, but you could not sign in."
 msgstr "Sorry, maar u kon niet aangemeld worden."
 
-#: main/event.py:28
-msgid "Search for a place"
-msgstr "Search for a place"
-
-#: main/event.py:28
-msgid "Paralia Armenistis, Chalkidiki"
-msgstr "Paralia Armenistis, Chalkidiki"
-
 #: main/event.py:29
-msgid "Name / Address (Automatic)"
-msgstr "Name / Address (Automatic)"
+msgid "Search for a place"
+msgstr "Zoek een plaats"
 
 #: main/event.py:30
-msgid "Place / City (Automatic)"
-msgstr "Place / City (Automatic)"
+msgid "Name / Address (Automatic)"
+msgstr "Naam / adres (automatisch)"
 
 #: main/event.py:31
+msgid "Place / City (Automatic)"
+msgstr "Plaats / stad (automatisch)"
+
+#: main/event.py:32
 msgid "Country (Automatic)"
-msgstr "Country (Automatic)"
+msgstr "Land (automatisch)"
 
-#: main/event.py:35
+#: main/event.py:36
 msgid "Timestamp"
-msgstr "Timestamp"
+msgstr "Tijdstip"
 
-#: main/event.py:36 main/templates/event/event_list.html:21
+#: main/event.py:37 main/templates/event/event_list.html:21
 msgid "Notes"
-msgstr "Notes"
-
-#: main/event.py:37
-msgid "This place is a layover"
-msgstr "This place is a layover"
+msgstr "Notities"
 
 #: main/event.py:38
-msgid "Add More"
-msgstr "Add More"
+msgid "This place is a layover"
+msgstr "Deze plaats is een overstap"
 
-#: main/event.py:40
-msgid "Year"
-msgstr "Year"
+#: main/event.py:39
+msgid "Add More"
+msgstr "Meer toevoegen"
 
 #: main/event.py:41
-msgid "Month"
-msgstr "Month"
+msgid "Year"
+msgstr "Jaar"
 
 #: main/event.py:42
-msgid "Day"
-msgstr "Day"
+msgid "Month"
+msgstr "Maand"
 
 #: main/event.py:43
+msgid "Day"
+msgstr "Dag"
+
+#: main/event.py:44
 msgid "Time"
-msgstr "Actief"
+msgstr "Tijd"
 
-#: main/event.py:74
+#: main/event.py:75
 msgid "You should at least enter a year"
-msgstr "You should at least enter a year"
+msgstr "U moet ten minste een jaar invoeren"
 
-#: main/event.py:94
+#: main/event.py:95
 msgid "Enter a valid date"
 msgstr "Ongeldige datum"
 
-#: main/event.py:144 main/templates/bit/header.html:15
+#: main/event.py:145 main/templates/bit/header.html:15
 msgid "Add Place"
-msgstr "Add Place"
+msgstr "Plaats toevoegen"
 
-#: main/event.py:173 main/templates/bit/header.html:18
+#: main/event.py:172 main/templates/bit/header.html:18
 msgid "My Places"
-msgstr "My Places"
+msgstr "Mijn plaatsen"
 
 #: main/lib/flask_wtf/recaptcha/validators.py:34
 #: main/lib/wtforms/validators.py:203 main/lib/wtforms/validators.py:240
@@ -330,36 +326,39 @@ msgstr "Taal"
 msgid "Home"
 msgstr "Home"
 
-#: main/main.py:133
+#: main/main.py:100
+msgid "Public. Used as sample data on homepage for anonymous users."
+msgstr "Public. Used as sample data on homepage for anonymous users."
+
+#: main/main.py:134
 msgid "Subject"
 msgstr "Onderwerp"
 
-#: main/main.py:136
+#: main/main.py:137
 msgid "Message"
 msgstr "Bericht"
 
-#: main/main.py:139
+#: main/main.py:140
 msgid "Your email (optional)"
 msgstr "Uw e-mail (optioneel)"
 
-#: main/main.py:155
+#: main/main.py:156
 msgid "Thank you for your feedback!"
 msgstr "Bedankt voor uw feedback!"
 
-#: main/main.py:160 main/templates/bit/contact_menu.html:3
+#: main/main.py:161 main/templates/bit/contact_menu.html:3
 msgid "Feedback"
 msgstr "Feedback"
 
 #: main/templates/admin/event_list.html:12
 #: main/templates/event/event_list.html:17
-#: main/templates/event/event_update.html:22
 msgid "Datetime"
-msgstr "Datetime"
+msgstr "Datum / tijd"
 
 #: main/templates/admin/event_list.html:13
 #: main/templates/event/event_list.html:18
 msgid "Place / City"
-msgstr "Place / City"
+msgstr "Plaats / stad"
 
 #: main/templates/admin/event_list.html:14
 #: main/templates/event/event_list.html:19
@@ -373,15 +372,20 @@ msgstr "Ongeldig IP-adres."
 
 #: main/templates/admin/event_list.html:16
 msgid "User"
-msgstr "User"
+msgstr "Gebruiker"
 
 #: main/templates/bit/footer.html:5
 msgid "Version"
 msgstr "Versie"
 
-#: main/templates/bit/footer.html:9
+#: main/templates/bit/footer.html:8
 msgid "View in JSON"
 msgstr "Bekijk in JSON"
+
+#: main/templates/bit/footer.html:14
+#, python-format
+msgid "View on %(brand)s"
+msgstr "View on %(brand)s"
 
 #: main/templates/bit/header.html:5
 msgid "Toggle navigation"
@@ -393,7 +397,7 @@ msgstr "Profiel instellingen"
 
 #: main/templates/bit/user_menu.html:14
 msgid "Event List"
-msgstr "Event List"
+msgstr "Lijst met gebeurtenissen"
 
 #: main/templates/bit/user_menu.html:17
 msgid "Sign out"
@@ -413,19 +417,23 @@ msgstr "Misschien is het onze fout... misschien die van u... maar in ieder geval
 
 #: main/templates/event/event_list.html:54
 msgid "Layover"
-msgstr "Layover"
+msgstr "Overstap"
 
 #: main/templates/event/event_update.html:18
 msgid "Today"
-msgstr "Today"
+msgstr "Vandaag"
 
 #: main/templates/event/event_update.html:19
 msgid "Now"
-msgstr "Now"
+msgstr "Nu"
+
+#: main/templates/event/event_update.html:22
+msgid "Date / Time"
+msgstr "Datum / Tijd"
 
 #: main/templates/event/event_update.html:52
 msgid "Current Location"
-msgstr "Current Location"
+msgstr "Huidige locatie"
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
@@ -436,11 +444,11 @@ msgstr "Bijwerken"
 #: main/templates/event/event_update.html:77
 #: main/templates/event/event_update.html:97
 msgid "Add"
-msgstr "Add"
+msgstr "Toevoegen"
 
 #: main/templates/event/event_update.html:85
 msgid "Draggable map to update the address"
-msgstr "Draggable map to update the address"
+msgstr "Verplaatsbare kaart om het adres bij te werken"
 
 #: main/templates/feedback.html:6
 msgid "Any questions or suggestions are welcome"
@@ -458,33 +466,49 @@ msgstr "Feedback verzenden"
 msgid "Next Page"
 msgstr "Volgende pagina"
 
+#: main/templates/map/map_toolbar.html:3
+msgid "Chart Type"
+msgstr "Chart Type"
+
+#: main/templates/map/map_toolbar.html:5
+msgid "Countries"
+msgstr "Countries"
+
+#: main/templates/map/map_toolbar.html:8
+msgid "Cities"
+msgstr "Cities"
+
+#: main/templates/map/map_toolbar.html:11
+msgid "Line"
+msgstr "Line"
+
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
 msgstr "Verbonden accounts"
 
-#: main/templates/profile.html:27 main/templates/user/user_update.html:38
+#: main/templates/profile.html:28 main/templates/user/user_update.html:38
 msgid "Avatar"
 msgstr "Avatar"
 
-#: main/templates/profile.html:29 main/templates/user/user_list.html:99
+#: main/templates/profile.html:30 main/templates/user/user_list.html:99
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
 msgstr "Avatar van"
 
-#: main/templates/profile.html:32
+#: main/templates/profile.html:33
 msgid "Change on"
 msgstr "Verander op"
 
-#: main/templates/profile.html:33
+#: main/templates/profile.html:34
 msgid "Gravatar"
 msgstr "Gravatar"
 
-#: main/templates/profile.html:41
+#: main/templates/profile.html:42
 msgid "Updating Profile.."
 msgstr "Profiel bijwerken..."
 
-#: main/templates/profile.html:42
+#: main/templates/profile.html:43
 msgid "Update Profile"
 msgstr "Profiel bijwerken"
 
@@ -515,7 +539,7 @@ msgstr "Facebook"
 msgid "Twitter"
 msgstr "Twitter"
 
-#: main/templates/signin.html:37
+#: main/templates/signin.html:37 main/templates/bit/footer.html:14
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -674,9 +698,9 @@ msgstr "Samenvoegen"
 msgid "Updating.."
 msgstr "Bijwerken..."
 
-#: main/templates/welcome.html:17
+#: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
-msgstr "See all the places that you've visited on a map like a vomit!"
+msgstr "Zie alle plaatsen die u hebt bezocht op de kaart als een braaksel!"
 
 #: main/user.py:37 main/templates/bit/user_menu.html:13
 msgid "User List"
@@ -719,4 +743,7 @@ msgstr "E-mail (samengevoegd)"
 #: main/user.py:226
 msgid "Merge Users"
 msgstr "Gebruikers samenvoegen"
+
+#~ msgid "Paralia Armenistis, Chalkidiki"
+#~ msgstr "Paralia Armenistis, Chalkidiki"
 

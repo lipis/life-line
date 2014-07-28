@@ -27,71 +27,67 @@ msgstr ""
 msgid "Sorry, but you could not sign in."
 msgstr ""
 
-#: main/event.py:28
+#: main/event.py:29
 msgid "Search for a place"
 msgstr ""
 
-#: main/event.py:28
-msgid "Paralia Armenistis, Chalkidiki"
-msgstr ""
-
-#: main/event.py:29
+#: main/event.py:30
 msgid "Name / Address (Automatic)"
 msgstr ""
 
-#: main/event.py:30
+#: main/event.py:31
 msgid "Place / City (Automatic)"
 msgstr ""
 
-#: main/event.py:31
+#: main/event.py:32
 msgid "Country (Automatic)"
 msgstr ""
 
-#: main/event.py:35
+#: main/event.py:36
 msgid "Timestamp"
 msgstr ""
 
-#: main/event.py:36 main/templates/event/event_list.html:21
+#: main/event.py:37 main/templates/event/event_list.html:21
 msgid "Notes"
 msgstr ""
 
-#: main/event.py:37
+#: main/event.py:38
 msgid "This place is a layover"
 msgstr ""
 
-#: main/event.py:38
+#: main/event.py:39
 msgid "Add More"
 msgstr ""
 
-#: main/event.py:40
+#: main/event.py:41
 msgid "Year"
 msgstr ""
 
-#: main/event.py:41
+#: main/event.py:42
 msgid "Month"
 msgstr ""
 
-#: main/event.py:42
+#: main/event.py:43
 msgid "Day"
 msgstr ""
 
-#: main/event.py:43
+#: main/event.py:44
 msgid "Time"
 msgstr ""
 
-#: main/event.py:74
+#: main/event.py:75
 msgid "You should at least enter a year"
 msgstr ""
 
-#: main/event.py:94
+#: main/event.py:95
 msgid "Enter a valid date"
 msgstr ""
 
-#: main/event.py:144 main/templates/bit/header.html:15
+#: main/event.py:145 main/templates/bit/header.html:15
 msgid "Add Place"
 msgstr ""
 
-#: main/event.py:173 main/templates/bit/header.html:18
+#: main/event.py:172 main/templates/bit/header.html:18
 msgid "My Places"
 msgstr ""
 
@@ -310,29 +306,32 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: main/main.py:133
+#: main/main.py:100
+msgid "Public. Used as sample data on homepage for anonymous users."
+msgstr ""
+
+#: main/main.py:134
 msgid "Subject"
 msgstr ""
 
-#: main/main.py:136
+#: main/main.py:137
 msgid "Message"
 msgstr ""
 
-#: main/main.py:139
+#: main/main.py:140
 msgid "Your email (optional)"
 msgstr ""
 
-#: main/main.py:155
+#: main/main.py:156
 msgid "Thank you for your feedback!"
 msgstr ""
 
-#: main/main.py:160 main/templates/bit/contact_menu.html:3
+#: main/main.py:161 main/templates/bit/contact_menu.html:3
 msgid "Feedback"
 msgstr ""
 
 #: main/templates/admin/event_list.html:12
 #: main/templates/event/event_list.html:17
-#: main/templates/event/event_update.html:22
 msgid "Datetime"
 msgstr ""
 
@@ -359,8 +358,13 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: main/templates/bit/footer.html:9
+#: main/templates/bit/footer.html:8
 msgid "View in JSON"
+msgstr ""
+
+#: main/templates/bit/footer.html:14
+#, python-format
+msgid "View on %(brand)s"
 msgstr ""
 
 #: main/templates/bit/header.html:5
@@ -405,6 +409,10 @@ msgstr ""
 msgid "Now"
 msgstr ""
 
+#: main/templates/event/event_update.html:22
+msgid "Date / Time"
+msgstr ""
+
 #: main/templates/event/event_update.html:52
 msgid "Current Location"
 msgstr ""
@@ -440,33 +448,49 @@ msgstr ""
 msgid "Next Page"
 msgstr ""
 
+#: main/templates/map/map_toolbar.html:3
+msgid "Chart Type"
+msgstr ""
+
+#: main/templates/map/map_toolbar.html:5
+msgid "Countries"
+msgstr ""
+
+#: main/templates/map/map_toolbar.html:8
+msgid "Cities"
+msgstr ""
+
+#: main/templates/map/map_toolbar.html:11
+msgid "Line"
+msgstr ""
+
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
 msgstr ""
 
-#: main/templates/profile.html:27 main/templates/user/user_update.html:38
+#: main/templates/profile.html:28 main/templates/user/user_update.html:38
 msgid "Avatar"
 msgstr ""
 
-#: main/templates/profile.html:29 main/templates/user/user_list.html:99
+#: main/templates/profile.html:30 main/templates/user/user_list.html:99
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
 msgstr ""
 
-#: main/templates/profile.html:32
+#: main/templates/profile.html:33
 msgid "Change on"
 msgstr ""
 
-#: main/templates/profile.html:33
+#: main/templates/profile.html:34
 msgid "Gravatar"
 msgstr ""
 
-#: main/templates/profile.html:41
+#: main/templates/profile.html:42
 msgid "Updating Profile.."
 msgstr ""
 
-#: main/templates/profile.html:42
+#: main/templates/profile.html:43
 msgid "Update Profile"
 msgstr ""
 
@@ -497,7 +521,7 @@ msgstr ""
 msgid "Twitter"
 msgstr ""
 
-#: main/templates/signin.html:37
+#: main/templates/signin.html:37 main/templates/bit/footer.html:14
 msgid "GitHub"
 msgstr ""
 
@@ -660,7 +684,7 @@ msgstr ""
 msgid "Updating.."
 msgstr ""
 
-#: main/templates/welcome.html:17
+#: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
 msgstr ""
 

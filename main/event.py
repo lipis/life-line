@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from google.appengine.ext import ndb
+from datetime import datetime
+import random
 
 from flask.ext import wtf
 from flask.ext.babel import lazy_gettext as _
+from google.appengine.ext import ndb
 import flask
 
-from datetime import datetime
 
 import auth
 import i18n
@@ -25,7 +26,7 @@ HOURS[0] = ('0', '----')
 
 
 class EventUpdateForm(i18n.Form):
-  search = wtf.TextField(_('Search for a place'), [wtf.validators.optional()], description=_('Paralia Armenistis, Chalkidiki'))
+  search = wtf.TextField(_('Search for a place'), [wtf.validators.optional()])
   address = wtf.TextField(_('Name / Address (Automatic)'), [wtf.validators.required()])
   place = wtf.TextField(_('Place / City (Automatic)'), [wtf.validators.required()])
   country = wtf.TextField(_('Country (Automatic)'), [wtf.validators.required()])
@@ -148,9 +149,7 @@ def event_create(event_id=0):
     )
 
 
-@app.route('/_s/user/<username>/event/', endpoint='event_list_service')
 @app.route('/user/<username>/event/')
-@app.route('/_s/place/')
 @app.route('/place/')
 @auth.login_required
 def event_list(username=None):
@@ -176,3 +175,25 @@ def event_list(username=None):
       has_json=True,
       user_db=user_db,
     )
+
+
+@app.route('/_s/user/<username>/event/')
+@app.route('/_s/place/')
+def event_list_service(username=None):
+  if auth.is_logged_in():
+    user_db = auth.current_user_db()
+  else:
+    user_dbs, user_cursor = model.User.get_dbs(is_public=True, limit=10)
+    user_db = random.choice(user_dbs) if user_dbs else None
+
+  if username and user_db.username != username:
+    if not user_db.admin:
+      return flask.abort(404)
+    user_db = model.User.get_by('username', username)
+
+  if not user_db:
+    return flask.abort(404)
+
+  event_dbs, next_cursor = user_db.get_event_dbs()
+
+  return util.jsonify_model_dbs(event_dbs, next_cursor)

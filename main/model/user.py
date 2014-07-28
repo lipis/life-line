@@ -20,6 +20,7 @@ class User(model.Base):
   admin = ndb.BooleanProperty(default=False)
   permissions = ndb.StringProperty(repeated=True)
   home = ndb.StringProperty(default='')
+  is_public = ndb.BooleanProperty(default=False)
 
   def has_permission(self, perm):
     return self.admin or perm in self.permissions

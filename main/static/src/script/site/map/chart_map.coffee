@@ -15,6 +15,10 @@ class window.ChartMap
     @service_url = $(@host).data('service-url') or '/_s/place/'
     @load()
 
+    # draw empty map for non lines..
+    if @type != 'line'
+      @draw()
+
     @init_toolbar()
 
   init_toolbar: () =>
@@ -68,8 +72,11 @@ class window.ChartMap
 
 
   draw_line: () =>
+    if @event_dbs.length == 0
+      return
     @type = 'line'
     options =
+      scrollwheel: false
       zoom: 2
       mapTypeId: google.maps.MapTypeId.TERRAIN
 

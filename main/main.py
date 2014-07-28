@@ -97,6 +97,7 @@ class ProfileUpdateForm(i18n.Form):
   home = wtf.StringField(_('Home'),
       [wtf.validators.optional()], filters=[util.strip_filter],
     )
+  is_public = wtf.BooleanField(_('Public. Used as sample data on homepage for anonymous users.'), [wtf.validators.optional()])
 
 
 @app.route('/_s/profile/', endpoint='profile_service')

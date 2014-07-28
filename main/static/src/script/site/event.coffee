@@ -4,6 +4,7 @@ window.init_event_list = () ->
   if location.hash.length > 2
     $(".#{location.hash.substr(1)}").addClass('info')
 
+
 window.init_event_update = () ->
   init_places_click()
   init_dates_click()
@@ -24,6 +25,7 @@ window.init_event_update = () ->
 
   $('#layover').click () ->
     window.layover_clicked = true
+
 
 update_datetime = () ->
   year_val = parseInt $('#year').val() or 0
@@ -97,6 +99,7 @@ window.search_with_timer = (timeout=500) ->
   search_timeout = setTimeout ->
       search_map $('#search').val(), true
     , timeout
+
 
 window.init_search_input = ->
   window.geocoder_map = new GeocoderMap $('#lat').val(), $('#lng').val()

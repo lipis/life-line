@@ -6,11 +6,12 @@ class window.GeocoderMap
     @geocoder = new google.maps.Geocoder()
     latlng = new google.maps.LatLng(lat, lng)
     options =
+      scrollwheel: false
       zoom: 9
       center: latlng
       mapTypeId: google.maps.MapTypeId.ROADMAP
 
-    @gmap = new google.maps.Map($('#event-map')[0], options)
+    @gmap = new google.maps.Map $('#event-map')[0], options
 
     @marker = new google.maps.Marker
       map: @gmap
