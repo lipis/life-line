@@ -5,6 +5,7 @@ from __future__ import absolute_import
 from google.appengine.ext import ndb
 
 import model
+import util
 
 
 class Event(model.Base):
@@ -32,3 +33,11 @@ class Event(model.Base):
       'accuracy',
       'notes',
     })
+
+  @classmethod
+  def get_dbs(cls, **kwargs):
+    return super(Event, cls).get_dbs(
+        country_code=util.param('country_code'),
+        **kwargs
+      )
+

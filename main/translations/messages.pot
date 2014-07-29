@@ -405,7 +405,7 @@ msgstr ""
 msgid "Add couple of new places to see them on a map."
 msgstr ""
 
-#: main/templates/event/event_list.html:63
+#: main/templates/event/event_list.html:66
 msgid "Layover"
 msgstr ""
 

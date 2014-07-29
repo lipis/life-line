@@ -9,7 +9,7 @@
 
   # if event_dbs
     <div class="map-container">
-      <div id="map" class="map" data-max-height="640" data-service-url="{{url_for('event_list_service', username=user_db.username)}}"></div>
+      <div id="map" class="map" data-max-height="640" data-service-url="/_s/{{request.url.replace(request.host_url, '')}}"></div>
     </div>
     # include 'map/map_toolbar.html'
     <hr>
@@ -56,7 +56,10 @@
             </a>
           </td>
           <td>{{event_db.place}}</td>
-          <td><i class="flag-icon flag-icon-{{event_db.country_code.lower()}}"></i> {{event_db.country}}</td>
+          <td>
+            <i class="flag-icon flag-icon-{{event_db.country_code.lower()}}"></i>
+            {{event_db.country}}
+          </td>
           <td>{{event_db.address}}</td>
           <td>
             # if event_db.layover
