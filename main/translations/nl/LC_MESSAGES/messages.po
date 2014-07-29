@@ -403,7 +403,7 @@ msgstr "Niets interessants hier."
 msgid "Add couple of new places to see them on a map."
 msgstr "Voeg een aantal nieuwe plaatsen toe om ze te zien op een kaart."
 
-#: main/templates/event/event_list.html:63
+#: main/templates/event/event_list.html:66
 msgid "Layover"
 msgstr "Overstap"
 
@@ -686,7 +686,7 @@ msgstr "Samenvoegen"
 msgid "Updating.."
 msgstr "Bijwerken..."
 
-#: main/templates/welcome.html:17
+#: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
 msgstr "Zie alle plaatsen die u hebt bezocht op de kaart als een braaksel!"
 

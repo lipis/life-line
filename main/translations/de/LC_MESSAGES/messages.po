@@ -403,7 +403,7 @@ msgstr "Nothing interesting here."
 msgid "Add couple of new places to see them on a map."
 msgstr "Add couple of new places to see them on a map."
 
-#: main/templates/event/event_list.html:63
+#: main/templates/event/event_list.html:66
 msgid "Layover"
 msgstr "Zwischenstopp"
 
@@ -686,7 +686,7 @@ msgstr "Zusammenführen"
 msgid "Updating.."
 msgstr "Wird aktualisiert..."
 
-#: main/templates/welcome.html:17
+#: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
 msgstr "Meine Aufenthaltsorte auf eine Karte geklatscht!"
 
