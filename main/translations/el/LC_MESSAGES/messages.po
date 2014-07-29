@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-07-28 19:20+0200\n"
+"POT-Creation-Date: 2014-07-29 19:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: el <LL@li.org>\n"
@@ -47,67 +47,67 @@ msgstr "Γειά σας %(name)s, καλωσήρθατε στο %(brand)s."
 msgid "Sorry, but you could not sign in."
 msgstr "Λυπούμαστε, αλλά δεν μπορείτε να εισέλθετε."
 
-#: main/event.py:29
+#: main/event.py:28
 msgid "Search for a place"
 msgstr "Ψάξε για μέρος"
 
-#: main/event.py:30
+#: main/event.py:29
 msgid "Name / Address (Automatic)"
 msgstr "Όνομα / Διεύθυνση (Αυτόματα)"
 
-#: main/event.py:31
+#: main/event.py:30
 msgid "Place / City (Automatic)"
 msgstr "Μέρος / Πόλη (Αυτόματα)"
 
-#: main/event.py:32
+#: main/event.py:31
 msgid "Country (Automatic)"
 msgstr "Χώρα (Αυτόματα)"
 
-#: main/event.py:36
+#: main/event.py:35
 msgid "Timestamp"
 msgstr "Ημερομηνία/ώρα"
 
-#: main/event.py:37 main/templates/event/event_list.html:21
+#: main/event.py:36 main/templates/event/event_list.html:30
 msgid "Notes"
 msgstr "Σημειώσεις"
 
-#: main/event.py:38
+#: main/event.py:37
 msgid "This place is a layover"
 msgstr "Αυτό το μέρος είναι μετάβαση"
 
-#: main/event.py:39
+#: main/event.py:38
 msgid "Add More"
 msgstr "Πρόσθεσε κι άλλα"
 
-#: main/event.py:41
+#: main/event.py:40
 msgid "Year"
 msgstr "Χρονιά"
 
-#: main/event.py:42
+#: main/event.py:41
 msgid "Month"
 msgstr "Μήνας"
 
-#: main/event.py:43
+#: main/event.py:42
 msgid "Day"
 msgstr "Μέρα"
 
-#: main/event.py:44
+#: main/event.py:43
 msgid "Time"
 msgstr "Ώρα"
 
-#: main/event.py:75
+#: main/event.py:74
 msgid "You should at least enter a year"
 msgstr "Πρέπει τουλάχιστον να συμπληρώσεις τη χρονιά"
 
-#: main/event.py:95
+#: main/event.py:94
 msgid "Enter a valid date"
 msgstr "Βάλε μια έγκυρη ημερομηνία"
 
-#: main/event.py:145 main/templates/bit/header.html:15
+#: main/event.py:159 main/templates/bit/header.html:15
 msgid "Add Place"
 msgstr "Νέο Μέρος"
 
-#: main/event.py:172 main/templates/bit/header.html:18
+#: main/event.py:186 main/templates/bit/header.html:18
 msgid "My Places"
 msgstr "Τα Μέρη μου"
 
@@ -351,22 +351,22 @@ msgid "Feedback"
 msgstr "Επικοινωνία"
 
 #: main/templates/admin/event_list.html:12
-#: main/templates/event/event_list.html:17
+#: main/templates/event/event_list.html:26
 msgid "Datetime"
 msgstr "Ημερομηνία"
 
 #: main/templates/admin/event_list.html:13
-#: main/templates/event/event_list.html:18
+#: main/templates/event/event_list.html:27
 msgid "Place / City"
 msgstr "Μέρος / Πόλη"
 
 #: main/templates/admin/event_list.html:14
-#: main/templates/event/event_list.html:19
+#: main/templates/event/event_list.html:28
 msgid "Country"
 msgstr "Χώρα"
 
 #: main/templates/admin/event_list.html:15
-#: main/templates/event/event_list.html:20
+#: main/templates/event/event_list.html:29
 msgid "Name / Address"
 msgstr "Όνομα / Διεύθυνση"
 
@@ -415,7 +415,15 @@ msgstr "Ωχ όχι"
 msgid "Maybe it's our fault.. maybe it's yours.. but either case, this page is unavailable!"
 msgstr "Ίσως είναι δικό μας λάθος.. ίσως είναι δικό σας.. αλλά σε κάθε περίπτωση, αυτή η σελίδα δεν είναι διαθέσιμη!"
 
-#: main/templates/event/event_list.html:54
+#: main/templates/event/event_list.html:18
+msgid "Nothing interesting here."
+msgstr ""
+
+#: main/templates/event/event_list.html:19
+msgid "Add couple of new places to see them on a map."
+msgstr ""
+
+#: main/templates/event/event_list.html:63
 msgid "Layover"
 msgstr "Μετάβαση"
 
@@ -486,29 +494,29 @@ msgstr "Γραμμή"
 msgid "Connected Accounts"
 msgstr "Συνδεδεμένοι Λογαριασμοί"
 
-#: main/templates/profile.html:28 main/templates/user/user_update.html:38
+#: main/templates/profile.html:29 main/templates/user/user_update.html:38
 msgid "Avatar"
 msgstr "Άβαταρ"
 
-#: main/templates/profile.html:30 main/templates/user/user_list.html:99
+#: main/templates/profile.html:31 main/templates/user/user_list.html:99
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
 msgstr "Άβαταρ"
 
-#: main/templates/profile.html:33
+#: main/templates/profile.html:34
 msgid "Change on"
 msgstr "Άλλαξέ το στο"
 
-#: main/templates/profile.html:34
+#: main/templates/profile.html:35
 msgid "Gravatar"
 msgstr "Gravatar"
 
-#: main/templates/profile.html:42
+#: main/templates/profile.html:43
 msgid "Updating Profile.."
 msgstr "Αποθήκευση Προφίλ.."
 
-#: main/templates/profile.html:43
+#: main/templates/profile.html:44
 msgid "Update Profile"
 msgstr "Αποθήκευση Προφίλ"
 
@@ -743,7 +751,4 @@ msgstr "Email (συγχωνευμένο)"
 #: main/user.py:226
 msgid "Merge Users"
 msgstr "Συγχώνευση Χρηστών"
-
-#~ msgid "Paralia Armenistis, Chalkidiki"
-#~ msgstr "Παραλία Αρμενιστής, Χαλκιδική"
 

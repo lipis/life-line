@@ -27,67 +27,67 @@ msgstr ""
 msgid "Sorry, but you could not sign in."
 msgstr ""
 
-#: main/event.py:29
+#: main/event.py:28
 msgid "Search for a place"
 msgstr ""
 
-#: main/event.py:30
+#: main/event.py:29
 msgid "Name / Address (Automatic)"
 msgstr ""
 
-#: main/event.py:31
+#: main/event.py:30
 msgid "Place / City (Automatic)"
 msgstr ""
 
-#: main/event.py:32
+#: main/event.py:31
 msgid "Country (Automatic)"
 msgstr ""
 
-#: main/event.py:36
+#: main/event.py:35
 msgid "Timestamp"
 msgstr ""
 
-#: main/event.py:37 main/templates/event/event_list.html:21
+#: main/event.py:36 main/templates/event/event_list.html:30
 msgid "Notes"
 msgstr ""
 
-#: main/event.py:38
+#: main/event.py:37
 msgid "This place is a layover"
 msgstr ""
 
-#: main/event.py:39
+#: main/event.py:38
 msgid "Add More"
 msgstr ""
 
-#: main/event.py:41
+#: main/event.py:40
 msgid "Year"
 msgstr ""
 
-#: main/event.py:42
+#: main/event.py:41
 msgid "Month"
 msgstr ""
 
-#: main/event.py:43
+#: main/event.py:42
 msgid "Day"
 msgstr ""
 
-#: main/event.py:44
+#: main/event.py:43
 msgid "Time"
 msgstr ""
 
-#: main/event.py:75
+#: main/event.py:74
 msgid "You should at least enter a year"
 msgstr ""
 
-#: main/event.py:95
+#: main/event.py:94
 msgid "Enter a valid date"
 msgstr ""
 
-#: main/event.py:145 main/templates/bit/header.html:15
+#: main/event.py:159 main/templates/bit/header.html:15
 msgid "Add Place"
 msgstr ""
 
-#: main/event.py:172 main/templates/bit/header.html:18
+#: main/event.py:186 main/templates/bit/header.html:18
 msgid "My Places"
 msgstr ""
 
@@ -331,22 +331,22 @@ msgid "Feedback"
 msgstr ""
 
 #: main/templates/admin/event_list.html:12
-#: main/templates/event/event_list.html:17
+#: main/templates/event/event_list.html:26
 msgid "Datetime"
 msgstr ""
 
 #: main/templates/admin/event_list.html:13
-#: main/templates/event/event_list.html:18
+#: main/templates/event/event_list.html:27
 msgid "Place / City"
 msgstr ""
 
 #: main/templates/admin/event_list.html:14
-#: main/templates/event/event_list.html:19
+#: main/templates/event/event_list.html:28
 msgid "Country"
 msgstr ""
 
 #: main/templates/admin/event_list.html:15
-#: main/templates/event/event_list.html:20
+#: main/templates/event/event_list.html:29
 msgid "Name / Address"
 msgstr ""
 
@@ -397,7 +397,15 @@ msgid ""
 "unavailable!"
 msgstr ""
 
-#: main/templates/event/event_list.html:54
+#: main/templates/event/event_list.html:18
+msgid "Nothing interesting here."
+msgstr ""
+
+#: main/templates/event/event_list.html:19
+msgid "Add couple of new places to see them on a map."
+msgstr ""
+
+#: main/templates/event/event_list.html:63
 msgid "Layover"
 msgstr ""
 
@@ -468,29 +476,29 @@ msgstr ""
 msgid "Connected Accounts"
 msgstr ""
 
-#: main/templates/profile.html:28 main/templates/user/user_update.html:38
+#: main/templates/profile.html:29 main/templates/user/user_update.html:38
 msgid "Avatar"
 msgstr ""
 
-#: main/templates/profile.html:30 main/templates/user/user_list.html:99
+#: main/templates/profile.html:31 main/templates/user/user_list.html:99
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
 msgstr ""
 
-#: main/templates/profile.html:33
+#: main/templates/profile.html:34
 msgid "Change on"
 msgstr ""
 
-#: main/templates/profile.html:34
+#: main/templates/profile.html:35
 msgid "Gravatar"
 msgstr ""
 
-#: main/templates/profile.html:42
+#: main/templates/profile.html:43
 msgid "Updating Profile.."
 msgstr ""
 
-#: main/templates/profile.html:43
+#: main/templates/profile.html:44
 msgid "Update Profile"
 msgstr ""
 

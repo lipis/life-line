@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-07-28 19:20+0200\n"
+"POT-Creation-Date: 2014-07-29 19:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: nl <LL@li.org>\n"
@@ -47,67 +47,67 @@ msgstr "Hallo %(name)s, welkom bij %(brand)s."
 msgid "Sorry, but you could not sign in."
 msgstr "Sorry, maar u kon niet aangemeld worden."
 
-#: main/event.py:29
+#: main/event.py:28
 msgid "Search for a place"
 msgstr "Zoek een plaats"
 
-#: main/event.py:30
+#: main/event.py:29
 msgid "Name / Address (Automatic)"
 msgstr "Naam / adres (automatisch)"
 
-#: main/event.py:31
+#: main/event.py:30
 msgid "Place / City (Automatic)"
 msgstr "Plaats / stad (automatisch)"
 
-#: main/event.py:32
+#: main/event.py:31
 msgid "Country (Automatic)"
 msgstr "Land (automatisch)"
 
-#: main/event.py:36
+#: main/event.py:35
 msgid "Timestamp"
 msgstr "Tijdstip"
 
-#: main/event.py:37 main/templates/event/event_list.html:21
+#: main/event.py:36 main/templates/event/event_list.html:30
 msgid "Notes"
 msgstr "Notities"
 
-#: main/event.py:38
+#: main/event.py:37
 msgid "This place is a layover"
 msgstr "Deze plaats is een overstap"
 
-#: main/event.py:39
+#: main/event.py:38
 msgid "Add More"
 msgstr "Meer toevoegen"
 
-#: main/event.py:41
+#: main/event.py:40
 msgid "Year"
 msgstr "Jaar"
 
-#: main/event.py:42
+#: main/event.py:41
 msgid "Month"
 msgstr "Maand"
 
-#: main/event.py:43
+#: main/event.py:42
 msgid "Day"
 msgstr "Dag"
 
-#: main/event.py:44
+#: main/event.py:43
 msgid "Time"
 msgstr "Tijd"
 
-#: main/event.py:75
+#: main/event.py:74
 msgid "You should at least enter a year"
 msgstr "U moet ten minste een jaar invoeren"
 
-#: main/event.py:95
+#: main/event.py:94
 msgid "Enter a valid date"
 msgstr "Ongeldige datum"
 
-#: main/event.py:145 main/templates/bit/header.html:15
+#: main/event.py:159 main/templates/bit/header.html:15
 msgid "Add Place"
 msgstr "Plaats toevoegen"
 
-#: main/event.py:172 main/templates/bit/header.html:18
+#: main/event.py:186 main/templates/bit/header.html:18
 msgid "My Places"
 msgstr "Mijn plaatsen"
 
@@ -328,7 +328,7 @@ msgstr "Home"
 
 #: main/main.py:100
 msgid "Public. Used as sample data on homepage for anonymous users."
-msgstr "Public. Used as sample data on homepage for anonymous users."
+msgstr "Publiek. Gebruikt als voorbeeldgegevens op homepage voor anonieme gebruikers."
 
 #: main/main.py:134
 msgid "Subject"
@@ -351,24 +351,24 @@ msgid "Feedback"
 msgstr "Feedback"
 
 #: main/templates/admin/event_list.html:12
-#: main/templates/event/event_list.html:17
+#: main/templates/event/event_list.html:26
 msgid "Datetime"
 msgstr "Datum / tijd"
 
 #: main/templates/admin/event_list.html:13
-#: main/templates/event/event_list.html:18
+#: main/templates/event/event_list.html:27
 msgid "Place / City"
 msgstr "Plaats / stad"
 
 #: main/templates/admin/event_list.html:14
-#: main/templates/event/event_list.html:19
+#: main/templates/event/event_list.html:28
 msgid "Country"
 msgstr "Accounts"
 
 #: main/templates/admin/event_list.html:15
-#: main/templates/event/event_list.html:20
+#: main/templates/event/event_list.html:29
 msgid "Name / Address"
-msgstr "Ongeldig IP-adres."
+msgstr "Naam / adres"
 
 #: main/templates/admin/event_list.html:16
 msgid "User"
@@ -415,7 +415,15 @@ msgstr "Oh nee"
 msgid "Maybe it's our fault.. maybe it's yours.. but either case, this page is unavailable!"
 msgstr "Misschien is het onze fout... misschien die van u... maar in ieder geval, deze pagina is niet beschikbaar!"
 
-#: main/templates/event/event_list.html:54
+#: main/templates/event/event_list.html:18
+msgid "Nothing interesting here."
+msgstr ""
+
+#: main/templates/event/event_list.html:19
+msgid "Add couple of new places to see them on a map."
+msgstr ""
+
+#: main/templates/event/event_list.html:63
 msgid "Layover"
 msgstr "Overstap"
 
@@ -468,47 +476,47 @@ msgstr "Volgende pagina"
 
 #: main/templates/map/map_toolbar.html:3
 msgid "Chart Type"
-msgstr "Chart Type"
+msgstr "Grafiektype"
 
 #: main/templates/map/map_toolbar.html:5
 msgid "Countries"
-msgstr "Countries"
+msgstr "Landen"
 
 #: main/templates/map/map_toolbar.html:8
 msgid "Cities"
-msgstr "Cities"
+msgstr "Steden"
 
 #: main/templates/map/map_toolbar.html:11
 msgid "Line"
-msgstr "Line"
+msgstr "Lijn"
 
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
 msgstr "Verbonden accounts"
 
-#: main/templates/profile.html:28 main/templates/user/user_update.html:38
+#: main/templates/profile.html:29 main/templates/user/user_update.html:38
 msgid "Avatar"
 msgstr "Avatar"
 
-#: main/templates/profile.html:30 main/templates/user/user_list.html:99
+#: main/templates/profile.html:31 main/templates/user/user_list.html:99
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
 msgstr "Avatar van"
 
-#: main/templates/profile.html:33
+#: main/templates/profile.html:34
 msgid "Change on"
 msgstr "Verander op"
 
-#: main/templates/profile.html:34
+#: main/templates/profile.html:35
 msgid "Gravatar"
 msgstr "Gravatar"
 
-#: main/templates/profile.html:42
+#: main/templates/profile.html:43
 msgid "Updating Profile.."
 msgstr "Profiel bijwerken..."
 
-#: main/templates/profile.html:43
+#: main/templates/profile.html:44
 msgid "Update Profile"
 msgstr "Profiel bijwerken"
 
@@ -743,7 +751,4 @@ msgstr "E-mail (samengevoegd)"
 #: main/user.py:226
 msgid "Merge Users"
 msgstr "Gebruikers samenvoegen"
-
-#~ msgid "Paralia Armenistis, Chalkidiki"
-#~ msgstr "Paralia Armenistis, Chalkidiki"
 

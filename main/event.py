@@ -13,7 +13,6 @@ import auth
 import i18n
 import model
 import util
-import task
 
 from main import app
 
@@ -110,10 +109,15 @@ def event_create(event_id=0):
         flask.flash('"%s" is updated!' % event_db.address, category='success')
       else:
         flask.flash('"%s" is added!' % event_db.address, category='success')
-        task.new_event_notification(event_db)
 
       if form.add_more.data:
-        return flask.redirect(flask.url_for('event_create'))
+        timestamp = event_db.timestamp.strftime('%Y%H')
+        if event_db.accuracy == 'month':
+          timestamp = event_db.timestamp.strftime('%Y%m%H')
+        if event_db.accuracy == 'day':
+          timestamp = event_db.timestamp.strftime('%Y%m%d%H')
+
+        return flask.redirect(flask.url_for('event_create', timestamp=timestamp))
       return flask.redirect('%s#%d' % (flask.url_for('event_list'), event_db.key.id()))
 
   if not form.errors:
@@ -129,13 +133,23 @@ def event_create(event_id=0):
       form.lng.data = flask.request.city_lat_lng.split(',')[1]
 
     try:
-      form.year.data = str(event_db.timestamp.year)
-      if event_db.accuracy == 'month':
-        form.month.data = str(event_db.timestamp.month)
-      elif event_db.accuracy == 'day':
-        form.month.data = str(event_db.timestamp.month)
-        form.day.data = str(event_db.timestamp.day)
-      form.hour.data = str(event_db.timestamp.hour)
+      if event_id == 0:
+        timestamp = util.param('timestamp')
+        form.year.data = timestamp[:4].lstrip('0')
+        form.hour.data = timestamp[-2:].lstrip('0')
+        if len(timestamp) == 8:
+          form.month.data = timestamp[4:-2].lstrip('0')
+        if len(timestamp) == 10:
+          form.month.data = timestamp[4:-4].lstrip('0')
+          form.day.data = timestamp[6:-2].lstrip('0')
+      else:
+        form.year.data = str(event_db.timestamp.year)
+        if event_db.accuracy == 'month':
+          form.month.data = str(event_db.timestamp.month)
+        elif event_db.accuracy == 'day':
+          form.month.data = str(event_db.timestamp.month)
+          form.day.data = str(event_db.timestamp.day)
+        form.hour.data = str(event_db.timestamp.hour)
     except:
       pass
 

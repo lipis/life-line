@@ -19,7 +19,7 @@
     <tbody>
       # for event_db in event_dbs
         # if last and last.year != event_db.timestamp.year
-          <tr>
+          <tr class="hide">
             <td colspan="5">
               <h4 class="align-center">{{event_db.timestamp.year}}</h4>
             </td>
@@ -44,7 +44,8 @@
           <td>{{event_db.place}}</td>
           <td>{{event_db.country}}</td>
           <td>{{event_db.address}}</td>
-          <td>{{event_db.user_key.get().name}}</td>
+          # set user_db = event_db.user_key.get()
+          <td><a href="{{url_for('event_list', username=user_db.username)}}">{{user_db.username}}</a></td>
         </tr>
 
         # set last = event_db.timestamp

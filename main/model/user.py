@@ -14,7 +14,7 @@ class User(model.Base):
   name = ndb.StringProperty(required=True)
   username = ndb.StringProperty(required=True)
   email = ndb.StringProperty(default='')
-  locale = ndb.StringProperty(default='')
+  locale = ndb.StringProperty(default='en')
   auth_ids = ndb.StringProperty(repeated=True)
   active = ndb.BooleanProperty(default=True)
   admin = ndb.BooleanProperty(default=False)
@@ -42,6 +42,8 @@ class User(model.Base):
       'name',
       'username',
       'permissions',
+      'home',
+      'is_public',
     })
 
   @classmethod

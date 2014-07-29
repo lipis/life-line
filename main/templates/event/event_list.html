@@ -6,12 +6,21 @@
 # endblock
 
 # block content
-  <div class="map-container">
-    <div id="map" class="map" data-max-height="640" data-service-url="{{url_for('event_list_service', username=user_db.username)}}"></div>
-  </div>
-  # include 'map/map_toolbar.html'
-  <hr>
-  <table class="table table-bordered table-hover">
+
+  # if event_dbs
+    <div class="map-container">
+      <div id="map" class="map" data-max-height="640" data-service-url="{{url_for('event_list_service', username=user_db.username)}}"></div>
+    </div>
+    # include 'map/map_toolbar.html'
+    <hr>
+  # else
+    <div class="alert alert-warning">
+      <h4>{{_('Nothing interesting here.')}}</h4>
+      <p>{{_('Add couple of new places to see them on a map.')}}</p>
+    </div>
+  # endif
+
+  <table class="table table-bordered table-hover {{'hide' if not event_dbs}}">
     <thead>
       <tr>
         <th class="span1">{{_('Datetime')}}</th>

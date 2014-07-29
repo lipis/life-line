@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-07-28 19:20+0200\n"
+"POT-Creation-Date: 2014-07-29 19:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: de <LL@li.org>\n"
@@ -47,69 +47,69 @@ msgstr "Hallo %(name)s, willkommen zu %(brand)s."
 msgid "Sorry, but you could not sign in."
 msgstr "Leider konnten Sie nicht eingeloggt werden."
 
-#: main/event.py:29
+#: main/event.py:28
 msgid "Search for a place"
-msgstr "Search for a place"
+msgstr "Suche nach einem Ort"
+
+#: main/event.py:29
+msgid "Name / Address (Automatic)"
+msgstr "Name / Adresse (automatisch)"
 
 #: main/event.py:30
-msgid "Name / Address (Automatic)"
-msgstr "Name / Address (Automatic)"
+msgid "Place / City (Automatic)"
+msgstr "Ort / Stadt (automatisch)"
 
 #: main/event.py:31
-msgid "Place / City (Automatic)"
-msgstr "Place / City (Automatic)"
-
-#: main/event.py:32
 msgid "Country (Automatic)"
-msgstr "Country (Automatic)"
+msgstr "Land (automatisch)"
 
-#: main/event.py:36
+#: main/event.py:35
 msgid "Timestamp"
-msgstr "Timestamp"
+msgstr "Uhrzeit"
 
-#: main/event.py:37 main/templates/event/event_list.html:21
+#: main/event.py:36 main/templates/event/event_list.html:30
 msgid "Notes"
-msgstr "Notes"
+msgstr "Notizen"
+
+#: main/event.py:37
+msgid "This place is a layover"
+msgstr "Dieser Ort ist ein Zwischenstopp"
 
 #: main/event.py:38
-msgid "This place is a layover"
-msgstr "This place is a layover"
-
-#: main/event.py:39
 msgid "Add More"
-msgstr "Add More"
+msgstr "Weitere hinzufügen"
+
+#: main/event.py:40
+msgid "Year"
+msgstr "Jahr"
 
 #: main/event.py:41
-msgid "Year"
-msgstr "Year"
+msgid "Month"
+msgstr "Monat"
 
 #: main/event.py:42
-msgid "Month"
-msgstr "Month"
+msgid "Day"
+msgstr "Tag"
 
 #: main/event.py:43
-msgid "Day"
-msgstr "Day"
-
-#: main/event.py:44
 msgid "Time"
-msgstr "Aktiv"
+msgstr "Zeit"
 
-#: main/event.py:75
+#: main/event.py:74
 msgid "You should at least enter a year"
-msgstr "You should at least enter a year"
+msgstr "Bitte wenigstens ein Jahr angeben"
 
-#: main/event.py:95
+#: main/event.py:94
 msgid "Enter a valid date"
 msgstr "Kein gültiges Datum"
 
-#: main/event.py:145 main/templates/bit/header.html:15
+#: main/event.py:159 main/templates/bit/header.html:15
 msgid "Add Place"
-msgstr "Add Place"
+msgstr "Ort hinzufügen"
 
-#: main/event.py:172 main/templates/bit/header.html:18
+#: main/event.py:186 main/templates/bit/header.html:18
 msgid "My Places"
-msgstr "My Places"
+msgstr "Meine Orte"
 
 #: main/lib/flask_wtf/recaptcha/validators.py:34
 #: main/lib/wtforms/validators.py:203 main/lib/wtforms/validators.py:240
@@ -324,11 +324,11 @@ msgstr "Sprache"
 
 #: main/main.py:97 main/templates/event/event_update.html:50
 msgid "Home"
-msgstr "Home"
+msgstr "Heimatort"
 
 #: main/main.py:100
 msgid "Public. Used as sample data on homepage for anonymous users."
-msgstr "Public. Used as sample data on homepage for anonymous users."
+msgstr "Öffentlich. Darf als Beispiel auf der Homepage für anonyme Benutzer verwendet werden."
 
 #: main/main.py:134
 msgid "Subject"
@@ -351,28 +351,28 @@ msgid "Feedback"
 msgstr "Feedback"
 
 #: main/templates/admin/event_list.html:12
-#: main/templates/event/event_list.html:17
+#: main/templates/event/event_list.html:26
 msgid "Datetime"
-msgstr "Datetime"
+msgstr "Datum / Zeit"
 
 #: main/templates/admin/event_list.html:13
-#: main/templates/event/event_list.html:18
+#: main/templates/event/event_list.html:27
 msgid "Place / City"
-msgstr "Place / City"
+msgstr "Ort / Stadt"
 
 #: main/templates/admin/event_list.html:14
-#: main/templates/event/event_list.html:19
+#: main/templates/event/event_list.html:28
 msgid "Country"
-msgstr "Accounts"
+msgstr "Land"
 
 #: main/templates/admin/event_list.html:15
-#: main/templates/event/event_list.html:20
+#: main/templates/event/event_list.html:29
 msgid "Name / Address"
-msgstr "Ungültige IP-Adresse."
+msgstr "Name / Adresse"
 
 #: main/templates/admin/event_list.html:16
 msgid "User"
-msgstr "User"
+msgstr "Benutzer"
 
 #: main/templates/bit/footer.html:5
 msgid "Version"
@@ -397,7 +397,7 @@ msgstr "Profil Einstellungen"
 
 #: main/templates/bit/user_menu.html:14
 msgid "Event List"
-msgstr "Event List"
+msgstr "Eventliste"
 
 #: main/templates/bit/user_menu.html:17
 msgid "Sign out"
@@ -415,25 +415,33 @@ msgstr "Oh nein"
 msgid "Maybe it's our fault.. maybe it's yours.. but either case, this page is unavailable!"
 msgstr "Unabhängig davon wer's schuld ist: diese Seite ist leider nicht verfügbar!"
 
-#: main/templates/event/event_list.html:54
+#: main/templates/event/event_list.html:18
+msgid "Nothing interesting here."
+msgstr ""
+
+#: main/templates/event/event_list.html:19
+msgid "Add couple of new places to see them on a map."
+msgstr ""
+
+#: main/templates/event/event_list.html:63
 msgid "Layover"
-msgstr "Layover"
+msgstr "Zwischenstopp"
 
 #: main/templates/event/event_update.html:18
 msgid "Today"
-msgstr "Today"
+msgstr "Heute"
 
 #: main/templates/event/event_update.html:19
 msgid "Now"
-msgstr "Now"
+msgstr "Jetzt"
 
 #: main/templates/event/event_update.html:22
 msgid "Date / Time"
-msgstr "Datetime"
+msgstr "Datum / Zeit"
 
 #: main/templates/event/event_update.html:52
 msgid "Current Location"
-msgstr "Current Location"
+msgstr "Aktuelle Position"
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
@@ -444,11 +452,11 @@ msgstr "Aktualisieren"
 #: main/templates/event/event_update.html:77
 #: main/templates/event/event_update.html:97
 msgid "Add"
-msgstr "Add"
+msgstr "Hinzufügen"
 
 #: main/templates/event/event_update.html:85
 msgid "Draggable map to update the address"
-msgstr "Draggable map to update the address"
+msgstr "Interaktive Karte zum Aktualisieren der Adresse"
 
 #: main/templates/feedback.html:6
 msgid "Any questions or suggestions are welcome"
@@ -468,47 +476,47 @@ msgstr "Nächste Seite"
 
 #: main/templates/map/map_toolbar.html:3
 msgid "Chart Type"
-msgstr "Chart Type"
+msgstr "Diagrammtyp"
 
 #: main/templates/map/map_toolbar.html:5
 msgid "Countries"
-msgstr "Accounts"
+msgstr "Länder"
 
 #: main/templates/map/map_toolbar.html:8
 msgid "Cities"
-msgstr "Aktiv"
+msgstr "Orte"
 
 #: main/templates/map/map_toolbar.html:11
 msgid "Line"
-msgstr "Line"
+msgstr "Linie"
 
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
 msgstr "Verknüpfte Accounts"
 
-#: main/templates/profile.html:28 main/templates/user/user_update.html:38
+#: main/templates/profile.html:29 main/templates/user/user_update.html:38
 msgid "Avatar"
 msgstr "Avatar"
 
-#: main/templates/profile.html:30 main/templates/user/user_list.html:99
+#: main/templates/profile.html:31 main/templates/user/user_list.html:99
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
 msgstr "Avatar von"
 
-#: main/templates/profile.html:33
+#: main/templates/profile.html:34
 msgid "Change on"
 msgstr "Ändern auf"
 
-#: main/templates/profile.html:34
+#: main/templates/profile.html:35
 msgid "Gravatar"
 msgstr "Gravatar"
 
-#: main/templates/profile.html:42
+#: main/templates/profile.html:43
 msgid "Updating Profile.."
 msgstr "Profil wird aktualisiert..."
 
-#: main/templates/profile.html:43
+#: main/templates/profile.html:44
 msgid "Update Profile"
 msgstr "Profil aktualisieren"
 
@@ -589,7 +597,7 @@ msgstr "Eingeloggt bleiben"
 
 #: main/templates/user/user_list.html:16
 msgid "Limit"
-msgstr "Limit"
+msgstr "Limitieren"
 
 #: main/templates/user/user_list.html:25
 msgid "Admins"
@@ -597,7 +605,7 @@ msgstr "Admins"
 
 #: main/templates/user/user_list.html:42
 msgid "Clear all permissions"
-msgstr "Clear all permissions"
+msgstr "Alle Rechte zurücksetzen"
 
 #: main/templates/user/user_list.html:48
 msgid "More"
@@ -700,7 +708,7 @@ msgstr "Wird aktualisiert..."
 
 #: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
-msgstr "See all the places that you've visited on a map like a vomit!"
+msgstr "Meine Aufenthaltsorte auf eine Karte geklatscht!"
 
 #: main/user.py:37 main/templates/bit/user_menu.html:13
 msgid "User List"
@@ -743,7 +751,4 @@ msgstr "E-Mail (zusammengeführt)"
 #: main/user.py:226
 msgid "Merge Users"
 msgstr "Benutzer zusammenführen"
-
-#~ msgid "Paralia Armenistis, Chalkidiki"
-#~ msgstr "Paralia Armenistis, Chalkidiki"
 

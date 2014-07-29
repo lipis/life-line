@@ -19,7 +19,8 @@
         </div>
         {{forms.text_field(form.name, autofocus=True)}}
         {{forms.email_field(form.email)}}
-        {{forms.text_field(form.home)}}
+        # set home = 'e.g. %s, %s' % (request.city.title(), request.country) if request.city and request.country else ''
+        {{forms.text_field(form.home, placeholder=home)}}
         {{forms.select_field(form.locale)}}
         {{forms.checkbox_field(form.is_public)}}
       </div>
