@@ -371,6 +371,10 @@ msgstr "Bekijk op %(brand)s"
 msgid "Toggle navigation"
 msgstr "Wissel navigatie"
 
+#: main/templates/bit/locale.html:26
+msgid "Help Translating"
+msgstr "Help Translating"
+
 #: main/templates/bit/user_menu.html:9
 msgid "Profile Settings"
 msgstr "Profiel instellingen"

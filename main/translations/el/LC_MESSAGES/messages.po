@@ -371,6 +371,10 @@ msgstr "Δείτε το στο %(brand)s"
 msgid "Toggle navigation"
 msgstr "Εναλλαγή πλοήγησης"
 
+#: main/templates/bit/locale.html:26
+msgid "Help Translating"
+msgstr "Help Translating"
+
 #: main/templates/bit/user_menu.html:9
 msgid "Profile Settings"
 msgstr "Ρυθμίσεις Προφίλ"
