@@ -44,11 +44,7 @@ MAX_DB_LIMIT = 1024
 # To Add/Modify languages use one of the filenames in: libx/babel/localedata/
 # Examples with country included: en_GB, ru_RU, de_CH
 LOCALE = {
-  'en': u'English',
-  'el': u'Ελληνικά',
-}
-
-LOCALE = {
+    'da': u'Dansk',
     'de': u'Deutsch',
     'el': u'Ελληνικά',
     'en': u'English',
@@ -58,6 +54,7 @@ LOCALE = {
 LOCALE_SORTED = sorted(LOCALE.iteritems(), key=operator.itemgetter(1))
 
 LOCALE_LANGUAGE = {
+    'da': 'da',
     'de': 'de',
     'el': 'el',
     'en': 'en',
