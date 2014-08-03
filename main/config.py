@@ -48,7 +48,9 @@ LOCALE = {
     'de': u'Deutsch',
     'el': u'Ελληνικά',
     'en': u'English',
+    'es': u'Español',
     'nl': u'Nederlands',
+    'ru': u'Русский',
   }
 
 LOCALE_SORTED = sorted(LOCALE.iteritems(), key=operator.itemgetter(1))
@@ -58,7 +60,9 @@ LOCALE_LANGUAGE = {
     'de': 'de',
     'el': 'el',
     'en': 'en',
+    'es': 'es',
     'nl': 'nl',
+    'ru': 'ru',
   }
 LANGUAGES = [l for l in LOCALE_LANGUAGE.values()]
 

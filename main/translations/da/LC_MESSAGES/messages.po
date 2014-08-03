@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-08-03 16:18+0200\n"
+"POT-Creation-Date: 2014-08-03 19:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: da <LL@li.org>\n"
@@ -383,6 +383,10 @@ msgid "View in JSON"
 msgstr "Se i JSON"
 
 #: main/templates/bit/footer.html:14
+msgid "Powered by gae-init"
+msgstr ""
+
+#: main/templates/bit/footer.html:15
 #, python-format
 msgid "View on %(brand)s"
 msgstr ""
@@ -551,7 +555,7 @@ msgstr "Facebook"
 msgid "Twitter"
 msgstr "Twitter"
 
-#: main/templates/signin.html:37 main/templates/bit/footer.html:14
+#: main/templates/signin.html:37 main/templates/bit/footer.html:15
 msgid "GitHub"
 msgstr ""
 

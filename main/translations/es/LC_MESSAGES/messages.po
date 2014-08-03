@@ -1,4 +1,4 @@
-# Dutch translations for PROJECT.
+# Spanish translations for PROJECT.
 # Copyright (C) 2014 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2014-08-03 19:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: nl <LL@li.org>\n"
+"Language-Team: es <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,153 +20,153 @@ msgstr ""
 
 #: main/admin.py:82 main/templates/bit/user_menu.html:12
 msgid "Admin Config"
-msgstr "Configuratie"
+msgstr "Configuración de administración"
 
 #: main/auth.py:225
 msgid "Please sign in"
-msgstr "Meld u aan"
+msgstr "Identifíquese por favor"
 
 #: main/auth.py:247
 msgid "You have been signed out."
-msgstr "U bent afgemeld."
+msgstr "La sesión se ha cerrado."
 
 #: main/auth.py:265 main/auth.py:311 main/auth.py:375
 msgid "You denied the request to sign in."
-msgstr "U hebt het verzoek om aan te melden afgewezen."
+msgstr "Has rechazado iniciar sesión."
 
 #: main/auth.py:335
 msgid "Something went wrong with Twitter sign in. Please try again."
-msgstr "Er ging iets mis met aanmelden via Twitter. Probeer het opnieuw."
+msgstr "Ha habido un problema al iniciar sesión en Twitter. Por favor, inténtelo de nuevo."
 
 #: main/auth.py:1147
 #, python-format
 msgid "Hello %(name)s, welcome to %(brand)s."
-msgstr "Hallo %(name)s, welkom bij %(brand)s."
+msgstr "Hola %(name)s, bienvenido a %(brand)s."
 
 #: main/auth.py:1152
 msgid "Sorry, but you could not sign in."
-msgstr "Sorry, maar u kon niet aangemeld worden."
+msgstr "Lo sentimos, no se ha podido iniciar sesión."
 
 #: main/event.py:28
 msgid "Search for a place"
-msgstr "Zoek een plaats"
+msgstr ""
 
 #: main/event.py:29
 msgid "Name / Address (Automatic)"
-msgstr "Naam / adres (automatisch)"
+msgstr ""
 
 #: main/event.py:30
 msgid "Place / City (Automatic)"
-msgstr "Plaats / stad (automatisch)"
+msgstr ""
 
 #: main/event.py:31
 msgid "Country (Automatic)"
-msgstr "Land (automatisch)"
+msgstr ""
 
 #: main/event.py:35
 msgid "Timestamp"
-msgstr "Tijdstip"
+msgstr ""
 
 #: main/event.py:36 main/templates/event/event_list.html:30
 msgid "Notes"
-msgstr "Notities"
+msgstr ""
 
 #: main/event.py:37
 msgid "This place is a layover"
-msgstr "Deze plaats is een overstap"
+msgstr ""
 
 #: main/event.py:38
 msgid "Add More"
-msgstr "Meer toevoegen"
+msgstr ""
 
 #: main/event.py:40
 msgid "Year"
-msgstr "Jaar"
+msgstr ""
 
 #: main/event.py:41
 msgid "Month"
-msgstr "Maand"
+msgstr ""
 
 #: main/event.py:42
 msgid "Day"
-msgstr "Dag"
+msgstr ""
 
 #: main/event.py:43
 msgid "Time"
-msgstr "Tijd"
+msgstr ""
 
 #: main/event.py:74
 msgid "You should at least enter a year"
-msgstr "U moet ten minste een jaar invoeren"
+msgstr ""
 
 #: main/event.py:94
 msgid "Enter a valid date"
-msgstr "Ongeldige datum"
+msgstr ""
 
 #: main/event.py:159 main/templates/bit/header.html:15
 msgid "Add Place"
-msgstr "Plaats toevoegen"
+msgstr ""
 
 #: main/event.py:186 main/templates/bit/header.html:18
 msgid "My Places"
-msgstr "Mijn plaatsen"
+msgstr ""
 
 #: main/lib/flask_wtf/recaptcha/validators.py:34
 #: main/lib/wtforms/validators.py:203 main/lib/wtforms/validators.py:240
 msgid "This field is required."
-msgstr "Dit veld is verplicht."
+msgstr "Este campo es obligatorio."
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:68
 msgid "Get a visual challenge"
-msgstr "Probeer een visuele uitdaging"
+msgstr "Obtenga un desafío visual"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:69
 msgid "Get an audio challenge"
-msgstr "Probeer een audio uitdaging"
+msgstr "Obtener un desafío de audio"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:70
 msgid "Get a new challenge"
-msgstr "Probeer een nieuwe uitdaging"
+msgstr "Obtener un nuevo desafio"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:71
 msgid "Type the two words:"
-msgstr "Typ de twee woorden:"
+msgstr "Escriba las dos palabras:"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:72
 msgid "Type what you hear:"
-msgstr "Typ wat u hoort:"
+msgstr "Escriba lo que escuche:"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:73
 msgid "Help"
-msgstr "Help"
+msgstr "Ayuda"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:74
 msgid "Play sound again"
-msgstr "Geluid opnieuw afspelen"
+msgstr "Reproducir el sonido de nuevo"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:75
 msgid "Download sound as MP3"
-msgstr "Geluid downloaden als MP3"
+msgstr "Descargar el sonido como un MP3"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:76
 msgid "Incorrect. Try again."
-msgstr "Onjuist. Probeer het opnieuw."
+msgstr "Incorrecto, Inténtelo de nuevo."
 
 #: main/lib/wtforms/csrf/core.py:98 main/lib/wtforms/ext/csrf/form.py:47
 msgid "Invalid CSRF Token"
-msgstr "Ongeldig CSRF-token"
+msgstr "El token CSRF es incorrecto"
 
 #: main/lib/wtforms/csrf/session.py:61 main/lib/wtforms/ext/csrf/session.py:58
 msgid "CSRF token missing"
-msgstr "CSRF-token ontbreekt"
+msgstr "El token CSRF falta"
 
 #: main/lib/wtforms/csrf/session.py:69 main/lib/wtforms/ext/csrf/session.py:66
 msgid "CSRF failed"
-msgstr "CSRF gefaald"
+msgstr "Fallo CSRF"
 
 #: main/lib/wtforms/csrf/session.py:74 main/lib/wtforms/ext/csrf/session.py:71
 msgid "CSRF token expired"
-msgstr "CSRF-token is verlopen"
+msgstr "El token CSRF ha expirado"
 
 #: main/lib/wtforms/ext/appengine/fields.py:87
 #: main/lib/wtforms/ext/appengine/fields.py:164
@@ -178,173 +178,173 @@ msgstr "CSRF-token is verlopen"
 #: main/lib/wtforms/ext/sqlalchemy/fields.py:185
 #: main/lib/wtforms/fields/core.py:468
 msgid "Not a valid choice"
-msgstr "Ongeldige keuze"
+msgstr "Opción inválida"
 
 #: main/lib/wtforms/ext/appengine/fields.py:185
 msgid "Not a valid list"
-msgstr "Niet een geldige lijst"
+msgstr "Lista inválida"
 
 #: main/lib/wtforms/ext/appengine/fields.py:204
 msgid "Not a valid integer list"
-msgstr "Niet een geldige lijst van getallen"
+msgstr "No es una lista de números enteros válida"
 
 #: main/lib/wtforms/ext/dateutil/fields.py:63
 msgid "Please input a date/time value"
-msgstr "Voer een datum/tijd in"
+msgstr "Por favor, introduzca una fecha"
 
 #: main/lib/wtforms/ext/dateutil/fields.py:75
 #: main/lib/wtforms/ext/dateutil/fields.py:83
 msgid "Invalid date/time input"
-msgstr "Ongeldige datum/tijd"
+msgstr "Fecha de entrada incorrecta"
 
 #: main/lib/wtforms/fields/core.py:461
 msgid "Invalid Choice: could not coerce"
-msgstr "Ongeldige keuze: kon niet omgezet worden"
+msgstr "Elección inválida: no se puede ajustar"
 
 #: main/lib/wtforms/fields/core.py:494
 msgid "Invalid choice(s): one or more data inputs could not be coerced"
-msgstr "Ongeldige keuze(s): één of meer van de invoeren kon niet omgezet worden"
+msgstr "Opción(es) inválida(s): una o más entradas de datos no pueden ser ajustadas"
 
 #: main/lib/wtforms/fields/core.py:501
 #, python-format
 msgid "'%(value)s' is not a valid choice for this field"
-msgstr "'%(value)s' is een ongeldige keuze voor dit veld"
+msgstr "'%(value)s' no es una opción válida para este campo"
 
 #: main/lib/wtforms/fields/core.py:584
 msgid "Not a valid integer value"
-msgstr "Ongeldig getal"
+msgstr "No es un valor entero válido"
 
 #: main/lib/wtforms/fields/core.py:650
 msgid "Not a valid decimal value"
-msgstr "Ongeldige decimale waarde"
+msgstr "No es un numero decimal válido"
 
 #: main/lib/wtforms/fields/core.py:677
 msgid "Not a valid float value"
-msgstr "Ongeldige float-waarde"
+msgstr "No es un número de punto flotante válido"
 
 #: main/lib/wtforms/fields/core.py:736
 msgid "Not a valid datetime value"
-msgstr "Ongeldige datum/tijd"
+msgstr "No es un valor de fecha y hora válido"
 
 #: main/lib/wtforms/fields/core.py:753
 msgid "Not a valid date value"
-msgstr "Ongeldige datum"
+msgstr "No es un valor de fecha válido"
 
 #: main/lib/wtforms/validators.py:56
 #, python-format
 msgid "Invalid field name '%s'."
-msgstr "Ongeldige naam voor veld '%s'."
+msgstr "Nombre de campo inválido '%s'."
 
 #: main/lib/wtforms/validators.py:64
 #, python-format
 msgid "Field must be equal to %(other_name)s."
-msgstr "Veld moet gelijk zijn aan %(other_name)s."
+msgstr "El campo debe coincidir con %(other_name)s."
 
 #: main/lib/wtforms/validators.py:97
 #, python-format
 msgid "Field must be at least %(min)d character long."
 msgid_plural "Field must be at least %(min)d characters long."
-msgstr[0] "Veld moet minstens %(min)d karakter lang zijn."
-msgstr[1] "Veld moet minstens %(min)d karakters lang zijn."
+msgstr[0] "El campo debe tener al menos %(min)d caracter."
+msgstr[1] "El campo debe tener al menos %(min)d caracteres."
 
 #: main/lib/wtforms/validators.py:100
 #, python-format
 msgid "Field cannot be longer than %(max)d character."
 msgid_plural "Field cannot be longer than %(max)d characters."
-msgstr[0] "Veld mag niet langer zijn dan %(max)d karakter."
-msgstr[1] "Veld mag niet langer zijn dan %(max)d karakters."
+msgstr[0] "El campo no puede tener más de %(max)d caracter."
+msgstr[1] "El campo no puede tener más de %(max)d caracteres."
 
 #: main/lib/wtforms/validators.py:103
 #, python-format
 msgid "Field must be between %(min)d and %(max)d characters long."
-msgstr "Veld moet tussen %(min)d en %(max)d karakters lang zijn."
+msgstr "El campo debe tener entre %(min)d y %(max)d caracteres."
 
 #: main/lib/wtforms/validators.py:139
 #, python-format
 msgid "Number must be at least %(min)s."
-msgstr "Getal moet minstens %(min)s zijn."
+msgstr "El número debe ser mayor que %(min)s."
 
 #: main/lib/wtforms/validators.py:141
 #, python-format
 msgid "Number must be at most %(max)s."
-msgstr "Getal mag maximaal %(max)s zijn."
+msgstr "El número debe ser menor que %(max)s."
 
 #: main/lib/wtforms/validators.py:143
 #, python-format
 msgid "Number must be between %(min)s and %(max)s."
-msgstr "Getal moet tussen %(min)s en %(max)s liggen."
+msgstr "El número debe estar entre %(min)s y %(max)s."
 
 #: main/lib/wtforms/validators.py:271
 msgid "Invalid input."
-msgstr "Ongeldige invoer."
+msgstr "Valor inválido."
 
 #: main/lib/wtforms/validators.py:293
 msgid "Invalid email address."
-msgstr "Ongeldig e-mailadres."
+msgstr "Email inválido."
 
 #: main/lib/wtforms/validators.py:325
 msgid "Invalid IP address."
-msgstr "Ongeldig IP-adres."
+msgstr "Dirección IP inválida."
 
 #: main/lib/wtforms/validators.py:374
 msgid "Invalid Mac address."
-msgstr "Ongeldig Mac-adres."
+msgstr "Dirección MAC inválida."
 
 #: main/lib/wtforms/validators.py:400
 msgid "Invalid URL."
-msgstr "Ongeldige URL."
+msgstr "URL inválida."
 
 #: main/lib/wtforms/validators.py:419
 msgid "Invalid UUID."
-msgstr "Ongeldige UUID."
+msgstr "UUID inválido."
 
 #: main/lib/wtforms/validators.py:447
 #, python-format
 msgid "Invalid value, must be one of: %(values)s."
-msgstr "Ongeldige waarde, moet een waarde zijn uit: %(values)s."
+msgstr "Valor inválido, debe ser uno de: %(values)s."
 
 #: main/lib/wtforms/validators.py:479
 #, python-format
 msgid "Invalid value, can't be any of: %(values)s."
-msgstr "Ongeldige waarde, kan niet een waarde zijn in: %(values)s."
+msgstr "Valor inválido, no puede ser ninguno de: %(values)s."
 
 #: main/main.py:87 main/user.py:53 main/templates/user/user_list.html:84
 #: main/templates/user/user_merge.html:21
 msgid "Name"
-msgstr "Naam"
+msgstr "Nombre"
 
 #: main/main.py:90 main/user.py:56 main/templates/user/user_list.html:86
 #: main/templates/user/user_merge.html:23
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 #: main/main.py:94 main/user.py:60 main/templates/user/user_list.html:87
 msgid "Language"
-msgstr "Taal"
+msgstr "Idioma"
 
 #: main/main.py:97 main/templates/event/event_update.html:50
 msgid "Home"
-msgstr "Woonplaats"
+msgstr ""
 
 #: main/main.py:100
 msgid "Public. Used as sample data on homepage for anonymous users."
-msgstr "Publiek. Gebruikt als voorbeeldgegevens op homepage voor anonieme gebruikers."
+msgstr ""
 
 #: main/main.py:134
 msgid "Subject"
-msgstr "Onderwerp"
+msgstr "Asunto"
 
 #: main/main.py:137
 msgid "Message"
-msgstr "Bericht"
+msgstr "Mensaje"
 
 #: main/main.py:140
 msgid "Your email (optional)"
-msgstr "Uw e-mail (optioneel)"
+msgstr "Tu correo (opcional)"
 
 #: main/main.py:156
 msgid "Thank you for your feedback!"
-msgstr "Bedankt voor uw feedback!"
+msgstr "¡Gracias por tus comentarios!"
 
 #: main/main.py:161 main/templates/bit/contact_menu.html:3
 msgid "Feedback"
@@ -353,34 +353,34 @@ msgstr "Feedback"
 #: main/templates/admin/event_list.html:12
 #: main/templates/event/event_list.html:26
 msgid "Datetime"
-msgstr "Datum / tijd"
+msgstr ""
 
 #: main/templates/admin/event_list.html:13
 #: main/templates/event/event_list.html:27
 msgid "Place / City"
-msgstr "Plaats / stad"
+msgstr ""
 
 #: main/templates/admin/event_list.html:14
 #: main/templates/event/event_list.html:28
 msgid "Country"
-msgstr "Accounts"
+msgstr ""
 
 #: main/templates/admin/event_list.html:15
 #: main/templates/event/event_list.html:29
 msgid "Name / Address"
-msgstr "Naam / adres"
+msgstr ""
 
 #: main/templates/admin/event_list.html:16
 msgid "User"
-msgstr "Gebruiker"
+msgstr ""
 
 #: main/templates/bit/footer.html:5
 msgid "Version"
-msgstr "Versie"
+msgstr "Versión"
 
 #: main/templates/bit/footer.html:8
 msgid "View in JSON"
-msgstr "Bekijk in JSON"
+msgstr "Ver en JSON"
 
 #: main/templates/bit/footer.html:14
 msgid "Powered by gae-init"
@@ -389,118 +389,118 @@ msgstr ""
 #: main/templates/bit/footer.html:15
 #, python-format
 msgid "View on %(brand)s"
-msgstr "Bekijk op %(brand)s"
+msgstr ""
 
 #: main/templates/bit/header.html:5
 msgid "Toggle navigation"
-msgstr "Wissel navigatie"
+msgstr "Cambiar el modo de navegación"
 
 #: main/templates/bit/locale.html:26
 msgid "Help Translating"
-msgstr "Help Translating"
+msgstr ""
 
 #: main/templates/bit/user_menu.html:9
 msgid "Profile Settings"
-msgstr "Profiel instellingen"
+msgstr "Ajustes de perfil"
 
 #: main/templates/bit/user_menu.html:14
 msgid "Event List"
-msgstr "Lijst met gebeurtenissen"
+msgstr ""
 
 #: main/templates/bit/user_menu.html:17
 msgid "Sign out"
-msgstr "Afmelden"
+msgstr "Cerrar sesión"
 
 #: main/templates/bit/user_menu.html:22
 msgid "Sign in"
-msgstr "Aanmelden"
+msgstr "Registrarse"
 
 #: main/templates/error.html:8
 msgid "Oh no"
-msgstr "Oh nee"
+msgstr "Oh no"
 
 #: main/templates/error.html:10
 msgid "Maybe it's our fault.. maybe it's yours.. but either case, this page is unavailable!"
-msgstr "Misschien is het onze fout... misschien die van u... maar in ieder geval, deze pagina is niet beschikbaar!"
+msgstr "Tal vez sea culpa nuestra.. tal vez es tuya.. pero en cualquier caso, esta página no está disponible!"
 
 #: main/templates/event/event_list.html:18
 msgid "Nothing interesting here."
-msgstr "Niets interessants hier."
+msgstr ""
 
 #: main/templates/event/event_list.html:19
 msgid "Add couple of new places to see them on a map."
-msgstr "Voeg een aantal nieuwe plaatsen toe om ze te zien op een kaart."
+msgstr ""
 
 #: main/templates/event/event_list.html:66
 msgid "Layover"
-msgstr "Overstap"
+msgstr ""
 
 #: main/templates/event/event_update.html:18
 msgid "Today"
-msgstr "Vandaag"
+msgstr ""
 
 #: main/templates/event/event_update.html:19
 msgid "Now"
-msgstr "Nu"
+msgstr ""
 
 #: main/templates/event/event_update.html:22
 msgid "Date / Time"
-msgstr "Datum / Tijd"
+msgstr ""
 
 #: main/templates/event/event_update.html:52
 msgid "Current Location"
-msgstr "Huidige locatie"
+msgstr ""
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
 #: main/templates/user/user_update.html:70
 msgid "Update"
-msgstr "Bijwerken"
+msgstr "Actualizar"
 
 #: main/templates/event/event_update.html:77
 #: main/templates/event/event_update.html:97
 msgid "Add"
-msgstr "Toevoegen"
+msgstr ""
 
 #: main/templates/event/event_update.html:85
 msgid "Draggable map to update the address"
-msgstr "Verplaatsbare kaart om het adres bij te werken"
+msgstr ""
 
 #: main/templates/feedback.html:6
 msgid "Any questions or suggestions are welcome"
-msgstr "Vragen en/of suggesties zijn welkom"
+msgstr "Las preguntas o sugerencias son bienvenidas"
 
 #: main/templates/feedback.html:18
 msgid "Sending Feedback.."
-msgstr "Feedback verzenden..."
+msgstr "Enviando comentario.."
 
 #: main/templates/feedback.html:19
 msgid "Send Feedback"
-msgstr "Feedback verzenden"
+msgstr "Enviar comentarios"
 
 #: main/templates/macro/utils.html:30
 msgid "Next Page"
-msgstr "Volgende pagina"
+msgstr "Página siguiente"
 
 #: main/templates/map/map_toolbar.html:3
 msgid "Chart Type"
-msgstr "Grafiektype"
+msgstr ""
 
 #: main/templates/map/map_toolbar.html:5
 msgid "Countries"
-msgstr "Landen"
+msgstr ""
 
 #: main/templates/map/map_toolbar.html:8
 msgid "Cities"
-msgstr "Steden"
+msgstr ""
 
 #: main/templates/map/map_toolbar.html:11
 msgid "Line"
-msgstr "Lijn"
+msgstr ""
 
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
-msgstr "Verbonden accounts"
+msgstr "Cuentas conectadas"
 
 #: main/templates/profile.html:29 main/templates/user/user_update.html:38
 msgid "Avatar"
@@ -510,11 +510,11 @@ msgstr "Avatar"
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
-msgstr "Avatar van"
+msgstr "Avatar de"
 
 #: main/templates/profile.html:34
 msgid "Change on"
-msgstr "Verander op"
+msgstr "Cambio en"
 
 #: main/templates/profile.html:35
 msgid "Gravatar"
@@ -522,15 +522,15 @@ msgstr "Gravatar"
 
 #: main/templates/profile.html:43
 msgid "Updating Profile.."
-msgstr "Profiel bijwerken..."
+msgstr "Actualizando perfil..."
 
 #: main/templates/profile.html:44
 msgid "Update Profile"
-msgstr "Profiel bijwerken"
+msgstr "Actualizar perfil de usuario"
 
 #: main/templates/signin.html:10
 msgid "It only takes 8 seconds"
-msgstr "Het duurt slechts 8 seconden"
+msgstr "Sólo se tarda 8 segundos"
 
 #: main/templates/signin.html:17
 msgid "Google"
@@ -545,7 +545,7 @@ msgstr "Google"
 #: main/templates/signin.html:100 main/templates/signin.html:107
 #, python-format
 msgid "Sign in with %(brand)s"
-msgstr "Aanmelden met %(brand)s"
+msgstr "Iniciar sesión con %(brand)s"
 
 #: main/templates/signin.html:23
 msgid "Facebook"
@@ -557,206 +557,221 @@ msgstr "Twitter"
 
 #: main/templates/signin.html:37 main/templates/bit/footer.html:15
 msgid "GitHub"
-msgstr "GitHub"
+msgstr ""
 
 #: main/templates/signin.html:44
 msgid "Bitbucket"
-msgstr "Bitbucket"
+msgstr ""
 
 #: main/templates/signin.html:51
 msgid "VK"
-msgstr "VK"
+msgstr ""
 
 #: main/templates/signin.html:58
 msgid "LinkedIn"
-msgstr "LinkedIn"
+msgstr ""
 
 #: main/templates/signin.html:65
 msgid "Dropbox"
-msgstr "Dropbox"
+msgstr ""
 
 #: main/templates/signin.html:72
 msgid "Windows Live"
-msgstr "Windows Live"
+msgstr ""
 
 #: main/templates/signin.html:79
 msgid "Stack Overflow"
-msgstr "Stack Overflow"
+msgstr ""
 
 #: main/templates/signin.html:86
 msgid "Instagram"
-msgstr "Instagram"
+msgstr ""
 
 #: main/templates/signin.html:93
 msgid "Microsoft"
-msgstr "Microsoft"
+msgstr ""
 
 #: main/templates/signin.html:100
 msgid "Reddit"
-msgstr "Reddit"
+msgstr ""
 
 #: main/templates/signin.html:107
 msgid "Yahoo!"
-msgstr "Yahoo!"
+msgstr ""
 
 #: main/templates/signin.html:112
 msgid "Keep me signed in"
-msgstr "Houd mij aangemeld"
+msgstr "No cerrar sesión"
 
 #: main/templates/user/user_list.html:16
 msgid "Limit"
-msgstr "Aantal"
+msgstr "Límite"
 
 #: main/templates/user/user_list.html:25
 msgid "Admins"
-msgstr "Beheerders"
+msgstr "Administradores"
 
 #: main/templates/user/user_list.html:42
 msgid "Clear all permissions"
-msgstr "Wis alle machtigingen"
+msgstr "Clear all permissions"
 
 #: main/templates/user/user_list.html:48
 msgid "More"
-msgstr "Meer"
+msgstr "Más"
 
 #: main/templates/user/user_list.html:55
 msgid "Are you sure you want to delete {users} selected user(s)?"
-msgstr "Weet u zeker dat u de {users} geselecteerde gebruiker(s) wilt verwijderen?"
+msgstr "¿Está seguro de que desea eliminar {users} usuario(s) seleccionados?"
 
 #: main/templates/user/user_list.html:56
 msgid "{users} user(s) deleted."
-msgstr "{users} gebruiker(s) verwijderd."
+msgstr "{users} usuario(s) eliminados."
 
 #: main/templates/user/user_list.html:57
 msgid "Something went wrong while deleting. Please try again."
-msgstr "Er ging iets mis tijdens het verwijderen. Probeer het opnieuw."
+msgstr "Algo salió mal durante el borrado. Por favor, inténtelo de nuevo."
 
 #: main/templates/user/user_list.html:61
 msgid "Delete Selected"
-msgstr "Selectie verwijderen"
+msgstr "Borrar Seleccionados"
 
 #: main/templates/user/user_list.html:67
 msgid "Merge Selected"
-msgstr "Selectie samenvoegen"
+msgstr "Fusionar seleccionados"
 
 #: main/templates/user/user_list.html:76
 msgid "Remove all filters"
-msgstr "Alle filters verwijderen"
+msgstr "Quitar todos los filtros"
 
 #: main/templates/user/user_list.html:77
 msgid "There are no users matching the filters."
-msgstr "Er zijn geen gebruikers die overeenkomen met de filters."
+msgstr "No hay usuarios que coincidan con los filtros."
 
 #: main/templates/user/user_list.html:88 main/templates/user/user_merge.html:24
 msgid "Created"
-msgstr "Gemaakt"
+msgstr "Creado"
 
 #: main/templates/user/user_list.html:89
 msgid "Modified"
-msgstr "Gewijzigd"
+msgstr "Modificado"
 
 #: main/templates/user/user_list.html:91 main/templates/user/user_merge.html:26
 #: main/templates/user/user_update.html:46
 msgid "Accounts"
-msgstr "Accounts"
+msgstr "Cuentas"
 
 #: main/templates/user/user_list.html:102
 #: main/templates/user/user_merge.html:37
 #: main/templates/user/user_update.html:13
 msgid "You"
-msgstr "U"
+msgstr "Usted"
 
 #: main/templates/user/user_list.html:125
 #: main/templates/user/user_merge.html:49
 msgid "admin"
-msgstr "beheerder"
+msgstr "administración"
 
 #: main/templates/user/user_list.html:128
 #: main/templates/user/user_merge.html:52
 msgid "inactive"
-msgstr "inactief"
+msgstr "inactivo"
 
 #: main/templates/user/user_merge.html:10
 #: main/templates/user/user_update.html:9
 msgid "Back to user list"
-msgstr "Terug naar de gebruikers lijst"
+msgstr "Volver a la lista de usuarios"
 
 #: main/templates/user/user_merge.html:81
 msgid "Merged Accounts"
-msgstr "Samengevoegde accounts"
+msgstr "Cuentas fusionadas"
 
 #: main/templates/user/user_merge.html:86
 #: main/templates/user/user_update.html:51
 msgid "Auth ID"
-msgstr "Autorisatie ID"
+msgstr "Auth ID"
 
 #: main/templates/user/user_merge.html:103
 msgid "Select the user's entity that you want to keep (the other entities will be deactivated)"
-msgstr "Selecteer de gebruiker die u wilt bewaren (de andere gebruiker gegevens zullen worden gedeactiveerd)"
+msgstr "Seleccione la entidad del usuario que desea guardar (el resto de entidades serán desactivadas)"
 
 #: main/templates/user/user_merge.html:104
 msgid "Before merging make sure the entities with references to the user are being taking care of"
-msgstr "Zorg vóór het samenvoegen ervoor dat gegevens met verwijzingen naar de gebruiker aangepast zijn"
+msgstr "Antes de fusionar asegurarse de que se tienen en cuenta las entidades con referencias al usuario"
 
 #: main/templates/user/user_merge.html:105
 msgid "For deactivated users the 3rd party associated accounts will be cleared"
-msgstr "Voor gedeactiveerde gebruikers zullen de 3de partij verbonden accounts worden gewist"
+msgstr "Para los usuarios desactivados las cuentas de terceras partes asociadas se borrarán"
 
 #: main/templates/user/user_merge.html:111
 msgid "Merging.."
-msgstr "Samenvoegen..."
+msgstr "Fusionando.."
 
 #: main/templates/user/user_merge.html:112
 msgid "Merge"
-msgstr "Samenvoegen"
+msgstr "Fusionar"
 
 #: main/templates/user/user_update.html:69
 msgid "Updating.."
-msgstr "Bijwerken..."
+msgstr "Actualizando.."
 
 #: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
-msgstr "Zie alle plaatsen die u hebt bezocht op de kaart als een braaksel!"
+msgstr ""
 
 #: main/user.py:37 main/templates/bit/user_menu.html:13
 msgid "User List"
-msgstr "Gebruikers lijst"
+msgstr "Lista de usuarios"
 
 #: main/user.py:49 main/user.py:162 main/templates/profile.html:17
 #: main/templates/user/user_list.html:85 main/templates/user/user_merge.html:22
 msgid "Username"
-msgstr "Gebruikersnaam"
+msgstr "Nombre de usuario"
 
 #: main/user.py:63
 msgid "Admin"
-msgstr "Beheerder"
+msgstr "Administrador"
 
 #: main/user.py:64 main/templates/user/user_list.html:31
 msgid "Active"
-msgstr "Actief"
+msgstr "Activo"
 
 #: main/user.py:65 main/templates/user/user_list.html:90
 #: main/templates/user/user_merge.html:25
 msgid "Permissions"
-msgstr "Machtigingen"
+msgstr "Permisos"
 
 #: main/user.py:95
 msgid "This username is invalid."
-msgstr "Deze gebruikersnaam is ongeldig."
+msgstr "El nombre de usuario no es válido."
 
 #: main/user.py:97
 msgid "This username is already taken."
-msgstr "Deze gebruikersnaam is al in gebruik."
+msgstr "El nombre de usuario ya está en uso."
 
 #: main/user.py:163
 msgid "Name (merged)"
-msgstr "Naam (samengevoegd)"
+msgstr "Nombre (fusionado)"
 
 #: main/user.py:166
 msgid "Email (merged)"
-msgstr "E-mail (samengevoegd)"
+msgstr "Email (fusionado)"
 
 #: main/user.py:226
 msgid "Merge Users"
-msgstr "Gebruikers samenvoegen"
+msgstr "Combinar Usuarios"
+
+#~ msgid "Already exists."
+#~ msgstr "Ya existe."
+
+#~ msgid "Updating Config.."
+#~ msgstr "Actualizando configuración.."
+
+#~ msgid "Update Config"
+#~ msgstr "Actualizar Configuración"
+
+#~ msgid "Heading"
+#~ msgstr "Cabecera"
+
+#~ msgid "Grumpy wizards make toxic brew for the evil Queen and Jack."
+#~ msgstr "José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta."
 

@@ -1,4 +1,4 @@
-# Dutch translations for PROJECT.
+# Russian translations for PROJECT.
 # Copyright (C) 2014 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2014-08-03 19:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: nl <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,153 +20,153 @@ msgstr ""
 
 #: main/admin.py:82 main/templates/bit/user_menu.html:12
 msgid "Admin Config"
-msgstr "Configuratie"
+msgstr "Управление конфигурацией"
 
 #: main/auth.py:225
 msgid "Please sign in"
-msgstr "Meld u aan"
+msgstr "Пожалуйста, войдите"
 
 #: main/auth.py:247
 msgid "You have been signed out."
-msgstr "U bent afgemeld."
+msgstr "Вы вышли."
 
 #: main/auth.py:265 main/auth.py:311 main/auth.py:375
 msgid "You denied the request to sign in."
-msgstr "U hebt het verzoek om aan te melden afgewezen."
+msgstr "Вы отклонили запрос на вход."
 
 #: main/auth.py:335
 msgid "Something went wrong with Twitter sign in. Please try again."
-msgstr "Er ging iets mis met aanmelden via Twitter. Probeer het opnieuw."
+msgstr "Что-то пошло не так при входе на сайт через Twitter. Пожалуйста, попробуйте еще раз."
 
 #: main/auth.py:1147
 #, python-format
 msgid "Hello %(name)s, welcome to %(brand)s."
-msgstr "Hallo %(name)s, welkom bij %(brand)s."
+msgstr "Здравствуйте, %(name)s, добро пожаловать на %(brand)s."
 
 #: main/auth.py:1152
 msgid "Sorry, but you could not sign in."
-msgstr "Sorry, maar u kon niet aangemeld worden."
+msgstr "Извините, но Вы не зашли на сайт."
 
 #: main/event.py:28
 msgid "Search for a place"
-msgstr "Zoek een plaats"
+msgstr ""
 
 #: main/event.py:29
 msgid "Name / Address (Automatic)"
-msgstr "Naam / adres (automatisch)"
+msgstr ""
 
 #: main/event.py:30
 msgid "Place / City (Automatic)"
-msgstr "Plaats / stad (automatisch)"
+msgstr ""
 
 #: main/event.py:31
 msgid "Country (Automatic)"
-msgstr "Land (automatisch)"
+msgstr ""
 
 #: main/event.py:35
 msgid "Timestamp"
-msgstr "Tijdstip"
+msgstr ""
 
 #: main/event.py:36 main/templates/event/event_list.html:30
 msgid "Notes"
-msgstr "Notities"
+msgstr ""
 
 #: main/event.py:37
 msgid "This place is a layover"
-msgstr "Deze plaats is een overstap"
+msgstr ""
 
 #: main/event.py:38
 msgid "Add More"
-msgstr "Meer toevoegen"
+msgstr ""
 
 #: main/event.py:40
 msgid "Year"
-msgstr "Jaar"
+msgstr ""
 
 #: main/event.py:41
 msgid "Month"
-msgstr "Maand"
+msgstr ""
 
 #: main/event.py:42
 msgid "Day"
-msgstr "Dag"
+msgstr ""
 
 #: main/event.py:43
 msgid "Time"
-msgstr "Tijd"
+msgstr ""
 
 #: main/event.py:74
 msgid "You should at least enter a year"
-msgstr "U moet ten minste een jaar invoeren"
+msgstr ""
 
 #: main/event.py:94
 msgid "Enter a valid date"
-msgstr "Ongeldige datum"
+msgstr ""
 
 #: main/event.py:159 main/templates/bit/header.html:15
 msgid "Add Place"
-msgstr "Plaats toevoegen"
+msgstr ""
 
 #: main/event.py:186 main/templates/bit/header.html:18
 msgid "My Places"
-msgstr "Mijn plaatsen"
+msgstr ""
 
 #: main/lib/flask_wtf/recaptcha/validators.py:34
 #: main/lib/wtforms/validators.py:203 main/lib/wtforms/validators.py:240
 msgid "This field is required."
-msgstr "Dit veld is verplicht."
+msgstr "Обязательное поле."
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:68
 msgid "Get a visual challenge"
-msgstr "Probeer een visuele uitdaging"
+msgstr "Получить визуальное задание"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:69
 msgid "Get an audio challenge"
-msgstr "Probeer een audio uitdaging"
+msgstr "Получить аудио задание"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:70
 msgid "Get a new challenge"
-msgstr "Probeer een nieuwe uitdaging"
+msgstr "Получить новое задание"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:71
 msgid "Type the two words:"
-msgstr "Typ de twee woorden:"
+msgstr "Введите два слова:"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:72
 msgid "Type what you hear:"
-msgstr "Typ wat u hoort:"
+msgstr "Введите то, что вы слышите:"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:73
 msgid "Help"
-msgstr "Help"
+msgstr "Помощь"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:74
 msgid "Play sound again"
-msgstr "Geluid opnieuw afspelen"
+msgstr "Проиграть звук еще раз"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:75
 msgid "Download sound as MP3"
-msgstr "Geluid downloaden als MP3"
+msgstr "Скачать звук как MP3 файл"
 
 #: main/lib/flask_wtf/recaptcha/widgets.py:76
 msgid "Incorrect. Try again."
-msgstr "Onjuist. Probeer het opnieuw."
+msgstr "Неправильно. Попробуйте еще раз."
 
 #: main/lib/wtforms/csrf/core.py:98 main/lib/wtforms/ext/csrf/form.py:47
 msgid "Invalid CSRF Token"
-msgstr "Ongeldig CSRF-token"
+msgstr "Неверный CSRF токен"
 
 #: main/lib/wtforms/csrf/session.py:61 main/lib/wtforms/ext/csrf/session.py:58
 msgid "CSRF token missing"
-msgstr "CSRF-token ontbreekt"
+msgstr "CSRF токен отсутствует"
 
 #: main/lib/wtforms/csrf/session.py:69 main/lib/wtforms/ext/csrf/session.py:66
 msgid "CSRF failed"
-msgstr "CSRF gefaald"
+msgstr "Ошибка CSRF"
 
 #: main/lib/wtforms/csrf/session.py:74 main/lib/wtforms/ext/csrf/session.py:71
 msgid "CSRF token expired"
-msgstr "CSRF-token is verlopen"
+msgstr "CSRF токен просрочен"
 
 #: main/lib/wtforms/ext/appengine/fields.py:87
 #: main/lib/wtforms/ext/appengine/fields.py:164
@@ -178,140 +178,142 @@ msgstr "CSRF-token is verlopen"
 #: main/lib/wtforms/ext/sqlalchemy/fields.py:185
 #: main/lib/wtforms/fields/core.py:468
 msgid "Not a valid choice"
-msgstr "Ongeldige keuze"
+msgstr "Неверный вариант"
 
 #: main/lib/wtforms/ext/appengine/fields.py:185
 msgid "Not a valid list"
-msgstr "Niet een geldige lijst"
+msgstr "Неверный список"
 
 #: main/lib/wtforms/ext/appengine/fields.py:204
 msgid "Not a valid integer list"
-msgstr "Niet een geldige lijst van getallen"
+msgstr "Неверный список целых чисел"
 
 #: main/lib/wtforms/ext/dateutil/fields.py:63
 msgid "Please input a date/time value"
-msgstr "Voer een datum/tijd in"
+msgstr "Пожалуйста, введите значение даты/времени"
 
 #: main/lib/wtforms/ext/dateutil/fields.py:75
 #: main/lib/wtforms/ext/dateutil/fields.py:83
 msgid "Invalid date/time input"
-msgstr "Ongeldige datum/tijd"
+msgstr "Неверное значение даты/времени"
 
 #: main/lib/wtforms/fields/core.py:461
 msgid "Invalid Choice: could not coerce"
-msgstr "Ongeldige keuze: kon niet omgezet worden"
+msgstr "Неверный вариант: невозможно преобразовать"
 
 #: main/lib/wtforms/fields/core.py:494
 msgid "Invalid choice(s): one or more data inputs could not be coerced"
-msgstr "Ongeldige keuze(s): één of meer van de invoeren kon niet omgezet worden"
+msgstr "Неверный вариант(варианты): одно или несколько значений невозможно преобразовать"
 
 #: main/lib/wtforms/fields/core.py:501
 #, python-format
 msgid "'%(value)s' is not a valid choice for this field"
-msgstr "'%(value)s' is een ongeldige keuze voor dit veld"
+msgstr "'%(value)s' - неверный вариант для этого поля"
 
 #: main/lib/wtforms/fields/core.py:584
 msgid "Not a valid integer value"
-msgstr "Ongeldig getal"
+msgstr "Неверное целое число"
 
 #: main/lib/wtforms/fields/core.py:650
 msgid "Not a valid decimal value"
-msgstr "Ongeldige decimale waarde"
+msgstr "Неверное десятичное число"
 
 #: main/lib/wtforms/fields/core.py:677
 msgid "Not a valid float value"
-msgstr "Ongeldige float-waarde"
+msgstr "Неверное десятичное число"
 
 #: main/lib/wtforms/fields/core.py:736
 msgid "Not a valid datetime value"
-msgstr "Ongeldige datum/tijd"
+msgstr "Неверное значение даты/времени"
 
 #: main/lib/wtforms/fields/core.py:753
 msgid "Not a valid date value"
-msgstr "Ongeldige datum"
+msgstr "Неверное значение даты"
 
 #: main/lib/wtforms/validators.py:56
 #, python-format
 msgid "Invalid field name '%s'."
-msgstr "Ongeldige naam voor veld '%s'."
+msgstr "Неправильное имя поля '%s'."
 
 #: main/lib/wtforms/validators.py:64
 #, python-format
 msgid "Field must be equal to %(other_name)s."
-msgstr "Veld moet gelijk zijn aan %(other_name)s."
+msgstr "Поле должно совпадать с %(other_name)s."
 
 #: main/lib/wtforms/validators.py:97
 #, python-format
 msgid "Field must be at least %(min)d character long."
 msgid_plural "Field must be at least %(min)d characters long."
-msgstr[0] "Veld moet minstens %(min)d karakter lang zijn."
-msgstr[1] "Veld moet minstens %(min)d karakters lang zijn."
+msgstr[0] "Значение должно содержать не менее %(min)d символа."
+msgstr[1] "Значение должно содержать не менее %(min)d символов."
+msgstr[2] "Значение должно содержать не менее %(min)d символов."
 
 #: main/lib/wtforms/validators.py:100
 #, python-format
 msgid "Field cannot be longer than %(max)d character."
 msgid_plural "Field cannot be longer than %(max)d characters."
-msgstr[0] "Veld mag niet langer zijn dan %(max)d karakter."
-msgstr[1] "Veld mag niet langer zijn dan %(max)d karakters."
+msgstr[0] "Значение не должно содержать более %(max)d символа."
+msgstr[1] "Значение не должно содержать более %(max)d символов."
+msgstr[2] "Значение не должно содержать более %(max)d символов."
 
 #: main/lib/wtforms/validators.py:103
 #, python-format
 msgid "Field must be between %(min)d and %(max)d characters long."
-msgstr "Veld moet tussen %(min)d en %(max)d karakters lang zijn."
+msgstr "Значение должно содержать от %(min)d до %(max)d символов."
 
 #: main/lib/wtforms/validators.py:139
 #, python-format
 msgid "Number must be at least %(min)s."
-msgstr "Getal moet minstens %(min)s zijn."
+msgstr "Число должно быть больше %(min)s."
 
 #: main/lib/wtforms/validators.py:141
 #, python-format
 msgid "Number must be at most %(max)s."
-msgstr "Getal mag maximaal %(max)s zijn."
+msgstr "Число должно быть меньше %(max)s."
 
 #: main/lib/wtforms/validators.py:143
 #, python-format
 msgid "Number must be between %(min)s and %(max)s."
-msgstr "Getal moet tussen %(min)s en %(max)s liggen."
+msgstr "Значение должно быть между %(min)s и %(max)s."
 
 #: main/lib/wtforms/validators.py:271
 msgid "Invalid input."
-msgstr "Ongeldige invoer."
+msgstr "Некорректный ввод."
 
 #: main/lib/wtforms/validators.py:293
 msgid "Invalid email address."
-msgstr "Ongeldig e-mailadres."
+msgstr "Неверный адрес электронной почты."
 
 #: main/lib/wtforms/validators.py:325
 msgid "Invalid IP address."
-msgstr "Ongeldig IP-adres."
+msgstr "Неверный IP адрес."
 
 #: main/lib/wtforms/validators.py:374
 msgid "Invalid Mac address."
-msgstr "Ongeldig Mac-adres."
+msgstr "Неверный MAC адрес."
 
 #: main/lib/wtforms/validators.py:400
 msgid "Invalid URL."
-msgstr "Ongeldige URL."
+msgstr "Неверный URL."
 
 #: main/lib/wtforms/validators.py:419
 msgid "Invalid UUID."
-msgstr "Ongeldige UUID."
+msgstr "Неверный UUID."
 
 #: main/lib/wtforms/validators.py:447
 #, python-format
 msgid "Invalid value, must be one of: %(values)s."
-msgstr "Ongeldige waarde, moet een waarde zijn uit: %(values)s."
+msgstr "Неверное значение, должно быть одним из %(values)s."
 
 #: main/lib/wtforms/validators.py:479
 #, python-format
 msgid "Invalid value, can't be any of: %(values)s."
-msgstr "Ongeldige waarde, kan niet een waarde zijn in: %(values)s."
+msgstr "Неверное значение, не должно быть одним из %(values)s."
 
 #: main/main.py:87 main/user.py:53 main/templates/user/user_list.html:84
 #: main/templates/user/user_merge.html:21
 msgid "Name"
-msgstr "Naam"
+msgstr "Имя"
 
 #: main/main.py:90 main/user.py:56 main/templates/user/user_list.html:86
 #: main/templates/user/user_merge.html:23
@@ -320,67 +322,67 @@ msgstr "E-mail"
 
 #: main/main.py:94 main/user.py:60 main/templates/user/user_list.html:87
 msgid "Language"
-msgstr "Taal"
+msgstr "Язык"
 
 #: main/main.py:97 main/templates/event/event_update.html:50
 msgid "Home"
-msgstr "Woonplaats"
+msgstr ""
 
 #: main/main.py:100
 msgid "Public. Used as sample data on homepage for anonymous users."
-msgstr "Publiek. Gebruikt als voorbeeldgegevens op homepage voor anonieme gebruikers."
+msgstr ""
 
 #: main/main.py:134
 msgid "Subject"
-msgstr "Onderwerp"
+msgstr "Тема"
 
 #: main/main.py:137
 msgid "Message"
-msgstr "Bericht"
+msgstr "Сообщение"
 
 #: main/main.py:140
 msgid "Your email (optional)"
-msgstr "Uw e-mail (optioneel)"
+msgstr "Ваш e-mail (необязательно)"
 
 #: main/main.py:156
 msgid "Thank you for your feedback!"
-msgstr "Bedankt voor uw feedback!"
+msgstr "Спасибо за Ваш отзыв!"
 
 #: main/main.py:161 main/templates/bit/contact_menu.html:3
 msgid "Feedback"
-msgstr "Feedback"
+msgstr "Обратная связь"
 
 #: main/templates/admin/event_list.html:12
 #: main/templates/event/event_list.html:26
 msgid "Datetime"
-msgstr "Datum / tijd"
+msgstr ""
 
 #: main/templates/admin/event_list.html:13
 #: main/templates/event/event_list.html:27
 msgid "Place / City"
-msgstr "Plaats / stad"
+msgstr ""
 
 #: main/templates/admin/event_list.html:14
 #: main/templates/event/event_list.html:28
 msgid "Country"
-msgstr "Accounts"
+msgstr ""
 
 #: main/templates/admin/event_list.html:15
 #: main/templates/event/event_list.html:29
 msgid "Name / Address"
-msgstr "Naam / adres"
+msgstr ""
 
 #: main/templates/admin/event_list.html:16
 msgid "User"
-msgstr "Gebruiker"
+msgstr ""
 
 #: main/templates/bit/footer.html:5
 msgid "Version"
-msgstr "Versie"
+msgstr "Версия"
 
 #: main/templates/bit/footer.html:8
 msgid "View in JSON"
-msgstr "Bekijk in JSON"
+msgstr "Показать как JSON"
 
 #: main/templates/bit/footer.html:14
 msgid "Powered by gae-init"
@@ -389,148 +391,148 @@ msgstr ""
 #: main/templates/bit/footer.html:15
 #, python-format
 msgid "View on %(brand)s"
-msgstr "Bekijk op %(brand)s"
+msgstr ""
 
 #: main/templates/bit/header.html:5
 msgid "Toggle navigation"
-msgstr "Wissel navigatie"
+msgstr "Переключить навигацию"
 
 #: main/templates/bit/locale.html:26
 msgid "Help Translating"
-msgstr "Help Translating"
+msgstr ""
 
 #: main/templates/bit/user_menu.html:9
 msgid "Profile Settings"
-msgstr "Profiel instellingen"
+msgstr "Настройки профиля"
 
 #: main/templates/bit/user_menu.html:14
 msgid "Event List"
-msgstr "Lijst met gebeurtenissen"
+msgstr ""
 
 #: main/templates/bit/user_menu.html:17
 msgid "Sign out"
-msgstr "Afmelden"
+msgstr "Выйти"
 
 #: main/templates/bit/user_menu.html:22
 msgid "Sign in"
-msgstr "Aanmelden"
+msgstr "Войти"
 
 #: main/templates/error.html:8
 msgid "Oh no"
-msgstr "Oh nee"
+msgstr "О, нет"
 
 #: main/templates/error.html:10
 msgid "Maybe it's our fault.. maybe it's yours.. but either case, this page is unavailable!"
-msgstr "Misschien is het onze fout... misschien die van u... maar in ieder geval, deze pagina is niet beschikbaar!"
+msgstr "Может быть это наша ошибка... может быть Ваша.. но как бы там ни было - эта страница недоступна!"
 
 #: main/templates/event/event_list.html:18
 msgid "Nothing interesting here."
-msgstr "Niets interessants hier."
+msgstr ""
 
 #: main/templates/event/event_list.html:19
 msgid "Add couple of new places to see them on a map."
-msgstr "Voeg een aantal nieuwe plaatsen toe om ze te zien op een kaart."
+msgstr ""
 
 #: main/templates/event/event_list.html:66
 msgid "Layover"
-msgstr "Overstap"
+msgstr ""
 
 #: main/templates/event/event_update.html:18
 msgid "Today"
-msgstr "Vandaag"
+msgstr ""
 
 #: main/templates/event/event_update.html:19
 msgid "Now"
-msgstr "Nu"
+msgstr ""
 
 #: main/templates/event/event_update.html:22
 msgid "Date / Time"
-msgstr "Datum / Tijd"
+msgstr ""
 
 #: main/templates/event/event_update.html:52
 msgid "Current Location"
-msgstr "Huidige locatie"
+msgstr ""
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
 #: main/templates/user/user_update.html:70
 msgid "Update"
-msgstr "Bijwerken"
+msgstr "Обновить"
 
 #: main/templates/event/event_update.html:77
 #: main/templates/event/event_update.html:97
 msgid "Add"
-msgstr "Toevoegen"
+msgstr ""
 
 #: main/templates/event/event_update.html:85
 msgid "Draggable map to update the address"
-msgstr "Verplaatsbare kaart om het adres bij te werken"
+msgstr ""
 
 #: main/templates/feedback.html:6
 msgid "Any questions or suggestions are welcome"
-msgstr "Vragen en/of suggesties zijn welkom"
+msgstr "Вопросы и предложения приветствуются"
 
 #: main/templates/feedback.html:18
 msgid "Sending Feedback.."
-msgstr "Feedback verzenden..."
+msgstr "Отправление отзыва.."
 
 #: main/templates/feedback.html:19
 msgid "Send Feedback"
-msgstr "Feedback verzenden"
+msgstr "Отправить отзыв"
 
 #: main/templates/macro/utils.html:30
 msgid "Next Page"
-msgstr "Volgende pagina"
+msgstr "Следующая страница"
 
 #: main/templates/map/map_toolbar.html:3
 msgid "Chart Type"
-msgstr "Grafiektype"
+msgstr ""
 
 #: main/templates/map/map_toolbar.html:5
 msgid "Countries"
-msgstr "Landen"
+msgstr ""
 
 #: main/templates/map/map_toolbar.html:8
 msgid "Cities"
-msgstr "Steden"
+msgstr ""
 
 #: main/templates/map/map_toolbar.html:11
 msgid "Line"
-msgstr "Lijn"
+msgstr ""
 
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
-msgstr "Verbonden accounts"
+msgstr "Подключенные аккаунты"
 
 #: main/templates/profile.html:29 main/templates/user/user_update.html:38
 msgid "Avatar"
-msgstr "Avatar"
+msgstr "Аватар"
 
 #: main/templates/profile.html:31 main/templates/user/user_list.html:99
 #: main/templates/user/user_merge.html:34
 #: main/templates/user/user_update.html:40
 msgid "Avatar of"
-msgstr "Avatar van"
+msgstr "Аватар"
 
 #: main/templates/profile.html:34
 msgid "Change on"
-msgstr "Verander op"
+msgstr "Изменить на"
 
 #: main/templates/profile.html:35
 msgid "Gravatar"
-msgstr "Gravatar"
+msgstr "Граватар"
 
 #: main/templates/profile.html:43
 msgid "Updating Profile.."
-msgstr "Profiel bijwerken..."
+msgstr "Обновление профиля.."
 
 #: main/templates/profile.html:44
 msgid "Update Profile"
-msgstr "Profiel bijwerken"
+msgstr "Обновить профиль"
 
 #: main/templates/signin.html:10
 msgid "It only takes 8 seconds"
-msgstr "Het duurt slechts 8 seconden"
+msgstr "Это займет всего 8 секунд"
 
 #: main/templates/signin.html:17
 msgid "Google"
@@ -545,7 +547,7 @@ msgstr "Google"
 #: main/templates/signin.html:100 main/templates/signin.html:107
 #, python-format
 msgid "Sign in with %(brand)s"
-msgstr "Aanmelden met %(brand)s"
+msgstr "Войдите с %(brand)s"
 
 #: main/templates/signin.html:23
 msgid "Facebook"
@@ -557,206 +559,221 @@ msgstr "Twitter"
 
 #: main/templates/signin.html:37 main/templates/bit/footer.html:15
 msgid "GitHub"
-msgstr "GitHub"
+msgstr ""
 
 #: main/templates/signin.html:44
 msgid "Bitbucket"
-msgstr "Bitbucket"
+msgstr ""
 
 #: main/templates/signin.html:51
 msgid "VK"
-msgstr "VK"
+msgstr ""
 
 #: main/templates/signin.html:58
 msgid "LinkedIn"
-msgstr "LinkedIn"
+msgstr ""
 
 #: main/templates/signin.html:65
 msgid "Dropbox"
-msgstr "Dropbox"
+msgstr ""
 
 #: main/templates/signin.html:72
 msgid "Windows Live"
-msgstr "Windows Live"
+msgstr ""
 
 #: main/templates/signin.html:79
 msgid "Stack Overflow"
-msgstr "Stack Overflow"
+msgstr ""
 
 #: main/templates/signin.html:86
 msgid "Instagram"
-msgstr "Instagram"
+msgstr ""
 
 #: main/templates/signin.html:93
 msgid "Microsoft"
-msgstr "Microsoft"
+msgstr ""
 
 #: main/templates/signin.html:100
 msgid "Reddit"
-msgstr "Reddit"
+msgstr ""
 
 #: main/templates/signin.html:107
 msgid "Yahoo!"
-msgstr "Yahoo!"
+msgstr ""
 
 #: main/templates/signin.html:112
 msgid "Keep me signed in"
-msgstr "Houd mij aangemeld"
+msgstr "Запомнить меня"
 
 #: main/templates/user/user_list.html:16
 msgid "Limit"
-msgstr "Aantal"
+msgstr "Лимит"
 
 #: main/templates/user/user_list.html:25
 msgid "Admins"
-msgstr "Beheerders"
+msgstr "Администраторы"
 
 #: main/templates/user/user_list.html:42
 msgid "Clear all permissions"
-msgstr "Wis alle machtigingen"
+msgstr "Clear all permissions"
 
 #: main/templates/user/user_list.html:48
 msgid "More"
-msgstr "Meer"
+msgstr "Больше"
 
 #: main/templates/user/user_list.html:55
 msgid "Are you sure you want to delete {users} selected user(s)?"
-msgstr "Weet u zeker dat u de {users} geselecteerde gebruiker(s) wilt verwijderen?"
+msgstr "Вы действительно желаете удалить {users} указанного(ных) пользователя(лей)?"
 
 #: main/templates/user/user_list.html:56
 msgid "{users} user(s) deleted."
-msgstr "{users} gebruiker(s) verwijderd."
+msgstr "{users} пользователь(ли) удалены."
 
 #: main/templates/user/user_list.html:57
 msgid "Something went wrong while deleting. Please try again."
-msgstr "Er ging iets mis tijdens het verwijderen. Probeer het opnieuw."
+msgstr "Что-то пошло не так при удалении. Пожалуйста, попробуйте еще раз."
 
 #: main/templates/user/user_list.html:61
 msgid "Delete Selected"
-msgstr "Selectie verwijderen"
+msgstr "Удалить выбранное"
 
 #: main/templates/user/user_list.html:67
 msgid "Merge Selected"
-msgstr "Selectie samenvoegen"
+msgstr "Объединить выбранное"
 
 #: main/templates/user/user_list.html:76
 msgid "Remove all filters"
-msgstr "Alle filters verwijderen"
+msgstr "Очистить фильтры"
 
 #: main/templates/user/user_list.html:77
 msgid "There are no users matching the filters."
-msgstr "Er zijn geen gebruikers die overeenkomen met de filters."
+msgstr "Нет пользователей, соответствующих фильтрам"
 
 #: main/templates/user/user_list.html:88 main/templates/user/user_merge.html:24
 msgid "Created"
-msgstr "Gemaakt"
+msgstr "Создан"
 
 #: main/templates/user/user_list.html:89
 msgid "Modified"
-msgstr "Gewijzigd"
+msgstr "Изменен"
 
 #: main/templates/user/user_list.html:91 main/templates/user/user_merge.html:26
 #: main/templates/user/user_update.html:46
 msgid "Accounts"
-msgstr "Accounts"
+msgstr "Аккаунты"
 
 #: main/templates/user/user_list.html:102
 #: main/templates/user/user_merge.html:37
 #: main/templates/user/user_update.html:13
 msgid "You"
-msgstr "U"
+msgstr "Вы"
 
 #: main/templates/user/user_list.html:125
 #: main/templates/user/user_merge.html:49
 msgid "admin"
-msgstr "beheerder"
+msgstr "администратор"
 
 #: main/templates/user/user_list.html:128
 #: main/templates/user/user_merge.html:52
 msgid "inactive"
-msgstr "inactief"
+msgstr "неактивный"
 
 #: main/templates/user/user_merge.html:10
 #: main/templates/user/user_update.html:9
 msgid "Back to user list"
-msgstr "Terug naar de gebruikers lijst"
+msgstr "Вернуться к списку пользователей"
 
 #: main/templates/user/user_merge.html:81
 msgid "Merged Accounts"
-msgstr "Samengevoegde accounts"
+msgstr "Объединенные аккаунты"
 
 #: main/templates/user/user_merge.html:86
 #: main/templates/user/user_update.html:51
 msgid "Auth ID"
-msgstr "Autorisatie ID"
+msgstr "Авториз. ID"
 
 #: main/templates/user/user_merge.html:103
 msgid "Select the user's entity that you want to keep (the other entities will be deactivated)"
-msgstr "Selecteer de gebruiker die u wilt bewaren (de andere gebruiker gegevens zullen worden gedeactiveerd)"
+msgstr "Выберите учетные записи, которые вы желаете оставить (другие учетные записи будут деактивированы)"
 
 #: main/templates/user/user_merge.html:104
 msgid "Before merging make sure the entities with references to the user are being taking care of"
-msgstr "Zorg vóór het samenvoegen ervoor dat gegevens met verwijzingen naar de gebruiker aangepast zijn"
+msgstr "Перед объединением убедитесь, что выбраны верные пользовательские профили"
 
 #: main/templates/user/user_merge.html:105
 msgid "For deactivated users the 3rd party associated accounts will be cleared"
-msgstr "Voor gedeactiveerde gebruikers zullen de 3de partij verbonden accounts worden gewist"
+msgstr "При отключении пользователей, все связанные с ними аккаунты будут очищены"
 
 #: main/templates/user/user_merge.html:111
 msgid "Merging.."
-msgstr "Samenvoegen..."
+msgstr "Объединение.."
 
 #: main/templates/user/user_merge.html:112
 msgid "Merge"
-msgstr "Samenvoegen"
+msgstr "Объединить"
 
 #: main/templates/user/user_update.html:69
 msgid "Updating.."
-msgstr "Bijwerken..."
+msgstr "Обновление.."
 
 #: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
-msgstr "Zie alle plaatsen die u hebt bezocht op de kaart als een braaksel!"
+msgstr ""
 
 #: main/user.py:37 main/templates/bit/user_menu.html:13
 msgid "User List"
-msgstr "Gebruikers lijst"
+msgstr "Список пользователей"
 
 #: main/user.py:49 main/user.py:162 main/templates/profile.html:17
 #: main/templates/user/user_list.html:85 main/templates/user/user_merge.html:22
 msgid "Username"
-msgstr "Gebruikersnaam"
+msgstr "Имя пользователя"
 
 #: main/user.py:63
 msgid "Admin"
-msgstr "Beheerder"
+msgstr "Администратор"
 
 #: main/user.py:64 main/templates/user/user_list.html:31
 msgid "Active"
-msgstr "Actief"
+msgstr "Активный"
 
 #: main/user.py:65 main/templates/user/user_list.html:90
 #: main/templates/user/user_merge.html:25
 msgid "Permissions"
-msgstr "Machtigingen"
+msgstr "Права доступа"
 
 #: main/user.py:95
 msgid "This username is invalid."
-msgstr "Deze gebruikersnaam is ongeldig."
+msgstr "Неверное имя пользователя."
 
 #: main/user.py:97
 msgid "This username is already taken."
-msgstr "Deze gebruikersnaam is al in gebruik."
+msgstr "Данное имя пользователя уже занято."
 
 #: main/user.py:163
 msgid "Name (merged)"
-msgstr "Naam (samengevoegd)"
+msgstr "Имя (после объединения)"
 
 #: main/user.py:166
 msgid "Email (merged)"
-msgstr "E-mail (samengevoegd)"
+msgstr "E-mail (после объединения)"
 
 #: main/user.py:226
 msgid "Merge Users"
-msgstr "Gebruikers samenvoegen"
+msgstr "Объединить пользователей"
+
+#~ msgid "Already exists."
+#~ msgstr "Уже существует."
+
+#~ msgid "Updating Config.."
+#~ msgstr "Обновление Конфигурации.."
+
+#~ msgid "Update Config"
+#~ msgstr "Обновить Конфигурацию"
+
+#~ msgid "Heading"
+#~ msgstr "Заголовок"
+
+#~ msgid "Grumpy wizards make toxic brew for the evil Queen and Jack."
+#~ msgstr "В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!"
 
