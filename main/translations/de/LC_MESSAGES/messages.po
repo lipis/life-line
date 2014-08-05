@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-08-03 19:10+0200\n"
+"POT-Creation-Date: 2014-08-04 18:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: de <LL@li.org>\n"
@@ -397,7 +397,7 @@ msgstr "Navigation an-/ausschalten"
 
 #: main/templates/bit/locale.html:26
 msgid "Help Translating"
-msgstr "Help Translating"
+msgstr "Helfen Sie beim Übersetzen"
 
 #: main/templates/bit/user_menu.html:9
 msgid "Profile Settings"
@@ -425,11 +425,11 @@ msgstr "Unabhängig davon wer's schuld ist: diese Seite ist leider nicht verfüg
 
 #: main/templates/event/event_list.html:18
 msgid "Nothing interesting here."
-msgstr "Nothing interesting here."
+msgstr "Hier gibt es nichts Interessantes."
 
 #: main/templates/event/event_list.html:19
 msgid "Add couple of new places to see them on a map."
-msgstr "Add couple of new places to see them on a map."
+msgstr "Fügen Sie ein paar neue Plätze hinzu, um sie auf der Karte sehen zu können."
 
 #: main/templates/event/event_list.html:66
 msgid "Layover"

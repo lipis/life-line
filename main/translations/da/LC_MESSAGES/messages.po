@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-08-03 19:10+0200\n"
+"POT-Creation-Date: 2014-08-04 18:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: da <LL@li.org>\n"
@@ -49,67 +49,67 @@ msgstr "Beklager, men du kunne ikke logge ind"
 
 #: main/event.py:28
 msgid "Search for a place"
-msgstr ""
+msgstr "Søg efter et sted"
 
 #: main/event.py:29
 msgid "Name / Address (Automatic)"
-msgstr ""
+msgstr "Navn / Adresse (Automatisk)"
 
 #: main/event.py:30
 msgid "Place / City (Automatic)"
-msgstr ""
+msgstr "Sted / By (Automatisk)"
 
 #: main/event.py:31
 msgid "Country (Automatic)"
-msgstr ""
+msgstr "Land (Automatisk)"
 
 #: main/event.py:35
 msgid "Timestamp"
-msgstr ""
+msgstr "Tidsstempel"
 
 #: main/event.py:36 main/templates/event/event_list.html:30
 msgid "Notes"
-msgstr ""
+msgstr "Noter"
 
 #: main/event.py:37
 msgid "This place is a layover"
-msgstr ""
+msgstr "Dette er et transit-sted"
 
 #: main/event.py:38
 msgid "Add More"
-msgstr ""
+msgstr "Tilføj mere"
 
 #: main/event.py:40
 msgid "Year"
-msgstr ""
+msgstr "År"
 
 #: main/event.py:41
 msgid "Month"
-msgstr ""
+msgstr "Måned"
 
 #: main/event.py:42
 msgid "Day"
-msgstr ""
+msgstr "Dag"
 
 #: main/event.py:43
 msgid "Time"
-msgstr ""
+msgstr "Tidspunkt"
 
 #: main/event.py:74
 msgid "You should at least enter a year"
-msgstr ""
+msgstr "Du bør mindst angive et år"
 
 #: main/event.py:94
 msgid "Enter a valid date"
-msgstr ""
+msgstr "Indtast en gyldig dato"
 
 #: main/event.py:159 main/templates/bit/header.html:15
 msgid "Add Place"
-msgstr ""
+msgstr "Tilføj sted"
 
 #: main/event.py:186 main/templates/bit/header.html:18
 msgid "My Places"
-msgstr ""
+msgstr "Mine steder"
 
 #: main/lib/flask_wtf/recaptcha/validators.py:34
 #: main/lib/wtforms/validators.py:203 main/lib/wtforms/validators.py:240
@@ -324,11 +324,11 @@ msgstr "Sprog"
 
 #: main/main.py:97 main/templates/event/event_update.html:50
 msgid "Home"
-msgstr ""
+msgstr "Hjem"
 
 #: main/main.py:100
 msgid "Public. Used as sample data on homepage for anonymous users."
-msgstr ""
+msgstr "Public. Used as sample data on homepage for anonymous users."
 
 #: main/main.py:134
 msgid "Subject"
@@ -353,26 +353,26 @@ msgstr "Tilbagemelding"
 #: main/templates/admin/event_list.html:12
 #: main/templates/event/event_list.html:26
 msgid "Datetime"
-msgstr ""
+msgstr "Datetime"
 
 #: main/templates/admin/event_list.html:13
 #: main/templates/event/event_list.html:27
 msgid "Place / City"
-msgstr ""
+msgstr "Sted / By"
 
 #: main/templates/admin/event_list.html:14
 #: main/templates/event/event_list.html:28
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 #: main/templates/admin/event_list.html:15
 #: main/templates/event/event_list.html:29
 msgid "Name / Address"
-msgstr ""
+msgstr "Navn / Adresse"
 
 #: main/templates/admin/event_list.html:16
 msgid "User"
-msgstr ""
+msgstr "Bruger"
 
 #: main/templates/bit/footer.html:5
 msgid "Version"
@@ -389,7 +389,7 @@ msgstr ""
 #: main/templates/bit/footer.html:15
 #, python-format
 msgid "View on %(brand)s"
-msgstr ""
+msgstr "View on %(brand)s"
 
 #: main/templates/bit/header.html:5
 msgid "Toggle navigation"
@@ -397,7 +397,7 @@ msgstr "Skift navigation"
 
 #: main/templates/bit/locale.html:26
 msgid "Help Translating"
-msgstr ""
+msgstr "Hjælp med at oversætte"
 
 #: main/templates/bit/user_menu.html:9
 msgid "Profile Settings"
@@ -405,7 +405,7 @@ msgstr "Profil opsætning"
 
 #: main/templates/bit/user_menu.html:14
 msgid "Event List"
-msgstr ""
+msgstr "Event List"
 
 #: main/templates/bit/user_menu.html:17
 msgid "Sign out"
@@ -425,31 +425,31 @@ msgstr "Måske har vi lavet en fejl her - send gerne en tilbagemelding med linke
 
 #: main/templates/event/event_list.html:18
 msgid "Nothing interesting here."
-msgstr ""
+msgstr "Intet interessant her."
 
 #: main/templates/event/event_list.html:19
 msgid "Add couple of new places to see them on a map."
-msgstr ""
+msgstr "Tilføj et par nye steder for at se dem på et kort."
 
 #: main/templates/event/event_list.html:66
 msgid "Layover"
-msgstr ""
+msgstr "Transit"
 
 #: main/templates/event/event_update.html:18
 msgid "Today"
-msgstr ""
+msgstr "I dag"
 
 #: main/templates/event/event_update.html:19
 msgid "Now"
-msgstr ""
+msgstr "Nu"
 
 #: main/templates/event/event_update.html:22
 msgid "Date / Time"
-msgstr ""
+msgstr "Dato / Tid"
 
 #: main/templates/event/event_update.html:52
 msgid "Current Location"
-msgstr ""
+msgstr "Nuværende Placering"
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
@@ -460,11 +460,11 @@ msgstr "Opdater"
 #: main/templates/event/event_update.html:77
 #: main/templates/event/event_update.html:97
 msgid "Add"
-msgstr ""
+msgstr "Tilføj"
 
 #: main/templates/event/event_update.html:85
 msgid "Draggable map to update the address"
-msgstr ""
+msgstr "Træk i kortet for at opdatere adressen"
 
 #: main/templates/feedback.html:6
 msgid "Any questions or suggestions are welcome"
@@ -484,19 +484,19 @@ msgstr "Næste Side"
 
 #: main/templates/map/map_toolbar.html:3
 msgid "Chart Type"
-msgstr ""
+msgstr "Diagramtype"
 
 #: main/templates/map/map_toolbar.html:5
 msgid "Countries"
-msgstr ""
+msgstr "Lande"
 
 #: main/templates/map/map_toolbar.html:8
 msgid "Cities"
-msgstr ""
+msgstr "Byer"
 
 #: main/templates/map/map_toolbar.html:11
 msgid "Line"
-msgstr ""
+msgstr "Linje"
 
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
@@ -557,47 +557,47 @@ msgstr "Twitter"
 
 #: main/templates/signin.html:37 main/templates/bit/footer.html:15
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: main/templates/signin.html:44
 msgid "Bitbucket"
-msgstr ""
+msgstr "Bitbucket"
 
 #: main/templates/signin.html:51
 msgid "VK"
-msgstr ""
+msgstr "VK"
 
 #: main/templates/signin.html:58
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: main/templates/signin.html:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: main/templates/signin.html:72
 msgid "Windows Live"
-msgstr ""
+msgstr "Windows Live"
 
 #: main/templates/signin.html:79
 msgid "Stack Overflow"
-msgstr ""
+msgstr "Stack Overflow"
 
 #: main/templates/signin.html:86
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: main/templates/signin.html:93
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: main/templates/signin.html:100
 msgid "Reddit"
-msgstr ""
+msgstr "Reddit"
 
 #: main/templates/signin.html:107
 msgid "Yahoo!"
-msgstr ""
+msgstr "Yahoo!"
 
 #: main/templates/signin.html:112
 msgid "Keep me signed in"
@@ -609,11 +609,11 @@ msgstr "Grænse"
 
 #: main/templates/user/user_list.html:25
 msgid "Admins"
-msgstr "Admins"
+msgstr "Administratorer"
 
 #: main/templates/user/user_list.html:42
 msgid "Clear all permissions"
-msgstr "Clear all permissions"
+msgstr "Ryd alle tilladelser"
 
 #: main/templates/user/user_list.html:48
 msgid "More"
@@ -716,7 +716,7 @@ msgstr "Opdaterer..."
 
 #: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
-msgstr ""
+msgstr "See all the places that you've visited on a map like a vomit!"
 
 #: main/user.py:37 main/templates/bit/user_menu.html:13
 msgid "User List"
@@ -759,19 +759,4 @@ msgstr "Email (forenet)"
 #: main/user.py:226
 msgid "Merge Users"
 msgstr "Sammenføj brugere"
-
-#~ msgid "Already exists."
-#~ msgstr "Eksisterer allerede."
-
-#~ msgid "Updating Config.."
-#~ msgstr "Opdaterer opsætningen"
-
-#~ msgid "Update Config"
-#~ msgstr "Opdaterer opsætningen"
-
-#~ msgid "Heading"
-#~ msgstr "Overskrift"
-
-#~ msgid "Grumpy wizards make toxic brew for the evil Queen and Jack."
-#~ msgstr "Høj bly gom vandt fræk sexquiz på wc."
 

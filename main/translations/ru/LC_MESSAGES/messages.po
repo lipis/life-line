@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-08-03 19:10+0200\n"
+"POT-Creation-Date: 2014-08-04 18:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -49,67 +49,67 @@ msgstr "Извините, но Вы не зашли на сайт."
 
 #: main/event.py:28
 msgid "Search for a place"
-msgstr ""
+msgstr "Search for a place"
 
 #: main/event.py:29
 msgid "Name / Address (Automatic)"
-msgstr ""
+msgstr "Name / Address (Automatic)"
 
 #: main/event.py:30
 msgid "Place / City (Automatic)"
-msgstr ""
+msgstr "Place / City (Automatic)"
 
 #: main/event.py:31
 msgid "Country (Automatic)"
-msgstr ""
+msgstr "Country (Automatic)"
 
 #: main/event.py:35
 msgid "Timestamp"
-msgstr ""
+msgstr "Timestamp"
 
 #: main/event.py:36 main/templates/event/event_list.html:30
 msgid "Notes"
-msgstr ""
+msgstr "Notes"
 
 #: main/event.py:37
 msgid "This place is a layover"
-msgstr ""
+msgstr "This place is a layover"
 
 #: main/event.py:38
 msgid "Add More"
-msgstr ""
+msgstr "Add More"
 
 #: main/event.py:40
 msgid "Year"
-msgstr ""
+msgstr "Year"
 
 #: main/event.py:41
 msgid "Month"
-msgstr ""
+msgstr "Month"
 
 #: main/event.py:42
 msgid "Day"
-msgstr ""
+msgstr "Day"
 
 #: main/event.py:43
 msgid "Time"
-msgstr ""
+msgstr "Time"
 
 #: main/event.py:74
 msgid "You should at least enter a year"
-msgstr ""
+msgstr "You should at least enter a year"
 
 #: main/event.py:94
 msgid "Enter a valid date"
-msgstr ""
+msgstr "Enter a valid date"
 
 #: main/event.py:159 main/templates/bit/header.html:15
 msgid "Add Place"
-msgstr ""
+msgstr "Add Place"
 
 #: main/event.py:186 main/templates/bit/header.html:18
 msgid "My Places"
-msgstr ""
+msgstr "My Places"
 
 #: main/lib/flask_wtf/recaptcha/validators.py:34
 #: main/lib/wtforms/validators.py:203 main/lib/wtforms/validators.py:240
@@ -326,11 +326,11 @@ msgstr "Язык"
 
 #: main/main.py:97 main/templates/event/event_update.html:50
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: main/main.py:100
 msgid "Public. Used as sample data on homepage for anonymous users."
-msgstr ""
+msgstr "Public. Used as sample data on homepage for anonymous users."
 
 #: main/main.py:134
 msgid "Subject"
@@ -355,26 +355,26 @@ msgstr "Обратная связь"
 #: main/templates/admin/event_list.html:12
 #: main/templates/event/event_list.html:26
 msgid "Datetime"
-msgstr ""
+msgstr "Datetime"
 
 #: main/templates/admin/event_list.html:13
 #: main/templates/event/event_list.html:27
 msgid "Place / City"
-msgstr ""
+msgstr "Place / City"
 
 #: main/templates/admin/event_list.html:14
 #: main/templates/event/event_list.html:28
 msgid "Country"
-msgstr ""
+msgstr "Country"
 
 #: main/templates/admin/event_list.html:15
 #: main/templates/event/event_list.html:29
 msgid "Name / Address"
-msgstr ""
+msgstr "Name / Address"
 
 #: main/templates/admin/event_list.html:16
 msgid "User"
-msgstr ""
+msgstr "User"
 
 #: main/templates/bit/footer.html:5
 msgid "Version"
@@ -391,7 +391,7 @@ msgstr ""
 #: main/templates/bit/footer.html:15
 #, python-format
 msgid "View on %(brand)s"
-msgstr ""
+msgstr "View on %(brand)s"
 
 #: main/templates/bit/header.html:5
 msgid "Toggle navigation"
@@ -399,7 +399,7 @@ msgstr "Переключить навигацию"
 
 #: main/templates/bit/locale.html:26
 msgid "Help Translating"
-msgstr ""
+msgstr "Help Translating"
 
 #: main/templates/bit/user_menu.html:9
 msgid "Profile Settings"
@@ -407,7 +407,7 @@ msgstr "Настройки профиля"
 
 #: main/templates/bit/user_menu.html:14
 msgid "Event List"
-msgstr ""
+msgstr "Event List"
 
 #: main/templates/bit/user_menu.html:17
 msgid "Sign out"
@@ -427,31 +427,31 @@ msgstr "Может быть это наша ошибка... может быть 
 
 #: main/templates/event/event_list.html:18
 msgid "Nothing interesting here."
-msgstr ""
+msgstr "Nothing interesting here."
 
 #: main/templates/event/event_list.html:19
 msgid "Add couple of new places to see them on a map."
-msgstr ""
+msgstr "Add couple of new places to see them on a map."
 
 #: main/templates/event/event_list.html:66
 msgid "Layover"
-msgstr ""
+msgstr "Layover"
 
 #: main/templates/event/event_update.html:18
 msgid "Today"
-msgstr ""
+msgstr "Today"
 
 #: main/templates/event/event_update.html:19
 msgid "Now"
-msgstr ""
+msgstr "Now"
 
 #: main/templates/event/event_update.html:22
 msgid "Date / Time"
-msgstr ""
+msgstr "Date / Time"
 
 #: main/templates/event/event_update.html:52
 msgid "Current Location"
-msgstr ""
+msgstr "Current Location"
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
@@ -462,11 +462,11 @@ msgstr "Обновить"
 #: main/templates/event/event_update.html:77
 #: main/templates/event/event_update.html:97
 msgid "Add"
-msgstr ""
+msgstr "Add"
 
 #: main/templates/event/event_update.html:85
 msgid "Draggable map to update the address"
-msgstr ""
+msgstr "Draggable map to update the address"
 
 #: main/templates/feedback.html:6
 msgid "Any questions or suggestions are welcome"
@@ -486,19 +486,19 @@ msgstr "Следующая страница"
 
 #: main/templates/map/map_toolbar.html:3
 msgid "Chart Type"
-msgstr ""
+msgstr "Chart Type"
 
 #: main/templates/map/map_toolbar.html:5
 msgid "Countries"
-msgstr ""
+msgstr "Countries"
 
 #: main/templates/map/map_toolbar.html:8
 msgid "Cities"
-msgstr ""
+msgstr "Cities"
 
 #: main/templates/map/map_toolbar.html:11
 msgid "Line"
-msgstr ""
+msgstr "Line"
 
 #: main/templates/profile.html:8
 msgid "Connected Accounts"
@@ -559,47 +559,47 @@ msgstr "Twitter"
 
 #: main/templates/signin.html:37 main/templates/bit/footer.html:15
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: main/templates/signin.html:44
 msgid "Bitbucket"
-msgstr ""
+msgstr "Bitbucket"
 
 #: main/templates/signin.html:51
 msgid "VK"
-msgstr ""
+msgstr "VK"
 
 #: main/templates/signin.html:58
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: main/templates/signin.html:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: main/templates/signin.html:72
 msgid "Windows Live"
-msgstr ""
+msgstr "Windows Live"
 
 #: main/templates/signin.html:79
 msgid "Stack Overflow"
-msgstr ""
+msgstr "Stack Overflow"
 
 #: main/templates/signin.html:86
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: main/templates/signin.html:93
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: main/templates/signin.html:100
 msgid "Reddit"
-msgstr ""
+msgstr "Reddit"
 
 #: main/templates/signin.html:107
 msgid "Yahoo!"
-msgstr ""
+msgstr "Yahoo!"
 
 #: main/templates/signin.html:112
 msgid "Keep me signed in"
@@ -718,7 +718,7 @@ msgstr "Обновление.."
 
 #: main/templates/welcome.html:15
 msgid "See all the places that you've visited on a map like a vomit!"
-msgstr ""
+msgstr "See all the places that you've visited on a map like a vomit!"
 
 #: main/user.py:37 main/templates/bit/user_menu.html:13
 msgid "User List"
@@ -761,19 +761,4 @@ msgstr "E-mail (после объединения)"
 #: main/user.py:226
 msgid "Merge Users"
 msgstr "Объединить пользователей"
-
-#~ msgid "Already exists."
-#~ msgstr "Уже существует."
-
-#~ msgid "Updating Config.."
-#~ msgstr "Обновление Конфигурации.."
-
-#~ msgid "Update Config"
-#~ msgstr "Обновить Конфигурацию"
-
-#~ msgid "Heading"
-#~ msgstr "Заголовок"
-
-#~ msgid "Grumpy wizards make toxic brew for the evil Queen and Jack."
-#~ msgstr "В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!"
 
