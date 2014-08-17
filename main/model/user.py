@@ -19,6 +19,8 @@ class User(model.Base):
   active = ndb.BooleanProperty(default=True)
   admin = ndb.BooleanProperty(default=False)
   permissions = ndb.StringProperty(repeated=True)
+  verified = ndb.BooleanProperty(default=False)
+  token = ndb.StringProperty(default='')
   home = ndb.StringProperty(default='')
   is_public = ndb.BooleanProperty(default=False)
 
@@ -38,19 +40,21 @@ class User(model.Base):
       'auth_ids',
       'avatar_url',
       'email',
-      'locale',
-      'name',
-      'username',
-      'permissions',
       'home',
       'is_public',
+      'locale',
+      'name',
+      'permissions',
+      'username',
+      'verified',
     })
 
   @classmethod
-  def get_dbs(cls, admin=None, active=None, permissions=None, **kwargs):
+  def get_dbs(cls, admin=None, active=None, verified=None, permissions=None, **kwargs):
     return super(User, cls).get_dbs(
         admin=admin or util.param('admin', bool),
         active=active or util.param('active', bool),
+        verified=verified or util.param('verified', bool),
         permissions=permissions or util.param('permissions', list),
         **kwargs
       )

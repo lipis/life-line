@@ -18,7 +18,7 @@
           <input id="username" class="form-control" name="username" type="text" value="{{user_db.username}}" readonly="readonly">
         </div>
         {{forms.text_field(form.name, autofocus=True)}}
-        {{forms.email_field(form.email)}}
+        # include 'user/user_email_field.html'
         # set home = 'e.g. %s, %s' % (request.city.title(), request.country) if request.city and request.country else ''
         {{forms.text_field(form.home, placeholder=home)}}
         {{forms.select_field(form.locale)}}

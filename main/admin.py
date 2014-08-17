@@ -45,6 +45,7 @@ class ConfigUpdateForm(i18n.Form):
   stackoverflow_key = wtf.StringField('Key', filters=[util.strip_filter])
   twitter_consumer_key = wtf.StringField('Consumer Key', filters=[util.strip_filter])
   twitter_consumer_secret = wtf.StringField('Consumer Secret', filters=[util.strip_filter])
+  verify_email = wtf.BooleanField('Verify user emails')
   vk_app_id = wtf.StringField('App ID', filters=[util.strip_filter])
   vk_app_secret = wtf.StringField('App Secret', filters=[util.strip_filter])
   yahoo_consumer_key = wtf.StringField('Consumer Key', filters=[util.strip_filter])

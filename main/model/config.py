@@ -24,13 +24,13 @@ class Config(model.Base):
   facebook_app_secret = ndb.StringProperty(default='')
   feedback_email = ndb.StringProperty(default='')
   flask_secret_key = ndb.StringProperty(default=util.uuid())
-  locale = ndb.StringProperty(default='en')
   github_client_id = ndb.StringProperty(default='')
   github_client_secret = ndb.StringProperty(default='')
   instagram_client_id = ndb.StringProperty(default='')
   instagram_client_secret = ndb.StringProperty(default='')
   linkedin_api_key = ndb.StringProperty(default='')
   linkedin_secret_key = ndb.StringProperty(default='')
+  locale = ndb.StringProperty(default='en')
   microsoft_client_id = ndb.StringProperty(default='')
   microsoft_client_secret = ndb.StringProperty(default='')
   notify_on_new_user = ndb.BooleanProperty(default=True)
@@ -41,6 +41,7 @@ class Config(model.Base):
   stackoverflow_key = ndb.StringProperty(default='')
   twitter_consumer_key = ndb.StringProperty(default='')
   twitter_consumer_secret = ndb.StringProperty(default='')
+  verify_email = ndb.BooleanProperty(default=True)
   vk_app_id = ndb.StringProperty(default='')
   vk_app_secret = ndb.StringProperty(default='')
   yahoo_consumer_key = ndb.StringProperty(default='')
@@ -107,13 +108,13 @@ class Config(model.Base):
       'facebook_app_secret',
       'feedback_email',
       'flask_secret_key',
-      'locale',
       'github_client_id',
       'github_client_secret',
       'instagram_client_id',
       'instagram_client_secret',
       'linkedin_api_key',
       'linkedin_secret_key',
+      'locale',
       'microsoft_client_id',
       'microsoft_client_secret',
       'notify_on_new_user',
@@ -124,6 +125,7 @@ class Config(model.Base):
       'stackoverflow_key',
       'twitter_consumer_key',
       'twitter_consumer_secret',
+      'verify_email',
       'vk_app_id',
       'vk_app_secret',
       'yahoo_consumer_key',
