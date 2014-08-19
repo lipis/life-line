@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-08-04 18:30+0200\n"
+"POT-Creation-Date: 2014-08-17 12:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -18,32 +18,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 
-#: main/admin.py:82 main/templates/bit/user_menu.html:12
+#: main/admin.py:83 main/templates/bit/user_menu.html:12
 msgid "Admin Config"
 msgstr "Configuración de administración"
 
-#: main/auth.py:225
+#: main/auth.py:226
 msgid "Please sign in"
 msgstr "Identifíquese por favor"
 
-#: main/auth.py:247
+#: main/auth.py:248
 msgid "You have been signed out."
 msgstr "La sesión se ha cerrado."
 
-#: main/auth.py:265 main/auth.py:311 main/auth.py:375
+#: main/auth.py:266 main/auth.py:313 main/auth.py:377
 msgid "You denied the request to sign in."
 msgstr "Has rechazado iniciar sesión."
 
-#: main/auth.py:335
+#: main/auth.py:337
 msgid "Something went wrong with Twitter sign in. Please try again."
 msgstr "Ha habido un problema al iniciar sesión en Twitter. Por favor, inténtelo de nuevo."
 
-#: main/auth.py:1147
+#: main/auth.py:1153
 #, python-format
 msgid "Hello %(name)s, welcome to %(brand)s."
 msgstr "Hola %(name)s, bienvenido a %(brand)s."
 
-#: main/auth.py:1152
+#: main/auth.py:1158
 msgid "Sorry, but you could not sign in."
 msgstr "Lo sentimos, no se ha podido iniciar sesión."
 
@@ -308,45 +308,45 @@ msgstr "Valor inválido, debe ser uno de: %(values)s."
 msgid "Invalid value, can't be any of: %(values)s."
 msgstr "Valor inválido, no puede ser ninguno de: %(values)s."
 
-#: main/main.py:87 main/user.py:53 main/templates/user/user_list.html:84
+#: main/main.py:89 main/user.py:53 main/templates/user/user_list.html:91
 #: main/templates/user/user_merge.html:21
 msgid "Name"
 msgstr "Nombre"
 
-#: main/main.py:90 main/user.py:56 main/templates/user/user_list.html:86
+#: main/main.py:92 main/user.py:56 main/templates/user/user_list.html:92
 #: main/templates/user/user_merge.html:23
 msgid "Email"
 msgstr "Email"
 
-#: main/main.py:94 main/user.py:60 main/templates/user/user_list.html:87
+#: main/main.py:96 main/user.py:60 main/templates/user/user_list.html:95
 msgid "Language"
 msgstr "Idioma"
 
-#: main/main.py:97 main/templates/event/event_update.html:50
+#: main/main.py:99 main/templates/event/event_update.html:50
 msgid "Home"
 msgstr "Home"
 
-#: main/main.py:100
+#: main/main.py:102
 msgid "Public. Used as sample data on homepage for anonymous users."
 msgstr "Public. Used as sample data on homepage for anonymous users."
 
-#: main/main.py:134
+#: main/main.py:140
 msgid "Subject"
 msgstr "Asunto"
 
-#: main/main.py:137
+#: main/main.py:143
 msgid "Message"
 msgstr "Mensaje"
 
-#: main/main.py:140
+#: main/main.py:146
 msgid "Your email (optional)"
 msgstr "Tu correo (opcional)"
 
-#: main/main.py:156
+#: main/main.py:162
 msgid "Thank you for your feedback!"
 msgstr "¡Gracias por tus comentarios!"
 
-#: main/main.py:161 main/templates/bit/contact_menu.html:3
+#: main/main.py:167 main/templates/bit/contact_menu.html:3
 msgid "Feedback"
 msgstr "Feedback"
 
@@ -453,7 +453,7 @@ msgstr "Current Location"
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
-#: main/templates/user/user_update.html:70
+#: main/templates/user/user_update.html:71
 msgid "Update"
 msgstr "Actualizar"
 
@@ -502,13 +502,13 @@ msgstr "Line"
 msgid "Connected Accounts"
 msgstr "Cuentas conectadas"
 
-#: main/templates/profile.html:29 main/templates/user/user_update.html:38
+#: main/templates/profile.html:29 main/templates/user/user_update.html:39
 msgid "Avatar"
 msgstr "Avatar"
 
-#: main/templates/profile.html:31 main/templates/user/user_list.html:99
+#: main/templates/profile.html:31 main/templates/user/user_list.html:106
 #: main/templates/user/user_merge.html:34
-#: main/templates/user/user_update.html:40
+#: main/templates/user/user_update.html:41
 msgid "Avatar of"
 msgstr "Avatar de"
 
@@ -611,67 +611,67 @@ msgstr "Límite"
 msgid "Admins"
 msgstr "Administradores"
 
-#: main/templates/user/user_list.html:42
+#: main/templates/user/user_list.html:49
 msgid "Clear all permissions"
 msgstr "Clear all permissions"
 
-#: main/templates/user/user_list.html:48
+#: main/templates/user/user_list.html:55
 msgid "More"
 msgstr "Más"
 
-#: main/templates/user/user_list.html:55
+#: main/templates/user/user_list.html:62
 msgid "Are you sure you want to delete {users} selected user(s)?"
 msgstr "¿Está seguro de que desea eliminar {users} usuario(s) seleccionados?"
 
-#: main/templates/user/user_list.html:56
+#: main/templates/user/user_list.html:63
 msgid "{users} user(s) deleted."
 msgstr "{users} usuario(s) eliminados."
 
-#: main/templates/user/user_list.html:57
+#: main/templates/user/user_list.html:64
 msgid "Something went wrong while deleting. Please try again."
 msgstr "Algo salió mal durante el borrado. Por favor, inténtelo de nuevo."
 
-#: main/templates/user/user_list.html:61
+#: main/templates/user/user_list.html:68
 msgid "Delete Selected"
 msgstr "Borrar Seleccionados"
 
-#: main/templates/user/user_list.html:67
+#: main/templates/user/user_list.html:74
 msgid "Merge Selected"
 msgstr "Fusionar seleccionados"
 
-#: main/templates/user/user_list.html:76
+#: main/templates/user/user_list.html:83
 msgid "Remove all filters"
 msgstr "Quitar todos los filtros"
 
-#: main/templates/user/user_list.html:77
+#: main/templates/user/user_list.html:84
 msgid "There are no users matching the filters."
 msgstr "No hay usuarios que coincidan con los filtros."
 
-#: main/templates/user/user_list.html:88 main/templates/user/user_merge.html:24
-msgid "Created"
-msgstr "Creado"
-
-#: main/templates/user/user_list.html:89
+#: main/templates/user/user_list.html:94
 msgid "Modified"
 msgstr "Modificado"
 
-#: main/templates/user/user_list.html:91 main/templates/user/user_merge.html:26
-#: main/templates/user/user_update.html:46
+#: main/templates/user/user_list.html:94 main/templates/user/user_merge.html:24
+msgid "Created"
+msgstr "Creado"
+
+#: main/templates/user/user_list.html:97 main/templates/user/user_merge.html:26
+#: main/templates/user/user_update.html:47
 msgid "Accounts"
 msgstr "Cuentas"
 
-#: main/templates/user/user_list.html:102
+#: main/templates/user/user_list.html:110
 #: main/templates/user/user_merge.html:37
 #: main/templates/user/user_update.html:13
 msgid "You"
 msgstr "Usted"
 
-#: main/templates/user/user_list.html:125
+#: main/templates/user/user_list.html:137
 #: main/templates/user/user_merge.html:49
 msgid "admin"
 msgstr "administración"
 
-#: main/templates/user/user_list.html:128
+#: main/templates/user/user_list.html:140
 #: main/templates/user/user_merge.html:52
 msgid "inactive"
 msgstr "inactivo"
@@ -686,7 +686,7 @@ msgid "Merged Accounts"
 msgstr "Cuentas fusionadas"
 
 #: main/templates/user/user_merge.html:86
-#: main/templates/user/user_update.html:51
+#: main/templates/user/user_update.html:52
 msgid "Auth ID"
 msgstr "Auth ID"
 
@@ -710,7 +710,7 @@ msgstr "Fusionando.."
 msgid "Merge"
 msgstr "Fusionar"
 
-#: main/templates/user/user_update.html:69
+#: main/templates/user/user_update.html:70
 msgid "Updating.."
 msgstr "Actualizando.."
 
@@ -722,8 +722,8 @@ msgstr "See all the places that you've visited on a map like a vomit!"
 msgid "User List"
 msgstr "Lista de usuarios"
 
-#: main/user.py:49 main/user.py:162 main/templates/profile.html:17
-#: main/templates/user/user_list.html:85 main/templates/user/user_merge.html:22
+#: main/user.py:49 main/user.py:176 main/templates/profile.html:17
+#: main/templates/user/user_list.html:92 main/templates/user/user_merge.html:22
 msgid "Username"
 msgstr "Nombre de usuario"
 
@@ -731,32 +731,36 @@ msgstr "Nombre de usuario"
 msgid "Admin"
 msgstr "Administrador"
 
-#: main/user.py:64 main/templates/user/user_list.html:31
+#: main/user.py:64 main/templates/user/user_list.html:37
 msgid "Active"
 msgstr "Activo"
 
-#: main/user.py:65 main/templates/user/user_list.html:90
+#: main/user.py:65 main/templates/user/user_list.html:31
+msgid "Verified"
+msgstr ""
+
+#: main/user.py:66 main/templates/user/user_list.html:96
 #: main/templates/user/user_merge.html:25
 msgid "Permissions"
 msgstr "Permisos"
 
-#: main/user.py:95
+#: main/user.py:96
 msgid "This username is invalid."
 msgstr "El nombre de usuario no es válido."
 
-#: main/user.py:97
+#: main/user.py:98
 msgid "This username is already taken."
 msgstr "El nombre de usuario ya está en uso."
 
-#: main/user.py:163
+#: main/user.py:177
 msgid "Name (merged)"
 msgstr "Nombre (fusionado)"
 
-#: main/user.py:166
+#: main/user.py:180
 msgid "Email (merged)"
 msgstr "Email (fusionado)"
 
-#: main/user.py:226
+#: main/user.py:241
 msgid "Merge Users"
 msgstr "Combinar Usuarios"
 

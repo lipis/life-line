@@ -136,6 +136,7 @@ window.init_places_click = ->
     $('#search').select()
     search_with_timer()
 
+
 window.init_dates_click = ->
   $('.today').click (e) ->
     e.preventDefault()

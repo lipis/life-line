@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-08-04 18:30+0200\n"
+"POT-Creation-Date: 2014-08-17 12:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -18,32 +18,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 
-#: main/admin.py:82 main/templates/bit/user_menu.html:12
+#: main/admin.py:83 main/templates/bit/user_menu.html:12
 msgid "Admin Config"
 msgstr "Управление конфигурацией"
 
-#: main/auth.py:225
+#: main/auth.py:226
 msgid "Please sign in"
 msgstr "Пожалуйста, войдите"
 
-#: main/auth.py:247
+#: main/auth.py:248
 msgid "You have been signed out."
 msgstr "Вы вышли."
 
-#: main/auth.py:265 main/auth.py:311 main/auth.py:375
+#: main/auth.py:266 main/auth.py:313 main/auth.py:377
 msgid "You denied the request to sign in."
 msgstr "Вы отклонили запрос на вход."
 
-#: main/auth.py:335
+#: main/auth.py:337
 msgid "Something went wrong with Twitter sign in. Please try again."
 msgstr "Что-то пошло не так при входе на сайт через Twitter. Пожалуйста, попробуйте еще раз."
 
-#: main/auth.py:1147
+#: main/auth.py:1153
 #, python-format
 msgid "Hello %(name)s, welcome to %(brand)s."
 msgstr "Здравствуйте, %(name)s, добро пожаловать на %(brand)s."
 
-#: main/auth.py:1152
+#: main/auth.py:1158
 msgid "Sorry, but you could not sign in."
 msgstr "Извините, но Вы не зашли на сайт."
 
@@ -310,45 +310,45 @@ msgstr "Неверное значение, должно быть одним из
 msgid "Invalid value, can't be any of: %(values)s."
 msgstr "Неверное значение, не должно быть одним из %(values)s."
 
-#: main/main.py:87 main/user.py:53 main/templates/user/user_list.html:84
+#: main/main.py:89 main/user.py:53 main/templates/user/user_list.html:91
 #: main/templates/user/user_merge.html:21
 msgid "Name"
 msgstr "Имя"
 
-#: main/main.py:90 main/user.py:56 main/templates/user/user_list.html:86
+#: main/main.py:92 main/user.py:56 main/templates/user/user_list.html:92
 #: main/templates/user/user_merge.html:23
 msgid "Email"
 msgstr "E-mail"
 
-#: main/main.py:94 main/user.py:60 main/templates/user/user_list.html:87
+#: main/main.py:96 main/user.py:60 main/templates/user/user_list.html:95
 msgid "Language"
 msgstr "Язык"
 
-#: main/main.py:97 main/templates/event/event_update.html:50
+#: main/main.py:99 main/templates/event/event_update.html:50
 msgid "Home"
 msgstr "Home"
 
-#: main/main.py:100
+#: main/main.py:102
 msgid "Public. Used as sample data on homepage for anonymous users."
 msgstr "Public. Used as sample data on homepage for anonymous users."
 
-#: main/main.py:134
+#: main/main.py:140
 msgid "Subject"
 msgstr "Тема"
 
-#: main/main.py:137
+#: main/main.py:143
 msgid "Message"
 msgstr "Сообщение"
 
-#: main/main.py:140
+#: main/main.py:146
 msgid "Your email (optional)"
 msgstr "Ваш e-mail (необязательно)"
 
-#: main/main.py:156
+#: main/main.py:162
 msgid "Thank you for your feedback!"
 msgstr "Спасибо за Ваш отзыв!"
 
-#: main/main.py:161 main/templates/bit/contact_menu.html:3
+#: main/main.py:167 main/templates/bit/contact_menu.html:3
 msgid "Feedback"
 msgstr "Обратная связь"
 
@@ -455,7 +455,7 @@ msgstr "Current Location"
 
 #: main/templates/event/event_update.html:75
 #: main/templates/event/event_update.html:95
-#: main/templates/user/user_update.html:70
+#: main/templates/user/user_update.html:71
 msgid "Update"
 msgstr "Обновить"
 
@@ -504,13 +504,13 @@ msgstr "Line"
 msgid "Connected Accounts"
 msgstr "Подключенные аккаунты"
 
-#: main/templates/profile.html:29 main/templates/user/user_update.html:38
+#: main/templates/profile.html:29 main/templates/user/user_update.html:39
 msgid "Avatar"
 msgstr "Аватар"
 
-#: main/templates/profile.html:31 main/templates/user/user_list.html:99
+#: main/templates/profile.html:31 main/templates/user/user_list.html:106
 #: main/templates/user/user_merge.html:34
-#: main/templates/user/user_update.html:40
+#: main/templates/user/user_update.html:41
 msgid "Avatar of"
 msgstr "Аватар"
 
@@ -613,67 +613,67 @@ msgstr "Лимит"
 msgid "Admins"
 msgstr "Администраторы"
 
-#: main/templates/user/user_list.html:42
+#: main/templates/user/user_list.html:49
 msgid "Clear all permissions"
 msgstr "Clear all permissions"
 
-#: main/templates/user/user_list.html:48
+#: main/templates/user/user_list.html:55
 msgid "More"
 msgstr "Больше"
 
-#: main/templates/user/user_list.html:55
+#: main/templates/user/user_list.html:62
 msgid "Are you sure you want to delete {users} selected user(s)?"
 msgstr "Вы действительно желаете удалить {users} указанного(ных) пользователя(лей)?"
 
-#: main/templates/user/user_list.html:56
+#: main/templates/user/user_list.html:63
 msgid "{users} user(s) deleted."
 msgstr "{users} пользователь(ли) удалены."
 
-#: main/templates/user/user_list.html:57
+#: main/templates/user/user_list.html:64
 msgid "Something went wrong while deleting. Please try again."
 msgstr "Что-то пошло не так при удалении. Пожалуйста, попробуйте еще раз."
 
-#: main/templates/user/user_list.html:61
+#: main/templates/user/user_list.html:68
 msgid "Delete Selected"
 msgstr "Удалить выбранное"
 
-#: main/templates/user/user_list.html:67
+#: main/templates/user/user_list.html:74
 msgid "Merge Selected"
 msgstr "Объединить выбранное"
 
-#: main/templates/user/user_list.html:76
+#: main/templates/user/user_list.html:83
 msgid "Remove all filters"
 msgstr "Очистить фильтры"
 
-#: main/templates/user/user_list.html:77
+#: main/templates/user/user_list.html:84
 msgid "There are no users matching the filters."
 msgstr "Нет пользователей, соответствующих фильтрам"
 
-#: main/templates/user/user_list.html:88 main/templates/user/user_merge.html:24
-msgid "Created"
-msgstr "Создан"
-
-#: main/templates/user/user_list.html:89
+#: main/templates/user/user_list.html:94
 msgid "Modified"
 msgstr "Изменен"
 
-#: main/templates/user/user_list.html:91 main/templates/user/user_merge.html:26
-#: main/templates/user/user_update.html:46
+#: main/templates/user/user_list.html:94 main/templates/user/user_merge.html:24
+msgid "Created"
+msgstr "Создан"
+
+#: main/templates/user/user_list.html:97 main/templates/user/user_merge.html:26
+#: main/templates/user/user_update.html:47
 msgid "Accounts"
 msgstr "Аккаунты"
 
-#: main/templates/user/user_list.html:102
+#: main/templates/user/user_list.html:110
 #: main/templates/user/user_merge.html:37
 #: main/templates/user/user_update.html:13
 msgid "You"
 msgstr "Вы"
 
-#: main/templates/user/user_list.html:125
+#: main/templates/user/user_list.html:137
 #: main/templates/user/user_merge.html:49
 msgid "admin"
 msgstr "администратор"
 
-#: main/templates/user/user_list.html:128
+#: main/templates/user/user_list.html:140
 #: main/templates/user/user_merge.html:52
 msgid "inactive"
 msgstr "неактивный"
@@ -688,7 +688,7 @@ msgid "Merged Accounts"
 msgstr "Объединенные аккаунты"
 
 #: main/templates/user/user_merge.html:86
-#: main/templates/user/user_update.html:51
+#: main/templates/user/user_update.html:52
 msgid "Auth ID"
 msgstr "Авториз. ID"
 
@@ -712,7 +712,7 @@ msgstr "Объединение.."
 msgid "Merge"
 msgstr "Объединить"
 
-#: main/templates/user/user_update.html:69
+#: main/templates/user/user_update.html:70
 msgid "Updating.."
 msgstr "Обновление.."
 
@@ -724,8 +724,8 @@ msgstr "See all the places that you've visited on a map like a vomit!"
 msgid "User List"
 msgstr "Список пользователей"
 
-#: main/user.py:49 main/user.py:162 main/templates/profile.html:17
-#: main/templates/user/user_list.html:85 main/templates/user/user_merge.html:22
+#: main/user.py:49 main/user.py:176 main/templates/profile.html:17
+#: main/templates/user/user_list.html:92 main/templates/user/user_merge.html:22
 msgid "Username"
 msgstr "Имя пользователя"
 
@@ -733,32 +733,36 @@ msgstr "Имя пользователя"
 msgid "Admin"
 msgstr "Администратор"
 
-#: main/user.py:64 main/templates/user/user_list.html:31
+#: main/user.py:64 main/templates/user/user_list.html:37
 msgid "Active"
 msgstr "Активный"
 
-#: main/user.py:65 main/templates/user/user_list.html:90
+#: main/user.py:65 main/templates/user/user_list.html:31
+msgid "Verified"
+msgstr ""
+
+#: main/user.py:66 main/templates/user/user_list.html:96
 #: main/templates/user/user_merge.html:25
 msgid "Permissions"
 msgstr "Права доступа"
 
-#: main/user.py:95
+#: main/user.py:96
 msgid "This username is invalid."
 msgstr "Неверное имя пользователя."
 
-#: main/user.py:97
+#: main/user.py:98
 msgid "This username is already taken."
 msgstr "Данное имя пользователя уже занято."
 
-#: main/user.py:163
+#: main/user.py:177
 msgid "Name (merged)"
 msgstr "Имя (после объединения)"
 
-#: main/user.py:166
+#: main/user.py:180
 msgid "Email (merged)"
 msgstr "E-mail (после объединения)"
 
-#: main/user.py:226
+#: main/user.py:241
 msgid "Merge Users"
 msgstr "Объединить пользователей"
 
