@@ -457,7 +457,7 @@ def uniq(seq):
 ###############################################################################
 def internet_on():
   try:
-    urllib2.urlopen('http://74.125.228.100', timeout=2)
+    urllib2.urlopen('https://www.google.com', timeout=2)
     return True
   except (urllib2.URLError, socket.timeout):
     return False
