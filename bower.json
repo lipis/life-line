@@ -2,6 +2,7 @@
   "name": "gae-init",
   "dependencies": {
     "bootstrap": "~3",
+    "bootswatch": "~3",
     "color": "2.4.1",
     "flag-icon-css": "~0",
     "font-awesome": "~4",
@@ -12,6 +13,9 @@
   "overrides": {
     "bootstrap": {
       "main": ["less/**", "fonts/*", "js/*"]
+    },
+    "bootswatch": {
+      "main": ["**/*.less"]
     },
     "color": {
       "main": ["one-color-debug.js"]
