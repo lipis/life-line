@@ -1,24 +1,22 @@
 # if current_user.id > 0
   <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      <i class="fa fa-user"></i>
+      <span class="fa fa-fw fa-user"></span>
       {{current_user.name}}
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a href="{{url_for('profile')}}"><i class="fa fa-fw fa-edit"></i> {{_('Profile Settings')}}</a></li>
+      <li><a href="{{url_for('profile')}}"><span class="fa fa-fw fa-user"></span> {{_('Profile')}}</a></li>
       # if current_user.admin
         <li class="divider"></li>
-        <li><a href="{{url_for('admin_config_update')}}"><i class="fa fa-fw fa-cog"></i> {{_('Admin Config')}}</a></li>
-        <li><a href="{{url_for('user_list', order='-modified', active=True)}}"><i class="fa fa-fw fa-group"></i> {{_('User List')}}</a></li>
-        <li><a href="{{url_for('admin_event_list', order='-created')}}"><i class="fa fa-list"></i> {{_('Event List')}}</a></li>
+        <li><a href="{{url_for('admin')}}"><span class="fa fa-fw fa-cog"></span> {{_('Admin')}}</a></li>
         <li class="divider"></li>
       # endif
-      <li><a href="{{url_for('signout')}}"><i class="fa fa-fw fa-sign-out"></i> {{_('Sign out')}}</a></li>
+      <li><a href="{{url_for('signout')}}"><span class="fa fa-fw fa-sign-out"></span> {{_('Sign out')}}</a></li>
     </ul>
   </li>
 # else
-  <li class="{{'active' if html_class == 'signin'}}">
-    <a href="{{url_for('signin')}}"><i class="fa fa-sign-in"></i> {{_('Sign in')}}</a>
+  <li class="{{'active' if html_class.find('auth') != -1}}">
+    <a href="{{url_for('signin')}}"><span class="fa fa-fw fa-sign-in"></span> {{_('Sign in')}}</a>
   </li>
 # endif

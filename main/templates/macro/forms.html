@@ -12,10 +12,30 @@
 # endmacro
 
 
-# macro input_field(field, type='text')
+# macro field_optional(field)
+  # if not field.flags.required
+    <small class="text-muted">({{_('optional')}})</small>
+  # endif
+# endmacro
+
+
+# macro input_field(field, prefix='', suffix='')
   <div class="form-group {{'has-error' if field.errors}}">
     {{field.label(class='control-label')}}
-    {{field(class='form-control', type=type, **kwargs)}}
+    {{field_optional(field)}}
+    # if prefix or suffix
+      <div class="input-group">
+        # if prefix
+          <span class="input-group-addon">{{prefix}}</span>
+        # endif
+        {{field(class='form-control', **kwargs)}}
+        # if suffix
+          <span class="input-group-addon">{{suffix}}</span>
+        # endif
+      </div>
+    # else
+      {{field(class='form-control', **kwargs)}}
+    # endif
     {{field_errors(field)}}
     {{field_description(field)}}
   </div>
@@ -23,12 +43,30 @@
 
 
 # macro text_field(field)
-  {{input_field(field, **kwargs)}}
+  {{input_field(field, type='text', **kwargs)}}
 # endmacro
 
 
 # macro password_field(field)
   {{input_field(field, type='password', **kwargs)}}
+# endmacro
+
+
+# macro password_visible_field(field, size='')
+  <div class="form-group {{'has-error' if field.errors}}">
+    {{field.label(class='control-label')}}
+    {{field_optional(field)}}
+    <div class="input-group {{'input-group-%s' % size if size}}">
+      {{field(class='form-control', type='password', autocomplete='off', **kwargs)}}
+      <span class="input-group-btn">
+        <button class="btn btn-default btn-password-show" type="button" data-target="#{{field.name}}" data-toggle="button" title="Show/Hide Password" tabindex="-1">
+          <span class="fa fa-eye"></span>
+        </button>
+      </span>
+    </div>
+    {{field_errors(field)}}
+    {{field_description(field)}}
+  </div>
 # endmacro
 
 
@@ -63,6 +101,7 @@
 # macro textarea_field(field, rows=4)
   <div class="form-group {{'has-error' if field.errors}}">
     {{field.label(class='control-label')}}
+    {{field_optional(field)}}
     {{field(class='form-control', rows=rows, **kwargs)}}
     {{field_errors(field)}}
     {{field_description(field)}}
@@ -84,6 +123,7 @@
 # macro list_input_field(field, type)
   <div class="form-group {{'has-error' if field.errors}}">
     {{field.label(class='control-label')}}
+    {{field_optional(field)}}
     {{field_description(field)}}
     # for key, value in field.choices
       <div class="{{type}}">
@@ -110,12 +150,27 @@
   {{list_input_field(field, 'radio')}}
 # endmacro
 
-# macro oauth_fields(name, fields, help)
+
+# macro recaptcha_field(field)
+  # if field
+    <div class="form-group recaptcha {{'has-error' if field.errors}}">
+      {{field.widget.server}}
+      {{field.widget.script_url}}
+      {{field.widget.frame_url}}
+      {{field}}
+      {{field_errors(field)}}
+      {{field_description(field)}}
+    </div>
+  # endif
+# endmacro
+
+
+# macro panel_fields(name, fields, help)
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#oauth" href="#{{slugify(name)}}">{{name}}</a>
-        <i class="fa fa-check pull-right {{'hide' if not check_form_fields(fields)}}"></i>
+        <a data-toggle="collapse" data-parent=".panel-group" href="#{{slugify(name)}}">{{name}}</a>
+        <span class="fa fa-check pull-right {{'hide' if not check_form_fields(fields)}}"></span>
       </h4>
     </div>
     <div id="{{slugify(name)}}" class="panel-collapse collapse">
@@ -125,7 +180,7 @@
             {{text_field(field)}}
           # endfor
         #else
-          {{ text_field(fields) }}
+          {{text_field(fields)}}
         #endif
         # if help
           <p class="help-block">{{help|safe}}</p>
@@ -133,4 +188,13 @@
       </div>
     </div>
   </div>
+# endmacro
+
+
+# macro data_loading_text(text='Please wait..', icon='fa fa-spin fa-spinner')
+  # if icon
+    data-loading-text="<span class='{{icon}}'></span> {{text}}"
+  # else
+    data-loading-text="{{text}}"
+  # endif
 # endmacro

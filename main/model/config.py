@@ -4,134 +4,62 @@ from __future__ import absolute_import
 
 from google.appengine.ext import ndb
 
+from api import fields
 import config
 import model
 import util
 
 
-class Config(model.Base):
-  analytics_id = ndb.StringProperty(default='')
-  announcement_html = ndb.TextProperty(default='')
-  announcement_type = ndb.StringProperty(default='info', choices=[
-      'info', 'warning', 'success', 'danger',
-    ])
-  bitbucket_key = ndb.StringProperty(default='')
-  bitbucket_secret = ndb.StringProperty(default='')
+class Config(model.Base, model.ConfigAuth):
+  analytics_id = ndb.StringProperty(default='', verbose_name='Tracking ID')
+  announcement_html = ndb.TextProperty(default='', verbose_name='Announcement HTML')
+  announcement_type = ndb.StringProperty(default='info', choices=['info', 'warning', 'success', 'danger'])
+  anonymous_recaptcha = ndb.BooleanProperty(default=False, verbose_name='Use reCAPTCHA in forms for unauthorized users')
   brand_name = ndb.StringProperty(default=config.APPLICATION_ID)
-  dropbox_app_key = ndb.StringProperty(default='')
-  dropbox_app_secret = ndb.StringProperty(default='')
-  facebook_app_id = ndb.StringProperty(default='')
-  facebook_app_secret = ndb.StringProperty(default='')
+  check_unique_email = ndb.BooleanProperty(default=True, verbose_name='Check for uniqueness of the verified emails')
+  email_authentication = ndb.BooleanProperty(default=False, verbose_name='Email authentication for sign in/sign up')
   feedback_email = ndb.StringProperty(default='')
   flask_secret_key = ndb.StringProperty(default=util.uuid())
-  github_client_id = ndb.StringProperty(default='')
-  github_client_secret = ndb.StringProperty(default='')
-  instagram_client_id = ndb.StringProperty(default='')
-  instagram_client_secret = ndb.StringProperty(default='')
-  linkedin_api_key = ndb.StringProperty(default='')
-  linkedin_secret_key = ndb.StringProperty(default='')
-  locale = ndb.StringProperty(default='en')
-  microsoft_client_id = ndb.StringProperty(default='')
-  microsoft_client_secret = ndb.StringProperty(default='')
-  notify_on_new_user = ndb.BooleanProperty(default=True)
-  reddit_client_id = ndb.StringProperty(default='')
-  reddit_client_secret = ndb.StringProperty(default='')
-  stackoverflow_client_id = ndb.StringProperty(default='')
-  stackoverflow_client_secret = ndb.StringProperty(default='')
-  stackoverflow_key = ndb.StringProperty(default='')
-  twitter_consumer_key = ndb.StringProperty(default='')
-  twitter_consumer_secret = ndb.StringProperty(default='')
-  verify_email = ndb.BooleanProperty(default=True)
-  vk_app_id = ndb.StringProperty(default='')
-  vk_app_secret = ndb.StringProperty(default='')
-  yahoo_consumer_key = ndb.StringProperty(default='')
-  yahoo_consumer_secret = ndb.StringProperty(default='')
+  locale = ndb.StringProperty(default='en', verbose_name='Default Locale')
+  notify_on_new_user = ndb.BooleanProperty(default=True, verbose_name='Send an email notification when a user signs up')
+  recaptcha_private_key = ndb.StringProperty(default='', verbose_name='Private Key')
+  recaptcha_public_key = ndb.StringProperty(default='', verbose_name='Public Key')
+  salt = ndb.StringProperty(default=util.uuid())
+  verify_email = ndb.BooleanProperty(default=True, verbose_name='Verify user emails')
 
   @property
-  def has_bitbucket(self):
-    return bool(self.bitbucket_key and self.bitbucket_secret)
+  def has_anonymous_recaptcha(self):
+    return bool(self.anonymous_recaptcha and self.has_recaptcha)
 
   @property
-  def has_dropbox(self):
-    return bool(self.dropbox_app_key and self.dropbox_app_secret)
+  def has_email_authentication(self):
+    return bool(self.email_authentication and self.feedback_email and self.verify_email)
 
   @property
-  def has_facebook(self):
-    return bool(self.facebook_app_id and self.facebook_app_secret)
-
-  @property
-  def has_github(self):
-    return bool(self.github_client_id and self.github_client_secret)
-
-  @property
-  def has_instagram(self):
-    return bool(self.instagram_client_id and self.instagram_client_secret)
-
-  @property
-  def has_linkedin(self):
-    return bool(self.linkedin_api_key and self.linkedin_secret_key)
-
-  @property
-  def has_reddit(self):
-    return bool(self.reddit_client_id and self.reddit_client_secret)
-
-  @property
-  def has_stackoverflow(self):
-    return bool(self.stackoverflow_client_id and self.stackoverflow_client_secret and self.stackoverflow_key)
-
-  @property
-  def has_twitter(self):
-    return bool(self.twitter_consumer_key and self.twitter_consumer_secret)
-
-  @property
-  def has_vk(self):
-    return bool(self.vk_app_id and self.vk_app_secret)
-
-  @property
-  def has_microsoft(self):
-    return bool(self.microsoft_client_id and self.microsoft_client_secret)
-
-  @property
-  def has_yahoo(self):
-    return bool(self.yahoo_consumer_key and self.yahoo_consumer_secret)
-
-  _PROPERTIES = model.Base._PROPERTIES.union({
-      'analytics_id',
-      'announcement_html',
-      'announcement_type',
-      'bitbucket_key',
-      'bitbucket_secret',
-      'brand_name',
-      'dropbox_app_key',
-      'dropbox_app_secret',
-      'facebook_app_id',
-      'facebook_app_secret',
-      'feedback_email',
-      'flask_secret_key',
-      'github_client_id',
-      'github_client_secret',
-      'instagram_client_id',
-      'instagram_client_secret',
-      'linkedin_api_key',
-      'linkedin_secret_key',
-      'locale',
-      'microsoft_client_id',
-      'microsoft_client_secret',
-      'notify_on_new_user',
-      'reddit_client_id',
-      'reddit_client_secret',
-      'stackoverflow_client_id',
-      'stackoverflow_client_secret',
-      'stackoverflow_key',
-      'twitter_consumer_key',
-      'twitter_consumer_secret',
-      'verify_email',
-      'vk_app_id',
-      'vk_app_secret',
-      'yahoo_consumer_key',
-      'yahoo_consumer_secret',
-    })
+  def has_recaptcha(self):
+    return bool(self.recaptcha_private_key and self.recaptcha_public_key)
 
   @classmethod
   def get_master_db(cls):
     return cls.get_or_insert('master')
+
+  FIELDS = {
+      'analytics_id': fields.String,
+      'announcement_html': fields.String,
+      'announcement_type': fields.String,
+      'anonymous_recaptcha': fields.Boolean,
+      'brand_name': fields.String,
+      'check_unique_email': fields.Boolean,
+      'email_authentication': fields.Boolean,
+      'feedback_email': fields.String,
+      'flask_secret_key': fields.String,
+      'locale': fields.String,
+      'notify_on_new_user': fields.Boolean,
+      'recaptcha_private_key': fields.String,
+      'recaptcha_public_key': fields.String,
+      'salt': fields.String,
+      'verify_email': fields.Boolean,
+    }
+
+  FIELDS.update(model.Base.FIELDS)
+  FIELDS.update(model.ConfigAuth.FIELDS)

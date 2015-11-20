@@ -1,8 +1,9 @@
-blinker
-flask
-Flask-Babel
-flask-login==0.2.9
-flask-wtf==0.8.2
+blinker==1.4
+flask-babel==0.9
+flask-login==0.3.0
+flask-oauthlib==0.9.1
+flask-restful==0.3.4
+flask-wtf==0.12
+flask==0.10.1
 git+https://github.com/joernhees/babel@zipcompat-build
-git+https://github.com/mitsuhiko/flask-oauth.git@0.13
-unidecode
+unidecode==0.4.17

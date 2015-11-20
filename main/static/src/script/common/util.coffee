@@ -4,13 +4,25 @@ window.LOG = ->
 
 window.init_common = ->
   init_loading_button()
+  init_password_show_button()
   init_time()
   init_announcement()
+  init_row_link()
 
 
 window.init_loading_button = ->
   $('body').on 'click', '.btn-loading', ->
     $(this).button 'loading'
+
+
+window.init_password_show_button = ->
+  $('body').on 'click', '.btn-password-show', ->
+    $target = $($(this).data 'target')
+    $target.focus()
+    if $(this).hasClass 'active'
+      $target.attr 'type', 'password'
+    else
+      $target.attr 'type', 'text'
 
 
 window.init_time = ->
@@ -35,6 +47,14 @@ window.init_announcement = ->
 
   if sessionStorage?.getItem('closedAnnouncement') != $('.alert-announcement').html()
     $('.alert-announcement').show()
+
+
+window.init_row_link = ->
+  $('body').on 'click', '.row-link', ->
+    window.location.href = $(this).data 'href'
+
+  $('body').on 'click', '.not-link', (e) ->
+    e.stopPropagation()
 
 
 window.clear_notifications = ->

@@ -51,10 +51,10 @@ init_user_delete_btn = ->
       $('input[name=user_db]:checked').each ->
         $(this).attr 'disabled', true
         user_keys.push $(this).val()
-      delete_url = $(this).data 'service-url'
+      delete_url = $(this).data 'api-url'
       success_message = $(this).data 'success'
       error_message = $(this).data 'error'
-      service_call 'DELETE', delete_url, {user_keys: user_keys.join(',')}, (err, result) ->
+      api_call 'DELETE', delete_url, {user_keys: user_keys.join(',')}, (err, result) ->
         if err
           $('input[name=user_db]:disabled').removeAttr 'disabled'
           show_notification error_message.replace('{users}', user_keys.length), 'danger'
@@ -70,7 +70,8 @@ init_user_delete_btn = ->
 ###############################################################################
 window.init_user_merge = ->
   user_keys = $('#user_keys').val()
-  service_call 'GET', "/_s#{location.pathname}", {user_keys: user_keys}, (error, result) ->
+  api_url = $('.api-url').data 'api-url'
+  api_call 'GET', api_url, {user_keys: user_keys}, (error, result) ->
     if error
       LOG 'Something went terribly wrong'
       return

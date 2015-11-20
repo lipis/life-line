@@ -5,11 +5,8 @@ $ ->
 $ -> $('html.welcome').each ->
   init_welcome()
 
-$ -> $('html.profile').each ->
-  init_profile()
-
-$ -> $('html.signin').each ->
-  init_signin()
+$ -> $('html.auth').each ->
+  init_auth()
 
 $ -> $('html.feedback').each ->
 

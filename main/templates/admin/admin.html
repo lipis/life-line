@@ -1,0 +1,48 @@
+# extends 'base.html'
+
+# block content
+  <div class="page-header">
+    <h1>{{title}}</h1>
+  </div>
+
+  <div class="row text-center">
+    {{admin_link(_('App Config'), 'cog', url_for('admin_config'))}}
+    {{admin_link(_('Auth Config'), 'lock', url_for('admin_auth'))}}
+    {{admin_link(_('Test'), 'sliders', url_for('admin_test'))}}
+  </div>
+
+  <div class="page-header">
+    <h2>{{_('Models')}}</h2>
+  </div>
+
+  <div class="row text-center">
+    {{admin_link('User List', 'group', url_for('user_list', order='-modified', active=True))}}
+    {{admin_link('Event List', 'list', url_for('admin_event_list', order='-created')}}
+  </div>
+
+  <div class="page-header">
+    <h2>
+      Google Cloud Platform
+      <small title="Application ID">({{config.APPLICATION_ID}})</small>
+    </h2>
+  </div>
+
+  <div class="row text-center">
+    {{admin_link('Overview', 'tachometer', 'https://console.developers.google.com/project/%s' % config.APPLICATION_ID, '_gae')}}
+    {{admin_link('Datastore', 'database', 'https://console.developers.google.com/project/%s/datastore/query' % config.APPLICATION_ID, '_gae')}}
+    {{admin_link('Instances', 'bolt', 'https://console.developers.google.com/project/%s/appengine/instances' % config.APPLICATION_ID, '_gae')}}
+    {{admin_link('Versions', 'archive', 'https://console.developers.google.com/project/%s/appengine/versions' % config.APPLICATION_ID, '_gae')}}
+    {{admin_link('Logs', 'bullhorn', 'https://console.developers.google.com/project/%s/logs?versionId=%s' % (config.APPLICATION_ID, config.CURRENT_VERSION_NAME), '_gae')}}
+    {{admin_link('Settings', 'cogs', 'https://console.developers.google.com/project/%s/settings' % config.APPLICATION_ID, '_gae')}}
+  </div>
+# endblock
+
+
+# macro admin_link(title, icon, url, target='')
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+    <a class="text-muted" href="{{url}}" target="{{target}}">
+      <h4><span class="fa fa-fw fa-3x fa-{{icon}}"></span></h4>
+      <h4 class="ellipsis">{{title}}</h4>
+    </a>
+  </div>
+# endmacro

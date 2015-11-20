@@ -5,12 +5,10 @@
 # block content
   <div class="page-header">
     <h1>
-      <small>
-        <a href="{{url_for('user_list', order='-modified', active=user_db.active)}}" class="text-muted" title="{{_('Back to user list')}}"><i class="fa fa-fw fa-chevron-left"></i></a>
-      </small>
+      {{utils.back_link(_('Back to user list'), 'user_list', order='-modified', active=user_db.active)}}
       {{title}}
-      # if current_user.id == user_db.key.id()
-        <small><i class="fa fa-hand-o-left" title="{{_('You')}}"></i></small>
+      # if current_user.user_db.key == user_db.key
+        <small><span class="fa fa-hand-o-left" title="{{_('You')}}"></span></small>
       # endif
     </h1>
   </div>
@@ -23,7 +21,7 @@
         # include 'user/user_email_field.html'
         {{forms.select_field(form.locale)}}
         {{forms.checkbox_field(form.verified)}}
-        # if current_user.id != user_db.key.id()
+        # if current_user.user_db.key != user_db.key
           {{forms.checkbox_field(form.admin)}}
           {{forms.checkbox_field(form.active)}}
         # else
@@ -38,21 +36,30 @@
         <div class="form-group">
           <label class="control-label">{{_('Avatar')}}</label>
           <div>
-            <img class="img-thumbnail" src="{{user_db.avatar_url_size(170)}}" alt="{{_('Avatar of')}} {{user_db.name}}">
+            <img class="img-thumbnail" src="{{user_db.avatar_url_size(170)}}" alt="{{_('Avatar of %(name)s', name=user_db.name)}}">
           </div>
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="form-group">
           <label class="control-label">{{_('Accounts')}}</label>
-          <table class="table table-bordered table-hover">
+          <div class="alert alert-warning {{'hide' if user_db.password_hash or user_db.auth_ids}}">
+            {{_('No associated accounts')}}
+          </div>
+          <table class="table table-bordered table-hover {{'hide' if not (user_db.password_hash or user_db.auth_ids)}}">
             <thead>
               <tr>
-                <th><i class="fa fa-key"></i></th>
+                <th><span class="fa fa-key"></span></th>
                 <th class="col-xs-12">{{_('Auth ID')}}</th>
               </tr>
             </thead>
             <tbody>
+              # if user_db.password_hash
+                <tr>
+                  <td>{{utils.auth_icon('email_auth')}}</td>
+                  <td>{{'Email Authentication'}}</td>
+                </tr>
+              # endif
               # for auth_id in user_db.auth_ids
                 <tr>
                   <td>{{utils.auth_icon(auth_id)}}</td>
@@ -67,8 +74,12 @@
     <hr>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <button type="submit" class="btn btn-primary btn-lg btn-block btn-loading" data-loading-text="{{_('Updating..')}}">
-          {{_('Update')}}
+        <button type="submit" class="btn btn-primary btn-lg btn-block btn-loading" {{forms.data_loading_text()}}>
+          # if user_db.key
+            {{_('Update')}}
+          # else
+            {{_('Create')}}
+          # endif
         </button>
       </div>
     </div>

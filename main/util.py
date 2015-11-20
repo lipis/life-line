@@ -1,14 +1,12 @@
 # coding: utf-8
 
-from datetime import datetime
-from datetime import date
 from uuid import uuid4
+import hashlib
 import re
 import unicodedata
 import urllib
 
 from google.appengine.datastore.datastore_query import Cursor
-from google.appengine.ext import blobstore
 from google.appengine.ext import ndb
 import flask
 
@@ -30,16 +28,23 @@ def param(name, cast=None):
 
   if cast and value is not None:
     if cast is bool:
-      return value.lower() in ['true', 'yes', '1', '']
+      return value.lower() in ['true', 'yes', 'y', '1', '']
     if cast is list:
       return value.split(',') if len(value) > 0 else []
+    if cast is ndb.Key:
+      return ndb.Key(urlsafe=value)
     return cast(value)
   return value
 
 
-def get_next_url():
-  next_url = param('next')
+def get_next_url(next_url=''):
+  next_url = next_url or param('next') or param('next_url')
+  do_not_redirect_urls = [flask.url_for(u) for u in [
+      'signin', 'signup', 'user_forgot', 'user_reset',
+    ]]
   if next_url:
+    if any(url in next_url for url in do_not_redirect_urls):
+      return flask.url_for('welcome')
     return next_url
   referrer = flask.request.referrer
   if referrer and referrer.startswith(flask.request.host_url):
@@ -62,107 +67,56 @@ def set_locale(locale, response):
 # Model manipulations
 ###############################################################################
 def get_dbs(
-    query, order=None, limit=None, cursor=None, keys_only=None, **filters
+    query, order=None, limit=None, cursor=None, prev_cursor=False,
+    keys_only=None, **filters
   ):
-  '''Retrieves entities from datastore, by applying cursor pagination
-  and equality filters. Returns dbs or keys and more cursor value
-  '''
-  limit = limit or config.DEFAULT_DB_LIMIT
-  cursor = Cursor.from_websafe_string(cursor) if cursor else None
   model_class = ndb.Model._kind_map[query.kind]
+  query_prev = query
   if order:
     for o in order.split(','):
       if o.startswith('-'):
         query = query.order(-model_class._properties[o[1:]])
+        if prev_cursor:
+          query_prev = query_prev.order(model_class._properties[o[1:]])
       else:
         query = query.order(model_class._properties[o])
+        if prev_cursor:
+          query_prev = query_prev.order(-model_class._properties[o])
 
-  for prop in filters:
-    if filters.get(prop, None) is None:
+  for prop, value in filters.iteritems():
+    if value is None:
       continue
-    if isinstance(filters[prop], list):
-      for value in filters[prop]:
-        query = query.filter(model_class._properties[prop] == value)
-    else:
-      query = query.filter(model_class._properties[prop] == filters[prop])
+    for val in value if isinstance(value, list) else [value]:
+      query = query.filter(model_class._properties[prop] == val)
+      if prev_cursor:
+        query_prev = query_prev.filter(model_class._properties[prop] == val)
 
+  limit = limit or config.DEFAULT_DB_LIMIT
+  if limit is -1:
+    return list(query.fetch(keys_only=keys_only)), {'next': None, 'prev': None}
+
+  cursor = Cursor.from_websafe_string(cursor) if cursor else None
   model_dbs, next_cursor, more = query.fetch_page(
       limit, start_cursor=cursor, keys_only=keys_only,
     )
   next_cursor = next_cursor.to_websafe_string() if more else None
-  return list(model_dbs), next_cursor
+  if not prev_cursor:
+    return list(model_dbs), {'next': next_cursor, 'prev': None}
+  model_dbs_prev, prev_cursor, prev_more = query_prev.fetch_page(
+      limit, start_cursor=cursor.reversed() if cursor else None, keys_only=True
+    )
+  prev_cursor = prev_cursor.reversed().to_websafe_string()\
+      if prev_cursor and cursor else None
+  return list(model_dbs), {'next': next_cursor, 'prev': prev_cursor}
+
+
+def get_keys(*arg, **kwargs):
+  return get_dbs(*arg, keys_only=True, **kwargs)
 
 
 ###############################################################################
 # JSON Response Helpers
 ###############################################################################
-def jsonify_model_dbs(model_dbs, next_cursor=None):
-  '''Return a response of a list of dbs as JSON service result
-  '''
-  result_objects = [model_db_to_object(model_db) for model_db in model_dbs]
-
-  response_object = {
-      'status': 'success',
-      'count': len(result_objects),
-      'now': datetime.utcnow().isoformat(),
-      'result': result_objects,
-    }
-  if next_cursor:
-    response_object['next_cursor'] = next_cursor
-    response_object['next_url'] = generate_next_url(next_cursor)
-  response = jsonpify(response_object)
-  return response
-
-
-def jsonify_model_db(model_db):
-  result_object = model_db_to_object(model_db)
-  response = jsonpify({
-      'status': 'success',
-      'now': datetime.utcnow().isoformat(),
-      'result': result_object,
-    })
-  return response
-
-
-def model_db_to_object(model_db):
-  model_db_object = {}
-  for prop in model_db._PROPERTIES:
-    if prop == 'id':
-      try:
-        value = json_value(getattr(model_db, 'key', None).id())
-      except AttributeError:
-        value = None
-    else:
-      value = json_value(getattr(model_db, prop, None))
-    if value is not None:
-      model_db_object[prop] = value
-      if prop == 'geo_pt':
-        model_db_object['latitude'] = value.split(',')[0]
-        model_db_object['longitude'] = value.split(',')[1]
-
-  return model_db_object
-
-
-def json_value(value):
-  if isinstance(value, (datetime, date)):
-    return value.isoformat()
-  if isinstance(value, ndb.Key):
-    return value.urlsafe()
-  if isinstance(value, blobstore.BlobKey):
-    return urllib.quote(str(value))
-  if isinstance(value, ndb.GeoPt):
-    return '%s,%s' % (value.lat, value.lon)
-  if is_iterable(value):
-    return [json_value(v) for v in value]
-  if isinstance(value, long):
-    # Big numbers are sent as strings for accuracy in JavaScript
-    if value > 9007199254740992 or value < -9007199254740992:
-      return str(value)
-  if isinstance(value, ndb.Model):
-    return model_db_to_object(value)
-  return value
-
-
 def jsonpify(*args, **kwargs):
   if param('callback'):
     content = '%s(%s)' % (
@@ -191,9 +145,8 @@ def check_form_fields(*fields):
 
 
 def generate_next_url(next_cursor, base_url=None, cursor_name='cursor'):
-  '''Substitutes or alters the current request URL with a new cursor parameter
-  for next page of results
-  '''
+  if isinstance(next_cursor, dict):
+    next_cursor = next_cursor.get('next')
   if not next_cursor:
     return None
   base_url = base_url or flask.request.base_url
@@ -222,7 +175,21 @@ _username_re = re.compile(r'^[a-z0-9]+(?:[\.][a-z0-9]+)*$')
 
 
 def is_valid_username(username):
-  return True if _username_re.match(username) else False
+  return bool(_username_re.match(username))
+
+
+def create_name_from_email(email):
+  return re.sub(r'_+|-+|\.+|\++', ' ', email.split('@')[0]).title()
+
+
+def password_hash(user_db, password):
+  m = hashlib.sha256()
+  m.update(user_db.key.urlsafe())
+  m.update(user_db.created.isoformat())
+  m.update(m.hexdigest())
+  m.update(password.encode('utf-8'))
+  m.update(config.CONFIG_DB.salt)
+  return m.hexdigest()
 
 
 def parse_date_input(text):
@@ -254,6 +221,12 @@ def update_query_argument(name, value=None, ignore='cursor', is_list=False):
       arguments[name] = value
   query = '&'.join('%s=%s' % item for item in sorted(arguments.items()))
   return '%s%s' % (flask.request.path, '?%s' % query if query else '')
+
+
+def parse_tags(tags, separator=None):
+  if not is_iterable(tags):
+    tags = str(tags.strip()).split(separator or config.TAG_SEPARATOR)
+  return filter(None, sorted(list(set(tags))))
 
 
 ###############################################################################
