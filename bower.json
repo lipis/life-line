@@ -14,7 +14,7 @@
       "main": ["less/**", "fonts/*", "js/*"]
     },
     "color": {
-      "main": ["one-color.js"]
+      "main": ["one-color-debug.js"]
     },
     "flag-icon-css": {
       "main": ["less/*", "flags/**"]

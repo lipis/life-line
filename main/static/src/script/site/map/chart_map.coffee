@@ -12,7 +12,7 @@ class window.ChartMap
     @gmap = null
     @bounds = new google.maps.LatLngBounds()
     @type == 'countries'
-    @service_url = $(@host).data('service-url') or '/_s/place/'
+    @service_url = $(@host).data('service-url') or '/api/api/event/'
     @load()
 
     # draw empty map for non lines..
@@ -29,7 +29,7 @@ class window.ChartMap
       @draw()
 
   load: () =>
-    service_call 'GET', @service_url, @on_event_result_callback
+    api_call 'GET', @service_url, @on_event_result_callback
 
 
   on_loaded: =>

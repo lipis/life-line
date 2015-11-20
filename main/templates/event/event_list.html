@@ -9,7 +9,7 @@
 
   # if event_dbs
     <div class="map-container">
-      <div id="map" class="map" data-max-height="640" data-service-url="/_s/{{request.url.replace(request.host_url, '')}}"></div>
+      <div id="map" class="map" data-max-height="640" data-service-url="{{url_for('api.event.list')}}"></div>
     </div>
     # include 'map/map_toolbar.html'
     <hr>

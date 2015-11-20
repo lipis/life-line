@@ -2,3 +2,4 @@
 
 from .config import *
 from .user import *
+from .event import *

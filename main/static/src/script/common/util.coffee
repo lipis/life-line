@@ -27,7 +27,7 @@ window.init_password_show_button = ->
 
 window.init_time = ->
   if $('time').length > 0
-    moment.lang LOCALE
+    moment.locale LOCALE
     recalculate = ->
       $('time[datetime]').each ->
         date = moment.utc $(this).attr 'datetime'

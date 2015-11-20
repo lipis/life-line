@@ -189,25 +189,3 @@ def event_list(username=None):
       has_json=True,
       user_db=user_db,
     )
-
-
-@app.route('/_s/user/<username>/event/')
-@app.route('/_s/place/')
-def event_list_service(username=None):
-  if auth.is_logged_in():
-    user_db = auth.current_user_db()
-  else:
-    user_dbs, user_cursor = model.User.get_dbs(is_public=True, limit=10)
-    user_db = random.choice(user_dbs) if user_dbs else None
-
-  if username and user_db.username != username:
-    if not user_db.admin:
-      return flask.abort(404)
-    user_db = model.User.get_by('username', username)
-
-  if not user_db:
-    return flask.abort(404)
-
-  event_dbs, next_cursor = user_db.get_event_dbs()
-
-  return util.jsonify_model_dbs(event_dbs, next_cursor)
