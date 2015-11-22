@@ -10,6 +10,7 @@ from api import helpers
 import auth
 import model
 import util
+import iso
 
 from main import api_v1
 
@@ -72,3 +73,20 @@ class AdminEventAPI(restful.Resource):
     if not event_db:
       helpers.make_not_found_exception('Event %s not found' % event_key)
     return helpers.make_response(event_db, model.Event.FIELDS)
+
+
+@api_v1.resource('/admin/event/upgrade/', endpoint='api.admin.event.upgrade')
+class AdminEventUpgradeAPI(restful.Resource):
+  @auth.admin_required
+  def get(self):
+    event_dbs, event_cursor = model.Event.get_dbs()
+    updated_dbs = []
+    for event_db in event_dbs:
+      if not event_db.country_code:
+        if event_db.country in iso.ISO_3166_INV:
+          event_db.country_code = iso.ISO_3166_INV[event_db.country]
+        updated_dbs.append(event_db)
+
+    if updated_dbs:
+      ndb.put_multi(updated_dbs)
+    return helpers.make_response(event_dbs, model.Event.FIELDS, event_cursor)
