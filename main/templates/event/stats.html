@@ -1,0 +1,68 @@
+# extends 'base.html'
+# import 'macro/utils.html' as utils
+
+# block head
+  # include 'bit/google_maps_api.html'
+# endblock
+
+# block content
+
+  <table class="table table-bordered table-hover {{'hide' if not event_dbs}}">
+    <thead>
+      <tr>
+        <th class="span1">{{_('Datetime')}}</th>
+        <th class="span2">{{_('Place / City')}}</th>
+        <th class="span2">{{_('Country')}}</th>
+        <th class="span4">{{_('Name / Address')}}</th>
+        <th class="span3">{{_('Notes')}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      # for event_db in event_dbs
+        # if last and last.year != event_db.timestamp.year
+          <tr>
+            <td colspan="5">
+              <h4 class="align-center">{{event_db.timestamp.year}}</h4>
+            </td>
+          </tr>
+        # endif
+        <tr id="{{event_db.key.id()}}" class="{{event_db.key.id()}} {% if event_db.layover %} layover {% endif %}">
+          <td class="text-nowrap">
+            <a href="{{url_for('event_update', event_id=event_db.key.id())}}">
+              # if event_db.accuracy == 'year'
+                {{event_db.timestamp.strftime('%Y')}}
+              # elif event_db.accuracy == 'month'
+                {{event_db.timestamp.strftime('%B %Y')}}
+              # else
+                {{event_db.timestamp.strftime('%d %b %Y')}}
+              # endif
+
+              # if event_db.timestamp.hour > 0
+                @ {{event_db.timestamp.strftime('%H:00')}}
+              # endif
+            </a>
+          </td>
+          <td>{{event_db.place}}</td>
+          <td>
+            <i class="flag-icon flag-icon-{{event_db.country_code.lower()}}"></i>
+            {{event_db.country}}
+          </td>
+          <td>{{event_db.address}}</td>
+          <td>
+            # if event_db.layover
+              {{_('Layover')}}
+            # endif
+            {{'-' if event_db.notes and event_db.layover}}
+            # if event_db.notes
+              {{event_db.notes[:64].strip()}}{% if event_db.notes |length > 64 %}...{% endif %}
+            # endif
+            {{'-' if not (event_db.notes or event_db.layover)}}
+          </td>
+        </tr>
+        # set last = event_db.timestamp
+      # endfor
+    </tbody>
+  </table>
+
+  {{utils.next_link(next_url)}}
+# endblock

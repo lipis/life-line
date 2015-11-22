@@ -21,6 +21,7 @@ class Event(model.Base):
   timestamp = ndb.DateTimeProperty()
   accuracy = ndb.StringProperty(default='year', choices=['year', 'month', 'day'])
   notes = ndb.StringProperty(default='')
+  home = ndb.BooleanProperty(default=False, verbose_name='This is my new home')
 
   @classmethod
   def get_dbs(cls, **kwargs):
@@ -30,17 +31,18 @@ class Event(model.Base):
       )
 
   FIELDS = {
-      'user_key': fields.Key,
-      'search': fields.String,
+      'accuracy': fields.String,
       'address': fields.String,
-      'place': fields.String,
       'country': fields.String,
       'country_code': fields.String,
       'geo_pt': fields.GeoPt,
+      'home': fields.Boolean,
       'layover': fields.Boolean,
-      'timestamp': fields.DateTime,
-      'accuracy': fields.String,
       'notes': fields.String,
+      'place': fields.String,
+      'search': fields.String,
+      'timestamp': fields.DateTime,
+      'user_key': fields.Key,
     }
 
   FIELDS.update(model.Base.FIELDS)

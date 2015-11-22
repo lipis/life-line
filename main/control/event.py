@@ -2,11 +2,14 @@
 
 from datetime import datetime
 import random
+import copy
 
 from flask.ext import wtf
 from flask.ext.babel import lazy_gettext as _
 from google.appengine.ext import ndb
 import flask
+import wtforms
+
 
 
 import auth
@@ -25,22 +28,23 @@ HOURS[0] = ('0', '----')
 
 
 class EventUpdateForm(i18n.Form):
-  search = wtf.TextField(_('Search for a place'), [wtf.validators.optional()])
-  address = wtf.TextField(_('Name / Address (Automatic)'), [wtf.validators.required()])
-  place = wtf.TextField(_('Place / City (Automatic)'), [wtf.validators.required()])
-  country = wtf.TextField(_('Country (Automatic)'), [wtf.validators.required()])
-  country_code = wtf.HiddenField('Country Code', [wtf.validators.required()])
-  lat = wtf.HiddenField('Latitude', [wtf.validators.required()])
-  lng = wtf.HiddenField('Longtitude', [wtf.validators.required()])
-  timestamp = wtf.TextField(_('Timestamp'), [wtf.validators.optional()])
-  notes = wtf.TextAreaField(_('Notes'), [wtf.validators.optional()])
-  layover = wtf.BooleanField(_('This place is a layover'), [wtf.validators.optional()])
-  add_more = wtf.BooleanField(_('Add More'), [wtf.validators.optional()])
+  search = wtforms.TextField(_('Search for a place'), [wtforms.validators.optional()])
+  address = wtforms.TextField(_('Name / Address (Automatic)'), [wtforms.validators.required()])
+  place = wtforms.TextField(_('Place / City (Automatic)'), [wtforms.validators.required()])
+  country = wtforms.TextField(_('Country (Automatic)'), [wtforms.validators.required()])
+  country_code = wtforms.HiddenField('Country Code', [wtforms.validators.required()])
+  lat = wtforms.HiddenField('Latitude', [wtforms.validators.required()])
+  lng = wtforms.HiddenField('Longtitude', [wtforms.validators.required()])
+  timestamp = wtforms.TextField(_('Timestamp'), [wtforms.validators.optional()])
+  notes = wtforms.TextAreaField(_('Notes'), [wtforms.validators.optional()])
+  layover = wtforms.BooleanField(_('This place is a layover'), [wtforms.validators.optional()])
+  add_more = wtforms.BooleanField(_('Add More'), [wtforms.validators.optional()])
+  home = wtforms.BooleanField(model.Event.home._verbose_name, [wtforms.validators.optional()])
 
-  year = wtf.SelectField(_('Year'), [wtf.validators.optional()])
-  month = wtf.TextField(_('Month'), [wtf.validators.optional()])
-  day = wtf.TextField(_('Day'), [wtf.validators.optional()])
-  hour = wtf.SelectField(_('Time'), [wtf.validators.optional()], choices=HOURS)
+  year = wtforms.SelectField(_('Year'), [wtforms.validators.optional()])
+  month = wtforms.TextField(_('Month'), [wtforms.validators.optional()])
+  day = wtforms.TextField(_('Day'), [wtforms.validators.optional()])
+  hour = wtforms.SelectField(_('Time'), [wtforms.validators.optional()], choices=HOURS)
 
 
 @app.route('/place/add/', methods=['GET', 'POST'])
@@ -177,15 +181,59 @@ def event_list(username=None):
 
   event_dbs, next_cursor = user_db.get_event_dbs()
 
-  if flask.request.path.startswith('/_s/'):
-    return util.jsonify_model_dbs(event_dbs, next_cursor)
-
   return flask.render_template(
       'event/event_list.html',
       html_class='event-list',
       title=_('My Places'),
       event_dbs=event_dbs,
       next_url=util.generate_next_url(next_cursor),
-      has_json=True,
+      user_db=user_db,
+    )
+
+
+@app.route('/user/<username>/stats/')
+@app.route('/stats/')
+@auth.login_required
+def stats(username=None):
+  user_db = auth.current_user_db()
+  if username and user_db.username != username:
+    if not user_db.admin:
+      return flask.abort(404)
+    user_db = model.User.get_by('username', username)
+    if not user_db:
+      return flask.abort(404)
+
+  event_dbs, next_cursor = user_db.get_event_dbs(
+      order='timestamp,accuracy,created', limit=-1
+    )
+
+  countries = {}
+  country = {
+    'seconds': 0,
+    'current': False,
+  }
+  last_event_db = None
+
+  for event_db in event_dbs:
+    if last_event_db:
+      if last_event_db.country_code not in countries:
+        countries[last_event_db.country_code] = copy.copy(country)
+      countries[last_event_db.country_code]['seconds'] += (event_db.timestamp - last_event_db.timestamp).total_seconds()
+    last_event_db = event_db
+
+  # current country
+  if event_db.country_code not in countries:
+    countries[event_db.country_code] = copy.copy(country)
+  countries[event_db.country_code]['seconds'] += (datetime.utcnow() - event_db.timestamp).total_seconds()
+  countries[event_db.country_code]['current'] = True
+
+  return flask.jsonify(countries)
+
+  return flask.render_template(
+      'event/stats.html',
+      html_class='stats',
+      title=_('My Stats'),
+      event_dbs=event_dbs,
+      next_url=util.generate_next_url(next_cursor),
       user_db=user_db,
     )
