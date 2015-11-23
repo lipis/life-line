@@ -10,12 +10,11 @@ from google.appengine.ext import ndb
 import flask
 import wtforms
 
-
-
 import auth
 import i18n
 import model
 import util
+import iso
 
 from main import app
 
@@ -207,33 +206,54 @@ def stats(username=None):
       order='timestamp,accuracy,created', limit=-1
     )
 
-  countries = {}
+  country_dbs_ = {}
   country = {
+    'country_code': '',
     'seconds': 0,
     'current': False,
   }
   last_event_db = None
 
   for event_db in event_dbs:
+    if event_db.layover:
+      continue
     if last_event_db:
-      if last_event_db.country_code not in countries:
-        countries[last_event_db.country_code] = copy.copy(country)
-      countries[last_event_db.country_code]['seconds'] += (event_db.timestamp - last_event_db.timestamp).total_seconds()
+      if last_event_db.country_code not in country_dbs_:
+        country_dbs_[last_event_db.country_code] = copy.copy(country)
+        country_dbs_[last_event_db.country_code]['country_code'] = last_event_db.country_code
+      country_dbs_[last_event_db.country_code]['seconds'] += (event_db.timestamp - last_event_db.timestamp).total_seconds()
     last_event_db = event_db
 
   # current country
-  if event_db.country_code not in countries:
-    countries[event_db.country_code] = copy.copy(country)
-  countries[event_db.country_code]['seconds'] += (datetime.utcnow() - event_db.timestamp).total_seconds()
-  countries[event_db.country_code]['current'] = True
+  if last_event_db.country_code not in country_dbs_:
+    country_dbs_[last_event_db.country_code] = copy.copy(country)
+    country_dbs_[last_event_db.country_code]['country_code'] = last_event_db.country_code
+  country_dbs_[last_event_db.country_code]['seconds'] += (datetime.utcnow() - last_event_db.timestamp).total_seconds()
+  country_dbs_[last_event_db.country_code]['current'] = True
 
-  return flask.jsonify(countries)
 
+  country_dbs = []
+  total = 0
+
+  for country_code in country_dbs_:
+    country = country_dbs_[country_code]
+    country['seconds'] = int(country['seconds'])
+    country['hours'] = int(country['seconds'] / 60 / 60)
+    country['days'] = int(round(country['seconds'] / 60 / 60 / 24))
+    country['months'] = country['days'] / 30.0
+    country['years'] = country['days'] / 365.0
+    country['country'] = iso.ISO_3166[country['country_code']]
+    country_dbs.append(country_dbs_[country_code])
+    total += country['seconds']
+
+  country_dbs = sorted(country_dbs, key=lambda c: c['seconds'], reverse=True)
   return flask.render_template(
       'event/stats.html',
       html_class='stats',
       title=_('My Stats'),
       event_dbs=event_dbs,
+      country_dbs=country_dbs,
+      total=total,
       next_url=util.generate_next_url(next_cursor),
       user_db=user_db,
     )

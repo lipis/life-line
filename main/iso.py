@@ -61,7 +61,7 @@ ISO_3166 = {
     'CW': u'Curaçao',
     'CY': u'Cyprus',
     'CZ': u'Czech Republic',
-    'DK': u'Danmark',
+    'DK': u'Denmark',
     'DJ': u'Djibouti',
     'DM': u'Dominica',
     'DO': u'Dominican Republic',
