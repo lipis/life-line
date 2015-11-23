@@ -1,0 +1,66 @@
+.trips {
+  .event-year {
+    text-align: right;
+    font-weight: 400;
+    font-size: @font-size-large;
+    color: @text-muted;
+    background-color: red;
+    z-index: 1000;
+  }
+
+  .event {
+    @space: 4px;
+    margin-right: 52px;
+    border-right: 1px solid @hr-border;
+
+    &.active {
+      background-color: fade(@brand-info, 16%);
+    }
+
+    .name {
+      font-weight: 500;
+      font-size: 1.1em;
+    }
+
+    .timestamp {
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+
+    .event-home {
+      padding: @space * 2 @space;
+      border-top: 1px solid @hr-border;
+      font-size: 1.1em;
+    }
+
+    .event-layover {
+      font-size: 0.9em;
+      opacity: 0.6;
+      padding: @space 0 @space 4%;
+    }
+
+    .event-visit {
+      padding: @space 0 @space 3%;
+    }
+
+    .event-return {
+      padding-left: 4%;
+      padding-bottom: @space;
+      border-bottom: 1px solid @hr-border;
+    }
+
+    .event-return + .event-home {
+      border-top: none;
+    }
+
+    &:hover {
+      background-color: @gray-lighter;
+    }
+  }
+
+
+  .map {
+    border: 1px solid darken(@hr-border, 10%);
+    border-radius: 2px;
+  }
+}

@@ -26,9 +26,9 @@
 # endmacro
 
 
-# macro back_link(title, route)
+# macro back_link(title, route, hash=None)
   <small>
-    <a href="{{url_for(route, **kwargs)}}" class="text-muted" title="{{title}}"><span class="fa fa-fw fa-chevron-left"></span></a>
+    <a href="{{url_for(route, **kwargs)}}{{'#%s' % hash if hash}}" class="text-muted" title="{{title}}"><span class="fa fa-fw fa-chevron-left"></span></a>
   </small>
 # endmacro
 

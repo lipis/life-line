@@ -1,5 +1,6 @@
 # extends 'base.html'
 # import 'macro/forms.html' as forms
+# import 'macro/utils.html' as utils
 
 # block head
   # include 'bit/google_maps_api.html'
@@ -7,7 +8,10 @@
 
 # block content
   <div class="page-header">
-    <h1>{{title}}</h1>
+    <h1>
+      {{utils.back_link(_('Back to trips'), 'trips', hash=event_db.key.id() if event_db.key else None)}}
+      {{title}}
+    </h1>
   </div>
   <form class="form" method="POST" action=".">
     {{form.csrf_token}}
@@ -24,9 +28,6 @@
           <div class="row">
             <div class="col-sm-3 form-group">
               {{form.year(class='form-control datetime', title=form.year.label.text)}}
-              <p class="help-block">
-
-              </p>
             </div>
             <div class="col-sm-3 form-group">
               <select class="form-control datetime" id="month" name="month" data-selected="{{form.month.data or 0}}" title="{{form.month.label.text}}"></select>

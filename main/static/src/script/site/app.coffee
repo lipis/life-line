@@ -24,3 +24,6 @@ $ -> $('html.event-list').each ->
 
 $ -> $('html.event-update').each ->
   init_event_update()
+
+$ -> $('html.trips').each ->
+  init_trips()

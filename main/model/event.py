@@ -23,6 +23,24 @@ class Event(model.Base):
   notes = ndb.StringProperty(default='')
   home = ndb.BooleanProperty(default=False, verbose_name='This is my new home')
 
+  @ndb.ComputedProperty
+  def name_short(self):
+    return ', '.join([self.place, self.country])
+
+  @ndb.ComputedProperty
+  def timestamp_human(self):
+    result = ''
+    if self.accuracy == 'year':
+      result = self.timestamp.strftime('%Y')
+    elif self.accuracy == 'month':
+      result = self.timestamp.strftime('%B %Y')
+    else:
+      result = self.timestamp.strftime('%d %b %Y')
+
+    if self.timestamp.hour > 0:
+      result += self.timestamp.strftime(' @ %H:00')
+    return result
+
   @classmethod
   def get_dbs(cls, **kwargs):
     return super(Event, cls).get_dbs(

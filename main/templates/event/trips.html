@@ -1,0 +1,68 @@
+# extends 'base.html'
+# import 'macro/utils.html' as utils
+
+# block head
+  # include 'bit/google_maps_api.html'
+# endblock
+
+# block content
+
+  # if not event_dbs
+    <div class="alert alert-warning">
+      <h4>{{_('Nothing interesting here.')}}</h4>
+      <p>{{_('Add couple of new places to see your trips.')}}</p>
+    </div>
+  # endif
+
+
+  # for event_db in event_dbs
+    # set new_home = event_db if event_db.home or loop.first else ''
+    # if not last or last.timestamp.year != event_db.timestamp.year
+      <div class="anchor" id="{{event_db.timestamp.year}}"></div>
+      <div class="event-year">
+        <div class="pull-right">
+          <a href="#{{event_db.timestamp.year}}">{{event_db.timestamp.year}}</a>
+        </div>
+      </div>
+    # endif
+
+    <div class="anchor" id="{{event_db.key.id()}}"></div>
+    <div class="event row-link {{event_db.key.id()}}" data-href="{{url_for('event_update', event_id=event_db.key.id())}}">
+      # if new_home
+        <div class="event-home">
+          <span class="flag-icon flag-icon-{{new_home.country_code.lower()}}"></span>
+          <span class="name">{{new_home.name_short}}</span>
+          <span class="timestamp">{{new_home.timestamp_human}}</span>
+        </div>
+      # elif last_home.name_short == event_db.name_short
+        <div class="event-return">
+          <span class="fa fa-home"></span>
+          <span class="timestamp">{{event_db.timestamp_human}}</span>
+        </div>
+      # elif event_db.layover
+        <div class="event-layover">
+          <span class="flag-icon flag-icon-{{event_db.country_code.lower()}}"></span>
+          <span class="fa fa-plane"></span>
+          <span class="name">{{event_db.name_short}}</span>
+          <span class="timestamp">{{event_db.timestamp_human}}</span>
+        </div>
+      # else
+        <div class="event-visit">
+          <span class="flag-icon flag-icon-{{event_db.country_code.lower()}}"></span>
+          <span class="name">{{event_db.name_short}}</span>
+          <span class="timestamp">{{event_db.timestamp_human}}</span>
+        </div>
+      # endif
+    </div>
+
+    # set last_home = event_db if event_db.home or loop.first else last_home
+    # set last = event_db
+  # endfor
+  {{utils.next_link(next_url)}}
+
+  <hr>
+
+  <div class="map-container">
+    <div id="map" class="map" data-max-height="600" data-service-url="{{url_for('api.event.list')}}"></div>
+  </div>
+# endblock

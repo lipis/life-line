@@ -14,8 +14,8 @@
         <li class="{% if html_class == 'event-create' %} active {% endif %}">
           <a href="{{url_for('event_create')}}"><i class="fa fa-file"></i> {{_('Add Place')}}</a>
         </li>
-        <li class="{% if html_class == 'event-list' %} active {% endif %}">
-          <a href="{{url_for('event_list')}}"><i class="fa fa-list"></i> {{_('My Places')}}</a>
+        <li class="{% if html_class == 'trips' %} active {% endif %}">
+          <a href="{{url_for('trips')}}"><i class="fa fa-briefcase"></i> {{_('My Trips')}}</a>
         </li>
         <li class="{% if html_class == 'stats' %} active {% endif %}">
           <a href="{{url_for('stats')}}"><i class="fa fa-globe"></i> {{_('Stats')}}</a>

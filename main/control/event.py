@@ -121,7 +121,7 @@ def event_create(event_id=0):
           timestamp = event_db.timestamp.strftime('%Y%m%d%H')
 
         return flask.redirect(flask.url_for('event_create', timestamp=timestamp))
-      return flask.redirect('%s#%d' % (flask.url_for('event_list'), event_db.key.id()))
+      return flask.redirect('%s#%d' % (flask.url_for('trips'), event_db.key.id()))
 
   if not form.errors:
     form.add_more.data = event_id == 0
@@ -254,6 +254,30 @@ def stats(username=None):
       event_dbs=event_dbs,
       country_dbs=country_dbs,
       total=total,
+      next_url=util.generate_next_url(next_cursor),
+      user_db=user_db,
+    )
+
+
+@app.route('/user/<username>/trips/')
+@app.route('/trips/')
+@auth.login_required
+def trips(username=None):
+  user_db = auth.current_user_db()
+  if username and user_db.username != username:
+    if not user_db.admin:
+      return flask.abort(404)
+    user_db = model.User.get_by('username', username)
+    if not user_db:
+      return flask.abort(404)
+
+  event_dbs, next_cursor = user_db.get_event_dbs(limit=-1, order='timestamp,-accuracy,created')
+
+  return flask.render_template(
+      'event/trips.html',
+      html_class='trips',
+      title=_('My Trips'),
+      event_dbs=event_dbs,
       next_url=util.generate_next_url(next_cursor),
       user_db=user_db,
     )

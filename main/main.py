@@ -30,10 +30,10 @@ api_v1 = helpers.Api(app, prefix='/api/v1')
 import api.v1
 
 
-if config.DEVELOPMENT:
-  from werkzeug import debug
-  app.wsgi_app = debug.DebuggedApplication(app.wsgi_app, evalex=True)
-  app.testing = False
+# if config.DEVELOPMENT:
+#   from werkzeug import debug
+#   app.wsgi_app = debug.DebuggedApplication(app.wsgi_app, evalex=True)
+#   app.testing = False
 
 
 @flask.request_started.connect_via(app)
