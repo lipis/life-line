@@ -21,7 +21,7 @@ class Event(model.Base):
   timestamp = ndb.DateTimeProperty()
   accuracy = ndb.StringProperty(default='year', choices=['year', 'month', 'day'])
   notes = ndb.StringProperty(default='')
-  home = ndb.BooleanProperty(default=False, verbose_name='This is my new home')
+  home = ndb.BooleanProperty(default=False, verbose_name='This is my new home or base')
 
   @ndb.ComputedProperty
   def name_short(self):

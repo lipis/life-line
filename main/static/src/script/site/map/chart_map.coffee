@@ -12,7 +12,7 @@ class window.ChartMap
     @gmap = null
     @bounds = new google.maps.LatLngBounds()
     @type == 'countries'
-    @service_url = $(@host).data('service-url') or '/api/api/event/'
+    @service_url = $(@host).data('service-url') or '/api/v1/event/'
     @load()
 
     # draw empty map for non lines..

@@ -1,12 +1,7 @@
 # extends 'base.html'
 # import 'macro/utils.html' as utils
 
-# block head
-  # include 'bit/google_maps_api.html'
-# endblock
-
 # block content
-
   # if not event_dbs
     <div class="alert alert-warning">
       <h4>{{_('Nothing interesting here.')}}</h4>
@@ -59,10 +54,4 @@
     # set last = event_db
   # endfor
   {{utils.next_link(next_url)}}
-
-  <hr>
-
-  <div class="map-container">
-    <div id="map" class="map" data-max-height="600" data-service-url="{{url_for('api.event.list')}}"></div>
-  </div>
 # endblock

@@ -1,6 +1,7 @@
 # coding: utf-8
 
 from __future__ import absolute_import
+import random
 
 from google.appengine.ext import ndb
 from flask.ext import restful
