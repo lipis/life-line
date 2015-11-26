@@ -1,9 +1,3 @@
-window.init_event_list = () ->
-  window.chart = new ChartMap 'line'
-
-  if location.hash.length > 2
-    $(".#{location.hash.substr(1)}").addClass('info')
-
 window.init_event_update = () ->
   init_places_click()
   init_dates_click()

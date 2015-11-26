@@ -19,9 +19,6 @@ $ -> $('html.user-merge').each ->
 $ -> $('html.admin-config').each ->
   init_admin_config()
 
-$ -> $('html.event-list').each ->
-  init_event_list()
-
 $ -> $('html.event-update').each ->
   init_event_update()
 

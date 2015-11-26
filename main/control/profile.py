@@ -48,6 +48,10 @@ class ProfileUpdateForm(i18n.Form):
       model.User.locale._verbose_name,
       choices=config.LOCALE_SORTED, filters=[util.strip_filter],
     )
+  home = wtforms.StringField(
+      model.User.home._verbose_name,
+      [wtforms.validators.optional()], filters=[util.strip_filter],
+    )
   is_public = wtforms.BooleanField(_('Public. Used as sample data on homepage for anonymous users.'), [wtforms.validators.optional()])
 
 

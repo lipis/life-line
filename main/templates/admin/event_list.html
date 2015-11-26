@@ -35,7 +35,7 @@
           <td>{{event_db.country}}</td>
           <td>{{event_db.address}}</td>
           # set user_db = event_db.user_key.get()
-          <td><a href="{{url_for('event_list', username=user_db.username)}}">{{user_db.username}}</a></td>
+          <td><a href="{{url_for('trips', username=user_db.username)}}">{{user_db.username}}</a></td>
         </tr>
 
         # set last = event_db.timestamp

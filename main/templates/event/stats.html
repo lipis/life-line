@@ -2,6 +2,13 @@
 # import 'macro/utils.html' as utils
 
 # block content
+  # if not country_dbs
+    <div class="alert alert-warning">
+      <h4>{{_('Nothing interesting here.')}}</h4>
+      <p>{{_('Add couple of new places to see your countries.')}}</p>
+    </div>
+  # endif
+
   <table class="table table-bordered table-hover {{'hide' if not country_dbs}}">
     <thead>
       <tr class="h3">

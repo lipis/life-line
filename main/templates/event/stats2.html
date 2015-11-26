@@ -1,0 +1,46 @@
+# extends 'base.html'
+# import 'macro/utils.html' as utils
+
+# block content
+  # if not place_dbs
+    <div class="alert alert-warning">
+      <h4>{{_('Nothing interesting here.')}}</h4>
+      <p>{{_('Add couple of new places to see your places.')}}</p>
+    </div>
+  # endif
+
+  <table class="table table-bordered table-hover {{'hide' if not place_dbs}}">
+    <thead>
+      <tr class="h3">
+        <th class="col-xs-1">{{_('Place')}}</th>
+        <th class="col-xs-1">{{_('Duration')}}</th>
+        <th class="col-xs-1">%</th>
+      </tr>
+    </thead>
+    <tbody>
+      # for place_db in place_dbs
+        # set value = place_db.seconds / total * 100
+        <tr class="{{'h3' if value > 1 else 'h4'}} {{'active' if place_db.current}}">
+          <td class="text-nowrap">
+            <span class="flag-icon flag-icon-{{place_db.country_code.lower()}}"></span>
+            {{place_db.place}}, <small>{{place_db.country}}</small>
+          </td>
+          <td class="text-nowrap">
+            # if place_db.years >= 1
+              {{'%.1f' | format(place_db.years)}} years
+            # elif place_db.months >= 1
+              {{'%.1f' | format(place_db.months)}} months
+            # elif place_db.days >= 1
+              {{'%.0f' | format(place_db.days)}} days
+            # else
+              {{'%.0f' | format(place_db.hours)}} hours
+            # endif
+          </td>
+          <td class="text-nowrap">
+            {{'%2.2f' | format(value)}} %
+          </td>
+        </tr>
+      # endfor
+    </tbody>
+  </table>
+# endblock

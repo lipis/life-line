@@ -166,34 +166,10 @@ def event_create(event_id=0):
     )
 
 
-@app.route('/user/<username>/event/')
-@app.route('/place/')
+@app.route('/user/<username>/countries/')
+@app.route('/countries/')
 @auth.login_required
-def event_list(username=None):
-  user_db = auth.current_user_db()
-  if username and user_db.username != username:
-    if not user_db.admin:
-      return flask.abort(404)
-    user_db = model.User.get_by('username', username)
-    if not user_db:
-      return flask.abort(404)
-
-  event_dbs, next_cursor = user_db.get_event_dbs()
-
-  return flask.render_template(
-      'event/event_list.html',
-      html_class='event-list',
-      title=_('My Places'),
-      event_dbs=event_dbs,
-      next_url=util.generate_next_url(next_cursor),
-      user_db=user_db,
-    )
-
-
-@app.route('/user/<username>/stats/')
-@app.route('/stats/')
-@auth.login_required
-def stats(username=None):
+def countries(username=None):
   user_db = auth.current_user_db()
   if username and user_db.username != username:
     if not user_db.admin:
@@ -225,11 +201,12 @@ def stats(username=None):
     last_event_db = event_db
 
   # current country
-  if last_event_db.country_code not in country_dbs_:
-    country_dbs_[last_event_db.country_code] = copy.copy(country)
-    country_dbs_[last_event_db.country_code]['country_code'] = last_event_db.country_code
-  country_dbs_[last_event_db.country_code]['seconds'] += (datetime.utcnow() - last_event_db.timestamp).total_seconds()
-  country_dbs_[last_event_db.country_code]['current'] = True
+  if last_event_db:
+    if last_event_db.country_code not in country_dbs_:
+      country_dbs_[last_event_db.country_code] = copy.copy(country)
+      country_dbs_[last_event_db.country_code]['country_code'] = last_event_db.country_code
+    country_dbs_[last_event_db.country_code]['seconds'] += (datetime.utcnow() - last_event_db.timestamp).total_seconds()
+    country_dbs_[last_event_db.country_code]['current'] = True
 
 
   country_dbs = []
@@ -243,13 +220,13 @@ def stats(username=None):
     country['months'] = country['days'] / 30.0
     country['years'] = country['days'] / 365.0
     country['country'] = iso.ISO_3166[country['country_code']]
-    country_dbs.append(country_dbs_[country_code])
+    country_dbs.append(country)
     total += country['seconds']
 
   country_dbs = sorted(country_dbs, key=lambda c: c['seconds'], reverse=True)
   return flask.render_template(
       'event/stats.html',
-      html_class='stats',
+      html_class='stats countries',
       title=_('My Stats'),
       event_dbs=event_dbs,
       country_dbs=country_dbs,
@@ -281,3 +258,78 @@ def trips(username=None):
       next_url=util.generate_next_url(next_cursor),
       user_db=user_db,
     )
+
+
+@app.route('/user/<username>/places/')
+@app.route('/places/')
+@auth.login_required
+def places(username=None):
+  user_db = auth.current_user_db()
+  if username and user_db.username != username:
+    if not user_db.admin:
+      return flask.abort(404)
+    user_db = model.User.get_by('username', username)
+    if not user_db:
+      return flask.abort(404)
+
+  event_dbs, next_cursor = user_db.get_event_dbs(
+      order='timestamp,accuracy,created', limit=-1
+    )
+
+  place_dbs_ = {}
+  country = {
+    'country_code': '',
+    'city': '',
+    'seconds': 0,
+    'current': False,
+  }
+  last_event_db = None
+
+  for event_db in event_dbs:
+    if event_db.layover:
+      continue
+    if last_event_db:
+      if last_event_db.place not in place_dbs_:
+        place_dbs_[last_event_db.place] = copy.copy(country)
+        place_dbs_[last_event_db.place]['country_code'] = last_event_db.country_code
+        place_dbs_[last_event_db.place]['place'] = last_event_db.place
+      place_dbs_[last_event_db.place]['seconds'] += (event_db.timestamp - last_event_db.timestamp).total_seconds()
+    last_event_db = event_db
+
+  # current country
+  if last_event_db:
+    if last_event_db.place not in place_dbs_:
+      place_dbs_[last_event_db.place] = copy.copy(country)
+      place_dbs_[last_event_db.place]['country_code'] = last_event_db.country_code
+      place_dbs_[last_event_db.place]['place'] = last_event_db.place
+    place_dbs_[last_event_db.place]['seconds'] += (datetime.utcnow() - last_event_db.timestamp).total_seconds()
+    place_dbs_[last_event_db.place]['current'] = True
+
+
+  place_dbs = []
+  total = 0
+
+  for place in place_dbs_:
+    place = place_dbs_[place]
+    place['seconds'] = int(place['seconds'])
+    place['hours'] = int(place['seconds'] / 60 / 60)
+    place['days'] = int(round(place['seconds'] / 60 / 60 / 24))
+    place['months'] = place['days'] / 30.0
+    place['years'] = place['days'] / 365.0
+    place['country'] = iso.ISO_3166[place['country_code']]
+    place_dbs.append(place)
+    total += place['seconds']
+
+  place_dbs = sorted(place_dbs, key=lambda c: c['seconds'], reverse=True)
+  return flask.render_template(
+      'event/stats2.html',
+      html_class='stats places',
+      title=_('My Stats'),
+      event_dbs=event_dbs,
+      place_dbs=place_dbs,
+      total=total,
+      next_url=util.generate_next_url(next_cursor),
+      user_db=user_db,
+    )
+
+

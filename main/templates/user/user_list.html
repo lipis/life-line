@@ -109,13 +109,13 @@
                 <span class="fa fa-hand-o-left" title="{{_('You')}}"></span>
               # endif
             </td>
-            <td class="text-nowrap">
+            <td class="text-nowrap not-link">
               {{user_db.email}}
               # if user_db.email and user_db.verified
                 <span class="fa fa-check text-success" title="Verified"></span>
               # endif
               <br>
-              <a class="text-success small" href="{{url_for('event_list', username=user_db.username)}}">{{user_db.username}}</a>
+              <a class="text-success small" href="{{url_for('trips', username=user_db.username)}}">{{user_db.username}}</a>
             </td>
             <td>
               <time datetime="{{user_db.modified}}">
