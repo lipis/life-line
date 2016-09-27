@@ -28,6 +28,10 @@ class Event(model.Base):
     return ', '.join([self.place, self.country])
 
   @ndb.ComputedProperty
+  def name_tax(self):
+    return ' - '.join([self.place, self.country_code])
+
+  @ndb.ComputedProperty
   def timestamp_human(self):
     result = ''
     if self.accuracy == 'year':
@@ -39,6 +43,18 @@ class Event(model.Base):
 
     if self.timestamp.hour > 0:
       result += self.timestamp.strftime(' @ %H:00')
+    return result
+
+  @ndb.ComputedProperty
+  def timestamp_tax(self):
+    result = ''
+    if self.accuracy == 'year':
+      result = self.timestamp.strftime('%Y')
+    elif self.accuracy == 'month':
+      result = self.timestamp.strftime('%m/%Y')
+    else:
+      result = self.timestamp.strftime('%m/%d/%Y')
+
     return result
 
   @classmethod

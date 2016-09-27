@@ -1,0 +1,27 @@
+# extends 'base.html'
+# import 'macro/utils.html' as utils
+
+# block content
+  # for event_db in event_dbs
+    # set new_home = event_db if event_db.home or loop.first else ''
+
+# if not last or last.timestamp.year != event_db.timestamp.year
+  <h2>{{event_db.timestamp.year}}</h2>
+# endif
+
+    # if new_home
+      <span class="text-success">{{new_home.name_tax}}</span>
+      <span class="timestamp">{{new_home.timestamp_tax}}</span>
+      <hr>
+    # elif last_home.name_short == event_db.name_short
+      <span title="Return {{event_db.name_short}}" class="{{'text-danger' if event_db.name_short == 'Copenhagen, Denmark'}}">{{event_db.timestamp_tax}}</span>
+      <br>
+    # elif not event_db.layover
+      <span>{{event_db.name_tax}}</span> |
+      <span>{{event_db.timestamp_tax}}</span> | |
+    # endif
+
+    # set last_home = event_db if event_db.home or loop.first else last_home
+    # set last = event_db
+  # endfor
+# endblock

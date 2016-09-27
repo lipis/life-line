@@ -260,6 +260,21 @@ def trips(username=None):
     )
 
 
+@app.route('/tax/')
+@auth.login_required
+def tax():
+  user_db = auth.current_user_db()
+  event_dbs, next_cursor = user_db.get_event_dbs(limit=-1, order='timestamp,-accuracy,created')
+
+  return flask.render_template(
+      'event/tax.html',
+      html_class='tax',
+      title=_('My Tax'),
+      event_dbs=event_dbs,
+      next_url=util.generate_next_url(next_cursor),
+    )
+
+
 @app.route('/user/<username>/places/')
 @app.route('/places/')
 @auth.login_required
